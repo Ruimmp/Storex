@@ -6,7 +6,7 @@
  * @version     12.04.2022
  */
 
-$title = "Register Storexa";
+$title = "Register Storex";
 ob_start();
 ?>
 
@@ -14,168 +14,71 @@ ob_start();
     <!DOCTYPE html>
     <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title><? $title ?></title>
-        <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="Assets/css/templatemo-style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><? $title ?></title>
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="Assets/css/templatemo-style.css">
+</head>
 
 
-    <body>
-    <!-- Page Loader -->
-    <div id="loader-wrapper">
-        <div id="loader"></div>
+<body>
+<div class="container-fluid tm-mt-60">
+    <div class="row tm-mb-50">
+        <div class="col-lg-4 col-12 mb-5">
+            <h2 class="tm-text-primary mb-5">Enregistrement</h2>
+            <form id="contact-form" action="" method="POST" class="tm-contact-form mx-auto">
+                <div class="form-group">
+                    <input
+                            type="text"
+                            id="UserFirstName"
+                            name="FirstName"
+                            class="form-control rounded-0"
+                            placeholder="Nom d'utilisateur"
+                            required/>
+                </div>
 
-        <div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
+                <div class="form-group">
+                    <input
+                            type="text"
+                            id="UserLastName"
+                            name="LastName"
+                            class="form-control rounded-0"
+                            placeholder="Nom de famille"
+                            required/>
+                </div>
 
+                <div class="form-group">
+                    <input
+                            type="email"
+                            name="email"
+                            class="form-control rounded-0"
+                            placeholder="Email"
+                            required/>
+                </div>
+
+                <div class="form-group">
+                    <input
+                            type="tel"
+                            id="UserPhoneNumber"
+                            name="PhoneNumber"
+                            class="form-control rounded-0"
+                            data-pattern="+** ** *** ** **"
+                            data-prefix="+41 "
+                            placeholder="Número de téléphone"
+                            required/>
+                </div>
+
+                <div class="form-group tm-text-right">
+                    <button type="submit" class="btn btn-primary">S'enregistrer</button>
+                </div>
+            </form>
+        </div>
     </div>
-    <!-- Page Loader -->
-
-
-    <div class="container-fluid tm-mt-60">
-        <div class="row tm-mb-50">
-            <div class="col-lg-4 col-12 mb-5">
-                <h2 class="tm-text-primary mb-5">Contact Page</h2>
-                <form id="contact-form" action="" method="POST" class="tm-contact-form mx-auto">
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required/>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control rounded-0" placeholder="Email" required/>
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" id="contact-select" name="inquiry">
-                            <option value="-">Subject</option>
-                            <option value="sales">Sales &amp; Marketing</option>
-                            <option value="creative">Creative Design</option>
-                            <option value="uiux">UI / UX</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="8" name="message" class="form-control rounded-0" placeholder="Message"
-                                  required=></textarea>
-                    </div>
-
-                    <div class="form-group tm-text-right">
-                        <button type="submit" class="btn btn-primary">Send</button>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-        <div class="row tm-mb-74 tm-people-row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-                <img src="Assets/img/people-1.jpg" alt="Image" class="mb-4 img-fluid">
-                <h2 class="tm-text-primary mb-4">Ryan White</h2>
-                <h3 class="tm-text-secondary h5 mb-4">Chief Executive Officer</h3>
-                <p class="mb-4">
-                    Mauris ante tellus, feugiat nec metus non, bibendum semper velit. Praesent laoreet urna id tristique
-                    fermentum. Morbi venenatis dui quis diam mollis pellentesque.
-                </p>
-                <ul class="tm-social pl-0 mb-0">
-                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-                <img src="Assets/img/people-2.jpg" alt="Image" class="mb-4 img-fluid">
-                <h2 class="tm-text-primary mb-4">Catherine Pinky</h2>
-                <h3 class="tm-text-secondary h5 mb-4">Chief Marketing Officer</h3>
-                <p class="mb-4">
-                    Sed faucibus nec velit finibus accumsan. Sed varius augue et leo pharetra, in varius lacus eleifend.
-                    Quisque ut eleifend lacus.
-                </p>
-                <ul class="tm-social pl-0 mb-0">
-                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-                <img src="Assets/img/people-3.jpg" alt="Image" class="mb-4 img-fluid">
-                <h2 class="tm-text-primary mb-4">Johnny Brief</h2>
-                <h3 class="tm-text-secondary h5 mb-4">Accounting Executive</h3>
-                <p class="mb-4">
-                    Sed faucibus nec velit finibus accumsan. Sed varius augue et leo pharetra, in varius lacus eleifend.
-                    Quisque ut eleifend lacus.
-                </p>
-                <ul class="tm-social pl-0 mb-0">
-                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 mb-5">
-                <img src="Assets/img/people-4.jpg" alt="Image" class="mb-4 img-fluid">
-                <h2 class="tm-text-primary mb-4">George Nelson</h2>
-                <h3 class="tm-text-secondary h5 mb-4">Creative Art Director #C69</h3>
-                <p class="mb-4">
-                    Nunc convallis facilisis congue. Curabitur gravida rutrum justo sed pulvinar. Pellentesque ac ante
-                    in erat bibendum dignissim.
-                </p>
-                <ul class="tm-social pl-0 mb-0">
-                    <li><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div> <!-- container-fluid, tm-container-content -->
-
-    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
-        <div class="container-fluid tm-container-small">
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-12 px-5 mb-5">
-                    <h3 class="tm-text-primary mb-4 tm-footer-title">About Catalog-Z</h3>
-                    <p>Catalog-Z is free Bootstrap 5 Alpha 2 HTML Template for video and photo websites. You can freely
-                        use this TemplateMo layout for a front-end integration with any kind of CMS website.</p>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
-                    <h3 class="tm-text-primary mb-4 tm-footer-title">Our Links</h3>
-                    <ul class="tm-footer-links pl-0">
-                        <li><a href="#">Advertise</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Our Company</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
-                    <ul class="tm-social-links d-flex justify-content-end pl-0 mb-5">
-                        <li class="mb-2"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li>
-                        <li class="mb-2"><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
-                        <li class="mb-2"><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
-                        <li class="mb-2"><a href="https://pinterest.com"><i class="fab fa-pinterest"></i></a></li>
-                    </ul>
-                    <a href="#" class="tm-text-gray text-right d-block mb-2">Terms of Use</a>
-                    <a href="#" class="tm-text-gray text-right d-block">Privacy Policy</a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-md-7 col-12 px-5 mb-3">
-                    Copyright 2020 Catalog-Z Company. All rights reserved.
-                </div>
-                <div class="col-lg-4 col-md-5 col-12 px-5 text-right">
-                    Designed by <a href="https://templatemo.com" class="tm-text-gray" rel="sponsored" target="_parent">TemplateMo</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="Assets/js/plugins.js"></script>
-    <script>
-        $(window).on("load", function () {
-            $('body').addClass('loaded');
-        });
-    </script>
-    </body>
-
-    </html>
-    <!-- SECTION CLOSE -->
+</div>
+</body>
 
 <?php
 $content = ob_get_clean();
