@@ -13,36 +13,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalog-Z Bootstrap 5.0 HTML Template</title>
+    <title>Accueil Storex</title>
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="Assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="Assets/css/styles/footer.css">
+
+    <link rel="icon" type="image/x-icon" href="Assets/img/logonobg.png">
+
     <!--
-
     TemplateMo 556 Catalog-Z
-
     https://templatemo.com/tm-556-catalog-z
-
     -->
 </head>
 <body>
-<!-- Page Loader
+<!-- Page Loader -->
 <div id="loader-wrapper">
     <div id="loader"></div>
-
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
+</div>
+<!-- Page Loader End -->
 
-</div>-->
-
+<!-- Header -->
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="Assets/img/logo-nobg.png" alt="HTML5 Icon" style="width:60px;height:60px;">
-            Anubis
+        <a class="navbar-brand" href="index.php?action=home">
+            <img src="Assets/img/logonobg.png" alt="HTML5 Icon" style="width:115px;height:115px;">
+            Storex
         </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
 
@@ -78,117 +80,110 @@
         </div>
     </div>
 </nav>
-
-<!--
-<div class="row tm-brand-row">
-    <div class="col-lg-4 col-10">
-        <div class="tm-brand-container">
-            <div class="tm-brand-texts">
-                <h1 class="text-uppercase tm-brand-name">Anubis</h1>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-8 col-2 tm-nav-col">
-        <div class="tm-nav">
-            <nav class="navbar navbar-expand-lg navbar-light tm-navbar">
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto mr-0">
-
-                        <li class="nav-item active">
-                            <div class="tm-nav-link-highlight"></div>
-                            <a class="nav-link" href="index.php?action=home">Home</a>
-                        </li>
-
-                        <?php if (!isset($_SESSION['userEmailAddress']) || (!isset($_GET['action'])) || ((@$_GET['action'] == "logout"))) : ?>
-                            <li class="nav-item">
-                                <div class="tm-nav-link-highlight"></div>
-                                <a class="nav-link" href="index.php?action=login">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <div class="tm-nav-link-highlight"></div>
-                                <a class="nav-link" href="index.php?action=register">Register</a>
-                            </li>
-                            <li class="nav-item">
-                                <div class="tm-nav-link-highlight"></div>
-                                <a class="nav-link" href="index.php?action=contact">Contacter</a>
-                            </li>
-                        <?php else : ?>
-                            <li class="nav-item">
-                                <div class="tm-nav-link-highlight"></div>
-                                <a class="nav-link" href="index.php?action=profile">Profile</a>
-                            </li>
-                            <li class="nav-item">
-                                <div class="tm-nav-link-highlight"></div>
-                                <a class="nav-link" href="index.php?action=logout">Logout</a>
-                            </li>
-                        <?php endif; ?>
-
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </div>
-</div>-->
+<!-- Header END -->
 
 <?= $content; ?>
 
-<!--
-<div>
-    <div class="footer-clean">
-        <footer>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Anubis.com</h3>
-                        <ul>
-                            <li><a href="#">Rechercher</a></li>
-                            <li><a href="#">Faire une annonce</a></li>
-                            <li><a href="#">Vos annonces</a></li>
-                            <li><a href="#">Catégories</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>À propos</h3>
-                        <ul>
-                            <li><a href="#">Contacter</a></li>
-                            <li><a href="#">Règles d'utilisation </a></li>
-                            <li><a href="#">Protection des données</a></li>
-                            <li><a href="#">Conditions générales</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-md-3 item">
-                        <h3>Partenaires</h3>
-                        <ul>
-                            <li><a href="#">CPNV - STE-CROIX</a></li>
-                            <li><a href="#">MasterCard</a></li>
-                            <li><a href="#">Tamedia Group</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a
-                            href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i
-                                class="icon ion-social-snapchat"></i></a><a href="#"><i
-                                class="icon ion-social-instagram"></i></a>
-                        <p class="copyright">Anubis 2022 © All rights reserved</p>
+<!-- Footer -->
+<footer class="bg-white">
+    <div class="container py-5">
+        <div class="row py-4">
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
+                <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt.</p>
+                <ul class="list-inline mt-4">
+                    <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i
+                                    class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i
+                                    class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i
+                                    class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i
+                                    class="fa fa-pinterest"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i
+                                    class="fa fa-vimeo"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                <h6 class="text-uppercase font-weight-bold mb-4">Categories</h6>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-2"><a href="index.php?action=ManCategory" class="text-muted">Homes</a></li>
+                    <li class="mb-2"><a href="index.php?action=WomenCategory" class="text-muted">Femme</a></li>
+                    <li class="mb-2"><a href="index.php?action=KidsCategory" class="text-muted">Enfants</a></li>
+                    <li class="mb-2"><a href="index.php?action=AccessoriesCategory" class="text-muted">Accessoires</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                <h6 class="text-uppercase font-weight-bold mb-4">Pages</h6>
+                <ul class="list-unstyled mb-0">
+                    <?php if (!isset($_SESSION['userEmailAddress']) ||
+                        (!isset($_GET['action'])) ||
+                        ((@$_GET['action'] == "logout"))) : ?>
+                        <li class="nav-item">
+                        <li class="mb-2"><a href="index.php?action=home" class="text-muted">Accueil</a></li>
+                        </li>
+                        <li class="nav-item">
+                        <li class="mb-2"><a href="index.php?action=displayArticles" class="text-muted">Articles</a></li>
+                        </li>
+                        <li class="nav-item">
+                        <li class="mb-2"><a href="index.php?action=login" class="text-muted">Connexion</a></li>
+                        </li>
+                        <li class="nav-item">
+                        <li class="mb-2"><a href="index.php?action=register" class="text-muted">S'enregistrer</a></li>
+                        </li>
+                    <?php else : ?>
+                        <li class="nav-item">
+                        <li class="mb-2"><a href="index.php?action=profile" class="text-muted">Profile</a></li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-link-logout">Logout</a>
+                        <li class="mb-2"><a href="index.php?action=logout" class="text-muted">Logout</a></li>
+                        </li>
+                        <li class="nav-item">
+                        <li class="mb-2"><a href="index.php?action=myArticles" class="text-muted">Mes articles</a></li>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-lg-0">
+                <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+                <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque
+                    temporibus.</p>
+                <div class="p-1 rounded border">
+                    <div class="input-group">
+                        <input type="email" placeholder="Entrez votre addresse mail" aria-describedby="button-addon1"
+                               class="form-control border-0 shadow-0">
+                        <div class="input-group-append">
+                            <button id="button-addon1" type="submit" class="btn btn-link"><i
+                                        class="fa fa-paper-plane"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
-</div>
--->
+
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+        <div class="container text-center">
+            <p class="text-muted mb-0 py-2">Storex 2022 © Tous les droits réservés</p>
+        </div>
+    </div>
+</footer>
+<!-- End -->
 
 <script src="Assets/js/jquery.min.js"></script>
 <script src="Assets/js/parallax.min.js"></script>
 <script src="Assets/js/bootstrap.min.js"></script>
+
+<script src="Assets/js/plugins.js"></script>
+
+<script>
+    $(window).on("load", function () {
+        $('body').addClass('loaded');
+    });
+</script>
+
 </body>
 </html>

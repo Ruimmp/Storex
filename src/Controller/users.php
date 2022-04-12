@@ -6,7 +6,7 @@
  * @version   12.04.2022
  */
 
-function UserRegister()
+function UserRegister1()
 {
     try {
         if (
@@ -45,8 +45,13 @@ function UserRegister()
             }
         }
     } catch
-    (error) {
+    (error $ex) {
         $RegisterErrorMessage = "Nous sommes en maintenance, réessayez dans quelques minutes!";
         require "view/FormRegister.php";
     }
+}
+
+function UserRegister()
+{
+    require "view/FormRegister.php";
 }

@@ -253,10 +253,6 @@ a.tm-text-primary:hover {
     color: #666666;
 }
 
-.tm-bg-gray {
-    background-color: #EEEEEE;
-}
-
 .tm-input-paging {
     width: 40px;
     border-radius: 0;
@@ -347,7 +343,7 @@ a.tm-text-primary:hover {
 }
 
 p, .tm-text-gray {
-    color: #999;
+    color: #fff;
 }
 
 .tm-text-gray-light {
@@ -536,13 +532,13 @@ figure.effect-ming:hover img {
     width: 44px;
     height: 44px;
     display: flex;
-    background-color: #fff;
+    background-color: #222831;
     align-items: center;
     justify-content: center;
 }
 
 .tm-social-links li a:hover {
-    color: #fff;
+    color: #D4AB65;
     background-color: #009999;
 }
 
