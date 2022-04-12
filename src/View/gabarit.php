@@ -13,13 +13,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil Storex</title>
+    <title><?=$title;?></title>
+    <link rel="icon" type="image/x-icon" href="Assets/img/logonobg.png">
+
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="Assets/css/templatemo-style.css">
     <link rel="stylesheet" href="Assets/css/styles/footer.css">
 
-    <link rel="icon" type="image/x-icon" href="Assets/img/logonobg.png">
+    <!-- Register CSS -->
+    <link rel="stylesheet" href="Assets/styles/FormRegister.css">
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="Assets/styles/FormLogin.css">
+
 
     <!--
     TemplateMo 556 Catalog-Z
@@ -176,7 +182,6 @@
 <script src="Assets/js/jquery.min.js"></script>
 <script src="Assets/js/parallax.min.js"></script>
 <script src="Assets/js/bootstrap.min.js"></script>
-
 <script src="Assets/js/plugins.js"></script>
 
 <script>
