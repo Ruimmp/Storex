@@ -6,13 +6,6 @@
 *
 */
 
-body {
-    background: #ff5f6d;
-    background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
-    background: linear-gradient(to right, #ff5f6d, #ffc371);
-    min-height: 100vh;
-}
-
 #button-addon1 {
     color: #ffc371;
 }

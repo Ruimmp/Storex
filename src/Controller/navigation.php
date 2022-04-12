@@ -11,7 +11,7 @@
  */
 function home()
 {
-    require "./view/gabarit.php";
+    require "./view/PageHome.php";
 }
 function UserProfile()
 {

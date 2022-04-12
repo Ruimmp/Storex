@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?=$title;?></title>
+    <title><?= $title; ?></title>
     <link rel="icon" type="image/x-icon" href="Assets/img/logonobg.png">
 
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
@@ -56,7 +56,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                <?php if (!isset($_SESSION['userEmailAddress']) ||
+                <?php if (!isset($_SESSION['UserEmail']) ||
                     (!isset($_GET['action'])) ||
                     ((@$_GET['action'] == "logout"))) : ?>
                     <li class="nav-item">
@@ -94,21 +94,52 @@
 <footer class="bg-white">
     <div class="container py-5">
         <div class="row py-4">
-            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
-                <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                    eiusmod tempor incididunt.</p>
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="Assets/img/logonobg.png" alt="" width="230" class="mb-3">
+
+<!--
+                <p class="font-italic text-muted">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                </p>
+
                 <ul class="list-inline mt-4">
-                    <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i
-                                    class="fa fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i
-                                    class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i
-                                    class="fa fa-instagram"></i></a></li>
-                    <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i
-                                    class="fa fa-pinterest"></i></a></li>
-                    <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i
-                                    class="fa fa-vimeo"></i></a></li>
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank" title="twitter">
+                            <i class="fa fa-twitter">
+                            </i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank" title="facebook">
+                            <i class="fa fa-facebook">
+                            </i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank" title="instagram">
+                            <i class="fa fa-instagram">
+                            </i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank" title="pinterest">
+                            <i class="fa fa-pinterest">
+                            </i>
+                        </a>
+                    </li>
+
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank" title="vimeo">
+                            <i class="fa fa-vimeo">
+                            </i>
+                        </a>
+                    </li>
+
                 </ul>
+                -->
+
             </div>
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                 <h6 class="text-uppercase font-weight-bold mb-4">Categories</h6>
@@ -123,7 +154,7 @@
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                 <h6 class="text-uppercase font-weight-bold mb-4">Pages</h6>
                 <ul class="list-unstyled mb-0">
-                    <?php if (!isset($_SESSION['userEmailAddress']) ||
+                    <?php if (!isset($_SESSION['UserEmail']) ||
                         (!isset($_GET['action'])) ||
                         ((@$_GET['action'] == "logout"))) : ?>
                         <li class="nav-item">
@@ -154,15 +185,25 @@
             </div>
             <div class="col-lg-4 col-md-6 mb-lg-0">
                 <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
-                <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque
-                    temporibus.</p>
+                <p class="text-muted mb-4">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.
+                </p>
                 <div class="p-1 rounded border">
+
                     <div class="input-group">
-                        <input type="email" placeholder="Entrez votre addresse mail" aria-describedby="button-addon1"
-                               class="form-control border-0 shadow-0">
+
+                        <input
+                                type="email"
+                                placeholder="Entrez votre mail"
+                                aria-describedby="button-addon1"
+                                class="form-control border-0 shadow-0">
                         <div class="input-group-append">
-                            <button id="button-addon1" type="submit" class="btn btn-link"><i
-                                        class="fa fa-paper-plane"></i></button>
+
+                            <button
+                                    id="button-addon1"
+                                    type="submit"
+                                    class="btn btn-link">
+                                <i class="fa fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
@@ -171,7 +212,7 @@
     </div>
 
     <!-- Copyrights -->
-    <div class="bg-light py-4">
+    <div class="bg-white py-4">
         <div class="container text-center">
             <p class="text-muted mb-0 py-2">Storex 2022 © Tous les droits réservés</p>
         </div>

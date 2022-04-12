@@ -14,7 +14,7 @@ function UserRegister1()
             isset($registerRequest['UserLastName']) &&
             isset($registerRequest['UserEmail']) &&
             isset($registerRequest['UserPhoneNumber']) &&
-            isset($registerRequest['UserPsw']) &&
+            isset($registerRequest['UserPassword']) &&
             isset($registerRequest['UserPswRepeat'])
         ) {
             //extract register parameters
