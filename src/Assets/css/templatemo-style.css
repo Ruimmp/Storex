@@ -182,9 +182,14 @@ a:hover { color:#009999; }
 .tm-btn-big { padding: 12px 90px 14px; }
 
 .navbar-toggler:focus { box-shadow: none; }
-.navbar-brand {
+.navbar-brand{
     color: #D4AB65;
-    font-size: 1.6rem;
+    font-size: 2.1rem;
+}
+
+.navbar-brand:hover{
+    color: #D4AB65;
+    font-weight: bold;
 }
 
 .navbar-brand i { font-size: 2rem; }

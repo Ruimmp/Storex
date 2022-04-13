@@ -26,6 +26,9 @@
     <!-- Login CSS -->
     <link rel="stylesheet" href="Assets/styles/FormLogin.css">
 
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="Assets/material-icon/css/material-design-iconic-font.min.css">
+
 
     <!--
     TemplateMo 556 Catalog-Z
