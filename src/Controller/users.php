@@ -55,3 +55,8 @@ function UserRegister()
 {
     require "view/FormRegister.php";
 }
+
+function UserLogin()
+{
+    require "view/FormLogin.php";
+}

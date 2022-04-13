@@ -60,7 +60,7 @@
                     (!isset($_GET['action'])) ||
                     ((@$_GET['action'] == "logout"))) : ?>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-home active" aria-current="page" href="index.php?action=home">Accueil</a>
+                        <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-articles" href="index.php?action=displayArticles">Articles</a>
@@ -94,52 +94,8 @@
 <footer class="bg-white">
     <div class="container py-5">
         <div class="row py-4">
-            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="Assets/img/logonobg.png" alt="" width="230" class="mb-3">
-
-<!--
-                <p class="font-italic text-muted">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
-                </p>
-
-                <ul class="list-inline mt-4">
-                    <li class="list-inline-item">
-                        <a href="#" target="_blank" title="twitter">
-                            <i class="fa fa-twitter">
-                            </i>
-                        </a>
-                    </li>
-
-                    <li class="list-inline-item">
-                        <a href="#" target="_blank" title="facebook">
-                            <i class="fa fa-facebook">
-                            </i>
-                        </a>
-                    </li>
-
-                    <li class="list-inline-item">
-                        <a href="#" target="_blank" title="instagram">
-                            <i class="fa fa-instagram">
-                            </i>
-                        </a>
-                    </li>
-
-                    <li class="list-inline-item">
-                        <a href="#" target="_blank" title="pinterest">
-                            <i class="fa fa-pinterest">
-                            </i>
-                        </a>
-                    </li>
-
-                    <li class="list-inline-item">
-                        <a href="#" target="_blank" title="vimeo">
-                            <i class="fa fa-vimeo">
-                            </i>
-                        </a>
-                    </li>
-
-                </ul>
-                -->
-
+            <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                <img src="Assets/img/logonobg.png" alt="" width="230" class="mb-3">
             </div>
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                 <h6 class="text-uppercase font-weight-bold mb-4">Categories</h6>
@@ -186,7 +142,7 @@
             <div class="col-lg-4 col-md-6 mb-lg-0">
                 <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
                 <p class="text-muted mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.
+                    Inscrivez-vous à notre newsletter pour être informé aux soldes de nos produits!
                 </p>
                 <div class="p-1 rounded border">
 

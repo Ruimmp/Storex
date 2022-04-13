@@ -9,7 +9,6 @@
 $title = "Register Storex";
 ob_start();
 ?>
-
     <section class="signup">
         <div class="container">
             <div class="signup-content">
@@ -18,22 +17,22 @@ ob_start();
                     <form method="POST" class="register-form" id="register-form">
 
                         <div class="form-group">
-                            <label for="FirstName"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <label for="LastName"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input
                                     type="text"
                                     name="LastName"
                                     id="UserLastName"
-                                    placeholder="Entrez votre nom"
+                                    placeholder="Entrez votre prénom"
                                     required/>
                         </div>
 
                         <div class="form-group">
-                            <label for="LastName"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <label for="FirstName"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input
                                     type="text"
                                     name="FirstName"
                                     id="UserFirstName"
-                                    placeholder="Entrez votre prénom"
+                                    placeholder="Entrez votre nom"
                                     required/>
                         </div>
 
@@ -43,7 +42,7 @@ ob_start();
                                     type="email"
                                     name="email"
                                     id="UserEmail"
-                                    placeholder="Entrez une addresse mail"
+                                    placeholder="Entrez votre addresse mail"
                                     required/>
                         </div>
 
@@ -96,64 +95,6 @@ ob_start();
             </div>
         </div>
     </section>
-
-
-    <!--
-        <div class="container-fluid tm-mt-60">
-            <div class="row tm-mb-50">
-                <div class="col-lg-4 col-12 mb-5">
-                    <h2 class="tm-text-primary mb-5">Création du compte</h2>
-                    <form id="contact-form" action="" method="POST" class="tm-contact-form mx-auto">
-
-                        <div class="form-group">
-                            <input
-                                    type="text"
-                                    id="UserFirstName"
-                                    name="FirstName"
-                                    class="form-control rounded-0"
-                                    placeholder="Nom d'utilisateur"
-                                    required/>
-                        </div>
-
-                        <div class="form-group">
-                            <input
-                                    type="text"
-                                    id="UserLastName"
-                                    name="LastName"
-                                    class="form-control rounded-0"
-                                    placeholder="Nom de famille"
-                                    required/>
-                        </div>
-
-                        <div class="form-group">
-                            <input
-                                    type="email"
-                                    name="email"
-                                    class="form-control rounded-0"
-                                    placeholder="Email"
-                                    required/>
-                        </div>
-
-                        <div class="form-group">
-                            <input
-                                    type="tel"
-                                    id="UserPhoneNumber"
-                                    name="PhoneNumber"
-                                    class="form-control rounded-0"
-                                    data-pattern="+** ** *** ** **"
-                                    data-prefix="+41 "
-                                    placeholder="Número de téléphone"
-                                    required/>
-                        </div>
-
-                        <div class="form-group tm-text-right">
-                            <button type="submit" class="btn btn-primary">S'enregistrer</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-    -->
-
 <?php
 $content = ob_get_clean();
 require 'gabarit.php';
