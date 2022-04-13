@@ -10,14 +10,42 @@ $title = "Accueil Storex";
 ob_start();
 ?>
 
-    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="Assets/img/hero.jpg">
-        <form class="d-flex tm-search-form">
-            <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success tm-search-btn" type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
+    <div class="container">
+        <h2 class="my-5 text-center text-white">Carousel #9</h2>
+        <div class="owl-carousel owl-1">
+
+            <blockquote class="testimony-29101">
+                <img src="../Assets/img/img-02.jpg">
+            </blockquote>
+
+            <blockquote class="testimony-29101">
+                <img src="../Assets/img/img-03.jpg">
+            </blockquote>
+
+            <blockquote class="testimony-29101">
+                <img src="../Assets/img/img-04.jpg">
+            </blockquote>
+
+            <blockquote class="testimony-29101">
+                <img src="../Assets/img/img-05.jpg">
+            </blockquote>
+
+        </div>
     </div>
+    </div>
+
+
+    <!--
+        <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll"
+             data-image-src="Assets/img/hero.jpg">
+            <form class="d-flex tm-search-form">
+                <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success tm-search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    -->
 
     <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row mb-4">
@@ -27,9 +55,6 @@ ob_start();
         <div class="row mb-4">
             <h2 class="col-6 tm-text-primary">Utilisateurs</h2>
         </div>
-
-
-
 
 
         <div class="row tm-mb-90 tm-gallery">
