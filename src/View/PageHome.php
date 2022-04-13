@@ -9,32 +9,6 @@
 $title = "Accueil Storex";
 ob_start();
 ?>
-
-    <div class="container">
-        <h2 class="my-5 text-center text-white">Carousel #9</h2>
-        <div class="owl-carousel owl-1">
-
-            <blockquote class="testimony-29101">
-                <img src="../Assets/img/img-02.jpg">
-            </blockquote>
-
-            <blockquote class="testimony-29101">
-                <img src="../Assets/img/img-03.jpg">
-            </blockquote>
-
-            <blockquote class="testimony-29101">
-                <img src="../Assets/img/img-04.jpg">
-            </blockquote>
-
-            <blockquote class="testimony-29101">
-                <img src="../Assets/img/img-05.jpg">
-            </blockquote>
-
-        </div>
-    </div>
-    </div>
-
-
     <!--
         <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll"
              data-image-src="Assets/img/hero.jpg">
@@ -51,11 +25,6 @@ ob_start();
         <div class="row mb-4">
             <h2 class="col-6 tm-text-primary">Catégories</h2>
         </div>
-
-        <div class="row mb-4">
-            <h2 class="col-6 tm-text-primary">Utilisateurs</h2>
-        </div>
-
 
         <div class="row tm-mb-90 tm-gallery">
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
@@ -111,6 +80,10 @@ ob_start();
                 </div>
             </div>
 
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary">Utilisateurs</h2>
+        </div>
+
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src="Assets/img/img-01.jpg" alt="Image" class="img-fluid">
@@ -163,6 +136,11 @@ ob_start();
                     <span>11,300 views</span>
                 </div>
             </div>
+
+            <div class="row mb-2">
+                <h2 class="col-6 tm-text-primary">CEO</h2>
+            </div>
+
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src="Assets/img/img-09.jpg" alt="Image" class="img-fluid">
@@ -176,6 +154,9 @@ ob_start();
                     <span>42,700 views</span>
                 </div>
             </div>
+
+
+            <hr>
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
                 <figure class="effect-ming tm-video-item">
                     <img src="Assets/img/img-10.jpg" alt="Image" class="img-fluid">

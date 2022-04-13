@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="Assets/css/styles/footer.css">
 
     <!-- Register CSS -->
-    <link rel="stylesheet" href="Assets/styles/FormRegister.css">
-    <!-- Login CSS -->
-    <link rel="stylesheet" href="Assets/styles/FormLogin.css">
+    <link rel="stylesheet" href="Assets/styles/FormsRegister_Login.css">
+    <!-- Home CSS -->
+    <link rel="stylesheet" href="Assets/styles/PageHome.css">
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="Assets/material-icon/css/material-design-iconic-font.min.css">
@@ -95,8 +95,7 @@
 
 <!-- Footer -->
 <footer class="bg-white">
-    <div class="container py-5">
-        <div class="row py-4">
+        <div class="row">
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                 <img src="Assets/img/logonobg.png" alt="" width="230" class="mb-3">
             </div>
@@ -168,12 +167,11 @@
                 </div>
             </div>
         </div>
-    </div>
 
     <!-- Copyrights -->
-    <div class="bg-white py-4">
-        <div class="container text-center">
-            <p class="text-muted mb-0 py-2">Storex 2022 © Tous les droits réservés</p>
+    <div class="bg-white py-2">
+        <div class="text-center">
+            <p class="text-muted mb-0">Storex 2022 © Tous les droits réservés</p>
         </div>
     </div>
 </footer>

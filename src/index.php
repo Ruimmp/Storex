@@ -4,12 +4,11 @@
  * @brief     This file is the rooter managing the link with controllers.
  * @author    Created by Monteiro.Rui
  * @version   12.04.2022
- *****************************
  */
 
 session_start();
-require "controller/users.php";
-require "controller/navigation.php";
+require "controller/UsersController.php";
+require "controller/NavigationController.php";
 
 /* Déclaration de constantes */
 const TYPE_CEO = 1;
@@ -33,9 +32,6 @@ if (isset($_GET['action'])) {
             break;
         case 'profile' :
             UserProfile();
-            break;
-        case 'displayArticles':
-            DisplayArticle();
             break;
         case 'myArticles' :
             DisplayMyArticles();
