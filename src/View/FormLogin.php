@@ -51,6 +51,9 @@ ob_start();
                         </div>
                     </form>
                 </div>
+                <div class="signup-image">
+                    <figure><img src="../Assets/img/Login.png" alt="Logo du site"></figure>
+                </div>
             </div>
         </div>
     </section>

@@ -9,6 +9,7 @@
 $title = "Register Storex";
 ob_start();
 ?>
+    <!-- Sign up form -->
     <section class="signup">
         <div class="container">
             <div class="signup-content">
@@ -17,7 +18,7 @@ ob_start();
                     <form method="POST" class="register-form" id="register-form">
 
                         <div class="form-group">
-                            <label for="LastName"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                             <input
                                     type="text"
                                     name="LastName"
@@ -47,12 +48,12 @@ ob_start();
                         </div>
 
                         <div class="form-group">
-                            <label for="PhoneNumber"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <label for="PhoneNumber"><i class="zmdi zmdi-phone material-icons-name"></i></label>
                             <input
                                     type="tel"
                                     name="PhoneNumber"
                                     id="UserPhoneNumber"
-                                    data-pattern="+** ** *** ** **"
+                                    data-pattern="+41 ** *** ** **"
                                     data-prefix="+41 "
                                     placeholder="Entrez votre numéro de téléphone"
                                     required/>
@@ -69,11 +70,11 @@ ob_start();
                         </div>
 
                         <div class="form-group">
-                            <label for="re-pass"><i class="zmdi zmdi-lock-outline"></i></label>
+                            <label for="re-PasswordRepeat"><i class="zmdi zmdi-lock-outline"></i></label>
                             <input
                                     type="password"
-                                    name="re_pass"
-                                    id="re_pass"
+                                    name="PasswordRepeat"
+                                    id="UserPasswordRepeat"
                                     placeholder="Répétez votre mot de passe"
                                     required/>
                         </div>
@@ -91,6 +92,9 @@ ob_start();
                             <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
                         </div>
                     </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img class="imgregister" src="../Assets/img/Register.png" alt="Logo du site"></figure>
                 </div>
             </div>
         </div>
