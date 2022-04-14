@@ -27,6 +27,7 @@ i {
 }
 
 .form-control1 {
+    margin-right: 10px;
     position: relative;
     flex: 1 1 auto;
     width: 1%;
