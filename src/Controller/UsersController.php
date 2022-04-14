@@ -1,6 +1,6 @@
 <?php
 /**
- * @file      users.php
+ * @file      UsersController.php
  * @brief     This controller is designed to manage all users actions
  * @author    Created by Monteiro.Rui
  * @version   12.04.2022
@@ -51,12 +51,32 @@ function UserRegister1()
     }
 }
 
+/**
+ * @brief Cette function sert a enregistrer un utilisateur
+ * @remark Toutes les données inscrites dans le formulaire, seront stockées dans la base de données
+ * @param $UserRegisterRequest
+ */
 function UserRegister()
 {
     require "view/FormRegister.php";
 }
 
+/**
+ * @brief Cette function sert a connecter un utilisateur
+ * @remark Elle vérifie les informations dans la base de données
+ * @param $UserLoginRequest
+ */
 function UserLogin()
 {
     require "view/FormLogin.php";
+}
+
+/**
+ * @brief Cette fonction sert a déconnecter l'utilisateur
+ */
+function UserLogout()
+{
+    $_SESSION = array();
+    session_destroy();
+    require "view/PageHome.php";
 }

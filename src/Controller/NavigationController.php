@@ -1,6 +1,6 @@
 <?php
 /**
- * @file      navigation.php
+ * @file      NavigationController.php
  * @brief     This controller is designed to manage all navigation aspect (view controller view)
  * @author    Created by Monteiro.Rui
  * @version   12.04.2022
