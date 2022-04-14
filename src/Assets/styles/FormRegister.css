@@ -230,8 +230,13 @@ h2 {
     clear: both;
 }
 
-body {
+.signup {
+    margin-bottom: 150px;
     font-size: 13px;
+
+}
+
+body {
     line-height: 1.8;
     color: #222;
     font-weight: 400;
@@ -290,10 +295,6 @@ body {
     -ms-transform: translate(-50%, -50%);
 }
 
-.signup {
-    margin-bottom: 150px;
-}
-
 .signup-content {
     padding: 0px 0px 40px 0px;
 }
@@ -322,7 +323,7 @@ figure {
 
 .form-submit {
     display: inline-block;
-    background: #009999;
+    background: #D4AB65;
     color: #fff;
     border-bottom: none;
     width: auto;
@@ -337,7 +338,7 @@ figure {
 }
 
 .form-submit:hover {
-    background: #D4AB65;
+    background: #be9614;
 }
 
 #signin {
@@ -358,6 +359,11 @@ figure {
 .term-service {
     font-size: 15px;
     color: #D4AB65;
+}
+
+.term-service:hover {
+    font-weight: bold;
+    color: #be9614;
 }
 
 .signup-form {

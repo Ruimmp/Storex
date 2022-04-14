@@ -94,8 +94,7 @@
 <?= $content; ?>
 
 <!-- Footer -->
-<footer class="bg-white">
-    <div class="container py-5">
+    <div class="ft_1">
         <div class="row py-4">
             <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
                 <img src="Assets/img/logonobg.png" alt="" width="230" class="mb-3">
@@ -133,7 +132,6 @@
                         <li class="mb-2"><a href="index.php?action=profile" class="text-muted">Profile</a></li>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-logout">Logout</a>
                         <li class="mb-2"><a href="index.php?action=logout" class="text-muted">Logout</a></li>
                         </li>
                         <li class="nav-item">
@@ -171,12 +169,11 @@
     </div>
 
     <!-- Copyrights -->
-    <div class="bg-white py-4">
-        <div class="container text-center">
+    <div class="bg-white py-2">
+        <div class="ft_1 text-center">
             <p class="text-muted mb-0 py-2">Storex 2022 © Tous les droits réservés</p>
         </div>
     </div>
-</footer>
 <!-- End -->
 
 <script src="Assets/js/jquery.min.js"></script>
