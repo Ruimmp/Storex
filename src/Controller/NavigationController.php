@@ -15,7 +15,7 @@ function home()
 }
 function UserProfile()
 {
-    require "./view/UserProfile.php";
+    require "./view/PageUserProfile.php";
 }
 
 function displayArticle()

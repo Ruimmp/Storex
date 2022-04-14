@@ -22,9 +22,9 @@
     <link rel="stylesheet" href="Assets/css/styles/footer.css">
 
     <!-- Register CSS -->
-    <link rel="stylesheet" href="Assets/styles/FormRegister.css">
+    <link rel="stylesheet" href="Assets/styles/FormsRegister_Login.css">
     <!-- Login CSS -->
-    <link rel="stylesheet" href="Assets/styles/FormLogin.css">
+    <link rel="stylesheet" href="Assets/styles/PageHome.css">
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="Assets/material-icon/css/material-design-iconic-font.min.css">

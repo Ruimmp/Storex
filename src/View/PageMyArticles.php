@@ -1,12 +1,12 @@
 <?php
 /**
- * @file        FormArticleAdd.php
- * @brief       This view is designed to display the add article form
+ * @file        PageMyArticles.php
+ * @brief       This view is designed to display the user articles
  * @author      Created by Monteiro.Rui
  * @version     14.04.2022
  */
 
-$title = "Article Storex";
+$title = "My Articles Storex";
 ob_start();
 ?>
 
