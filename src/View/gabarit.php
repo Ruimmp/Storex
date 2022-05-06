@@ -177,8 +177,6 @@
 <!-- End -->
 
 <script src="Assets/js/jquery.min.js"></script>
-<script src="Assets/js/parallax.min.js"></script>
-<script src="Assets/js/bootstrap.min.js"></script>
 <script src="Assets/js/plugins.js"></script>
 
 <script>
