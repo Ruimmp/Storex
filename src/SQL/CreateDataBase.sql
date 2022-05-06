@@ -120,4 +120,4 @@ VALUES ('CEO'),
 DROP USER if exists 'StorexAutoAdmin'@'localhost';
 
 CREATE USER 'StorexAutoAdmin'@'localhost' IDENTIFIED BY 'storex';
-GRANT SELECT, INSERT, UPDATE ON snows.* TO 'StorexAutoAdmin'@'localhost';
+GRANT SELECT, INSERT, UPDATE ON storex.* TO 'StorexAutoAdmin'@'localhost';
