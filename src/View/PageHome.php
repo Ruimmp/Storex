@@ -14,7 +14,7 @@ ob_start();
          data-image-src="Assets/img/hero.jpg">
         <form class="d-flex tm-search-form">
             <input class="tm-search-input" type="search" placeholder="Cherchez ici" aria-label="Search">
-            <button class="btn btn-outline-success tm-search-btn" type="submit">
+            <button class="btn tm-search-btn" type="submit">
                 <i class="fas fa-search"></i>
             </button>
         </form>
