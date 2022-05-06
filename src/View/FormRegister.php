@@ -85,7 +85,7 @@ ob_start();
                                     <span>
                                     </span>
                                 </span>
-                                Vous avez déjà un compte <a href="index.php?action=login" class="term-service">Connectez-vous!</a>
+                                Vous avez déjà un compte? <a href="index.php?action=login" class="term-service">Connectez-vous!</a>
                             </label>
                         </div>
                         <div class="form-group form-button">

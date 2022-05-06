@@ -42,7 +42,7 @@ ob_start();
                                     <span>
                                     </span>
                                 </span>
-                                Vous n'avez pas de compte <a href="index.php?action=register" class="term-service">Créez un!</a>
+                                Vous n'avez pas de compte? <a href="index.php?action=register" class="term-service">Créez un!</a>
                             </label>
                         </div>
 
