@@ -18,7 +18,7 @@ function UserProfile()
     require "./view/PageUserProfile.php";
 }
 
-function displayArticle()
+function UserLogin()
 {
-    require "./view/annonce.php";
+    require "./view/FormLogin.php";
 }
