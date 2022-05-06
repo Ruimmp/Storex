@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="Assets/styles/FormsRegister_Login.css">
     <!-- Login CSS -->
     <link rel="stylesheet" href="Assets/styles/PageHome.css">
+    <!-- Erro CSS -->
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="Assets/material-icon/css/material-design-iconic-font.min.css">
@@ -66,9 +67,6 @@
                         <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-articles" href="index.php?action=displayArticles">Articles</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link nav-link-login" href="index.php?action=login">Connexion</a>
                     </li>
                     <li class="nav-item">
@@ -102,8 +100,8 @@
             <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
                 <h6 class="text-uppercase font-weight-bold mb-4">Categories</h6>
                 <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><a href="index.php?action=ManCategory" class="text-muted">Homes</a></li>
                     <li class="mb-2"><a href="index.php?action=WomenCategory" class="text-muted">Femme</a></li>
+                    <li class="mb-2"><a href="index.php?action=ManCategory" class="text-muted">Homes</a></li>
                     <li class="mb-2"><a href="index.php?action=KidsCategory" class="text-muted">Enfants</a></li>
                     <li class="mb-2"><a href="index.php?action=AccessoriesCategory" class="text-muted">Accessoires</a>
                     </li>
@@ -117,10 +115,6 @@
                         ((@$_GET['action'] == "logout"))) : ?>
                         <li class="nav-item">
                         <li class="mb-2"><a href="index.php?action=home" class="text-muted">Accueil</a></li>
-                        </li>
-                        <li class="nav-item">
-                        <li class="mb-2"><a href="index.php?action=displayArticles" class="text-muted">Articles</a></li>
-                        </li>
                         <li class="nav-item">
                         <li class="mb-2"><a href="index.php?action=login" class="text-muted">Connexion</a></li>
                         </li>
