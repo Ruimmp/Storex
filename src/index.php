@@ -10,11 +10,6 @@ session_start();
 require "controller/UsersController.php";
 require "controller/NavigationController.php";
 
-/* Déclaration de constantes */
-const TYPE_CEO = 1;
-const TYPE_CTO = 2;
-const TYPE_CLIENT = 3;
-
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {
