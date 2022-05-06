@@ -6,73 +6,63 @@
  * @version   12.04.2022
  */
 
-function UserRegister1()
+/**
+ * Cette function sert à enregistrer un nouvel utilisateur dans la base de données
+ */
+function UserRegister($registerRequest)
 {
-    try {
-        if (
-            isset($registerRequest['UserFirstName']) &&
-            isset($registerRequest['UserLastName']) &&
-            isset($registerRequest['UserEmail']) &&
-            isset($registerRequest['UserPhoneNumber']) &&
-            isset($registerRequest['UserPassword']) &&
-            isset($registerRequest['UserPswRepeat'])
-        ) {
-            //extract register parameters
-            $UserEmail = $registerRequest['UserEmail'];
-            //E-mail user set to lowercase
-            $UserEmail = strtolower($UserEmail);
+    if (
+        isset($registerRequest['UserFirstName']) &&
+        isset($registerRequest['UserLastName']) &&
+        isset($registerRequest['UserEmail']) &&
+        isset($registerRequest['UserPhoneNumber']) &&
+        isset($registerRequest['UserPassword']) &&
+        isset($registerRequest['UserPswRepeat'])
+    ) {
+        //extract register parameters
+        $UserEmail = $registerRequest['UserEmail'];
+        //E-mail user set to lowercase
+        $UserEmail = strtolower($UserEmail);
 
-            $UserFirstName = $registerRequest['UserFirstName'];
-            $UserLastName = $registerRequest['UserLastName'];
-            $UserPhoneNumber = $registerRequest['UserPhoneNumber'];
-            $UserPassword = $registerRequest['UserPassword'];
-            $UserPasswordRepeat = $registerRequest['UserPasswordRepeat'];
+        $UserFirstName = $registerRequest['UserFirstName'];
+        $UserLastName = $registerRequest['UserLastName'];
+        $UserPhoneNumber = $registerRequest['UserPhoneNumber'];
+        $UserPassword = $registerRequest['UserPassword'];
+        $UserPasswordRepeat = $registerRequest['UserPasswordRepeat'];
 
-            if ($UserPassword == $UserPasswordRepeat) {
-                require_once "model/usersManager.php";
-                $registerResult = registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword);
-                if ($registerResult) {
-                    createSession($UserEmail);
-                    $registerErrorMessage = null;
-                    home();
-                } else if (!$registerResult) {
-                    $registerErrorMessage = "Ce nom d'utilisateur est déjà utilisé!";
-                    require "view/FormRegister.php";
-                }
-            } else {
-                $registerErrorMessage = "Les mots de passe ne correspond pas!";
-                require "view/FormRegister.php";
+        if ($UserPassword == $UserPasswordRepeat) {
+            require_once "model/UsersManager.php";
+            if (registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword)) {
+                createSession($UserEmail);
+                $_GET['registerError'] = false;
+                $_GET['action'] = "home";
+                require "view/PageHome.php";
             }
+        } else {
+            $_GET['registerError'] = true;
+            $_GET['action'] = "register";
+            require "view/FormRegister.php";
         }
-    } catch
-    (error $ex) {
-        $RegisterErrorMessage = "Nous sommes en maintenance, réessayez dans quelques minutes!";
+    } else {
+        $_GET['action'] = "register";
         require "view/FormRegister.php";
     }
 }
 
 /**
- * @brief Cette function sert a enregistrer un utilisateur
- * @remark Toutes les données inscrites dans le formulaire, seront stockées dans la base de données
- * @param $UserRegisterRequest
+ * This function is designed to create a new user session
+ * @param $UserEmail : user unique id
  */
-function UserRegister()
+function createSession($UserEmail)
 {
-    require "view/FormRegister.php";
+    $_SESSION['UserEmail'] = $UserEmail;
+    //set user type in Session
+    $userType = getUserType($UserEmail);
+    $_SESSION['userType'] = $userType;
 }
 
 /**
- * @brief Cette function sert a connecter un utilisateur
- * @remark Elle vérifie les informations dans la base de données
- * @param $UserLoginRequest
- */
-function UserLogin()
-{
-    require "view/FormLogin.php";
-}
-
-/**
- * @brief Cette fonction sert a déconnecter l'utilisateur
+ * @brief Cette fonction sert à déconnecter l'utilisateur
  */
 function UserLogout()
 {

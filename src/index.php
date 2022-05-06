@@ -17,7 +17,7 @@ if (isset($_GET['action'])) {
             home();
             break;
         case 'register' :
-            UserRegister();
+            UserRegister($_POST);
             break;
         case 'login':
             UserLogin();
