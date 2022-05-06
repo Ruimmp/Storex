@@ -29,17 +29,17 @@ ob_start();
         <div class="row tm-gallery">
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                 <figure class="effect-ming tm-video-item">
-                    <img src="Assets/img/img-03.jpg" alt="Image" class="img-fluid">
+                    <img src="Assets/img/woman.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Femmes</h2>
-                        <a href="photo-detail.html">View more</a>
+                        <a href="./View/PageWomenArticles.php">View more</a>
                     </figcaption>
                 </figure>
             </div>
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                 <figure class="effect-ming tm-video-item">
-                    <img src="Assets/img/img-03.jpg" alt="Image" class="img-fluid">
+                    <img src="Assets/img/man.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Hommes</h2>
                         <a href="photo-detail.html">View more</a>
@@ -49,7 +49,7 @@ ob_start();
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                 <figure class="effect-ming tm-video-item">
-                    <img src="Assets/img/img-03.jpg" alt="Image" class="img-fluid">
+                    <img src="Assets/img/kids.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Enfants</h2>
                         <a href="photo-detail.html">View more</a>
@@ -59,7 +59,7 @@ ob_start();
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                 <figure class="effect-ming tm-video-item">
-                    <img src="Assets/img/img-03.jpg" alt="Image" class="img-fluid">
+                    <img src="Assets/img/access.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Accessoires</h2>
                         <a href="photo-detail.html">View more</a>
@@ -81,7 +81,7 @@ ob_start();
                     <img src="Assets/img/img-03.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Femmes</h2>
-                        <a href="photo-detail.html">View more</a>
+                        <a href="index.php?action=WomenCategory">View more</a>
                     </figcaption>
                 </figure>
             </div>
@@ -91,7 +91,7 @@ ob_start();
                     <img src="Assets/img/img-03.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Hommes</h2>
-                        <a href="photo-detail.html">View more</a>
+                        <a href="index.php?action=ManCategory">View more</a>
                     </figcaption>
                 </figure>
             </div>
@@ -101,7 +101,7 @@ ob_start();
                     <img src="Assets/img/img-03.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Enfants</h2>
-                        <a href="photo-detail.html">View more</a>
+                        <a href="index.php?action=KidsCategory">View more</a>
                     </figcaption>
                 </figure>
             </div>
@@ -111,7 +111,7 @@ ob_start();
                     <img src="Assets/img/img-03.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Accessoires</h2>
-                        <a href="photo-detail.html">View more</a>
+                        <a href="index.php?action=AccessoriesCategory">View more</a>
                     </figcaption>
                 </figure>
             </div>
