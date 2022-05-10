@@ -5,3 +5,4 @@ src/.idea
 # Templates
 Documentation/Templates
 Documentation/Template
+src/Model/dbConnector.php
