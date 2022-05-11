@@ -68,7 +68,7 @@
 #### Configuration du fichier pour la connexion
 - Pour ce connecter à la data base en local, il vous faut modifier le fichier de connexion, celui-[ci](https://github.com/Ruimmp/Storex/blob/main/src/Model/dbConnector.php) dans le projet que vous avez téléchargé
 
-- Dans la fonction `openDBConnexion`, modifiez ces parties du code par raport a ce que vou avez chez vous:
+- Dans la fonction `openDBConnexion.php`, modifiez ces parties du code par raport a ce que vou avez chez vous:
 ```
     $dbName = 'storex';
     $userName = 'NOM DE L'UTILISATEUR AVEC TOUTES LES PERMISSIONS DANS LA BASE DE DONNÉS';
