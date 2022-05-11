@@ -1,6 +1,6 @@
 # Storex
 ## Introduction
-- Storex est un site web d'annonces dans lequel ou peut créer un compte, se connecter, voir des articles publiés par d'autre utilisateurs, mettre des articles en vente, modifier le profil et quelques autres parametres.
+- Storex est un site web d'annonces dans lequel ou peut créer un compte, se connecter, voir des articles publiés par d'utilisateurs, mettre des articles en vente, modifier le profil et quelques autres paramètres.
 - Les annonces ont des images génériques pour chaque activité et le site sera enregistré dans une base de données MYSQL.
 - Le projet est refait depuis le zéro avec un template de page d'accueil.
 
