@@ -10,19 +10,19 @@
 - Avec le compte, ou pourra créer des annonces pour vendre un article.
 
 ## Planification de projet
-- [ ] Sprint 1
-  - [ ] Modifier le template de page d'acueil
-  - [ ] Création d'un footer
-  - [ ] Création de la page d'inscription
-  - [ ] Création de la page de connexion
+- [X] Sprint 1
+  - [X] Modifier le template de page d'acueil
+  - [X] Création d'un footer
+  - [X] Création de la page d'inscription
+  - [X] Création de la page de connexion
 - [ ] Sprint 2
-  - [ ] Création de la base de données (MCD, MLD, Script)
-  - [ ] Organisation du projet sur IceScrum
+  - [X] Création de la base de données (MCD, MLD, Script)
+  - [X] Organisation du projet sur IceScrum
   - [ ] Wireframe et Zoning
 - [ ] Sprint 3
-  - [ ] Création des pages:
-    - [ ] Enregistrement
-    - [ ] Connexion
+  - [X] Création des pages:
+    - [X] Enregistrement
+    - [X] Connexion
   - [ ] Création des fonctions pour l'inscription
   - [ ] Création des fonctions pour la connexion
 - [ ] Sprint 4
