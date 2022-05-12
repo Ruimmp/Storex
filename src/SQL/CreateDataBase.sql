@@ -41,9 +41,9 @@ CREATE TABLE IF NOT EXISTS `storex`.`users`
     `ID`          INT         NOT NULL AUTO_INCREMENT,
     `FirstName`   VARCHAR(50) NOT NULL,
     `LastName`    VARCHAR(50) NOT NULL,
-    `PhoneNumber` VARCHAR(20) NULL,
-    `Email`       VARCHAR(50) NOT NULL,
-    `Password`    VARCHAR(500) NOT NULL,
+    `PhoneNumber` VARCHAR(30) NULL,
+    `Email`       VARCHAR(100) NOT NULL,
+    `Password`    VARCHAR(1000) NOT NULL,
     `usertype_ID` INT         NOT NULL,
     PRIMARY KEY (`ID`),
     UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `storex`.`users`
 CREATE TABLE IF NOT EXISTS `storex`.`categories`
 (
     `ID`   INT         NOT NULL AUTO_INCREMENT,
-    `Name` VARCHAR(50) NOT NULL,
+    `Name` VARCHAR(100) NOT NULL,
     PRIMARY KEY (`ID`),
     UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE
 )
@@ -78,10 +78,10 @@ CREATE TABLE IF NOT EXISTS `storex`.`categories`
 CREATE TABLE IF NOT EXISTS `storex`.`articles`
 (
     `ID`          INT          NOT NULL AUTO_INCREMENT,
-    `Name`        VARCHAR(50)  NOT NULL,
-    `Price`       DECIMAL(10)   NOT NULL,
-    `Description` VARCHAR(2000) NULL,
-    `Image`       VARCHAR(200)  NOT NULL,
+    `Name`        VARCHAR(100)  NOT NULL,
+    `Price`       DECIMAL(50)   NOT NULL,
+    `Description` VARCHAR(10000) NULL,
+    `Image`       VARCHAR(500)  NOT NULL,
     `category_ID` INT          NOT NULL,
     `user_ID`     INT          NOT NULL,
     PRIMARY KEY (`ID`),
@@ -120,4 +120,4 @@ VALUES ('CEO'),
 DROP USER if exists 'StorexAutoAdmin'@'localhost';
 
 CREATE USER 'StorexAutoAdmin'@'localhost' IDENTIFIED BY 'storex';
-GRANT SELECT, INSERT, UPDATE ON storex.* TO 'StorexAutoAdmin'@'localhost';
+GRANT ALL PRIVILEGES ON storex.* TO 'StorexAutoAdmin'@'localhost';
