@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `storex`.`users`
     `ID`          INT         NOT NULL AUTO_INCREMENT,
     `FirstName`   VARCHAR(50) NOT NULL,
     `LastName`    VARCHAR(50) NOT NULL,
-    `PhoneNumber` VARCHAR(30) NULL,
+    `PhoneNumber` VARCHAR(100) NULL,
     `Email`       VARCHAR(100) NOT NULL,
     `Password`    VARCHAR(1000) NOT NULL,
     `usertype_ID` INT         NOT NULL,
