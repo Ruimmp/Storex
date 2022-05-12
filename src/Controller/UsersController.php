@@ -75,51 +75,6 @@ function createSession($UserEmail)
     $_SESSION['usertype_ID'] = $userType;
 }
 
-/*
-function addUser($addUserRequest)
-{
-    //variable set
-    if (
-        isset($registerRequest['UserFirstName']) &&
-        isset($registerRequest['UserLastName']) &&
-        isset($registerRequest['UserEmail']) &&
-        isset($registerRequest['UserPhoneNumber']) &&
-        isset($registerRequest['UserPassword']) &&
-        isset($registerRequest['UserPswRepeat'])
-    ) {
-
-        //extract register parameters
-        $UserFirstName = $registerRequest['UserFirstName'];
-        $UserLastName = $registerRequest['UserLastName'];
-        $UserEmail = $addUserRequest['UserEmail'];
-        //E-mail user set to lowercase
-        $UserEmail = strtolower($UserEmail);
-        $UserPhoneNumber = $registerRequest['UserPhoneNumber'];
-        $UserPassword = $addUserRequest['UserPassword'];
-        $UserPasswordRepeat = $addUserRequest['UserPasswordRepeat'];
-        $userType = $addUserRequest['usertype_ID'];
-
-        if ($UserPassword == $UserPasswordRepeat) {
-            require_once "model/usersManager.php";
-
-
-            if (addNewUser($UserFirstName, $UserLastName, $UserEmail, $UserPassword, $userType)) {
-                $_GET['registerError'] = false;
-                $usersResults = getUsers();
-                require "view/adminUsers.php";
-            }
-        } else {
-            $_GET['registerError'] = true;
-            $_GET['action'] = "register";
-            require "view/addUser.php";
-        }
-    } else {
-        $_GET['action'] = "register";
-        require "view/addUser.php";
-    }
-}
-*/
-
 /**
  * @brief Cette fonction sert à déconnecter l'utilisateur
  */

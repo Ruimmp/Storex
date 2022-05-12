@@ -61,7 +61,6 @@ function openDBConnexion()
     $port = 3306;
     $charset = 'utf8';
     $dbName = 'storex';
-    //$userName = 'root';
     $userName = 'Storex';
     //$userName = 'StorexAutoAdmin';
     $userPwd = 'Storex2022Password';
