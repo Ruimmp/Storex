@@ -117,7 +117,8 @@ VALUES ('CEO'),
        ('CTO'),
        ('Vendor');
 
-DROP USER if exists 'StorexAutoAdmin'@'localhost';
 
-CREATE USER 'StorexAutoAdmin'@'localhost' IDENTIFIED BY 'storex';
-GRANT ALL PRIVILEGES ON storex.* TO 'StorexAutoAdmin'@'localhost';
+/* Création de l'utilisateur
+CREATE USER IF NOT EXISTS 'StorexAutoAdmin'@'%' IDENTIFIED BY 'storex';
+GRANT ALL PRIVILEGES ON *.* TO 'StorexAutoAdmin'@'%';
+*/
