@@ -10,20 +10,38 @@
  */
 
 /**
- * This function is designed to insert value in database
- * @param $query
- * @return bool|null : $statement->execute() returne true is the insert was successful
+ * This function is designed to execute a query received as parameter
+ * @param $query : must be correctly build for sql (synthaxis) but the protection against sql injection will be done there
+ * @return array|null : get the query result (can be null)
+ * Source : http://php.net/manual/en/pdo.prepare.php
  */
-function executeQuery($query)
+function executeQuerySelect($query)
 {
     $queryResult = null;
 
     $dbConnexion = openDBConnexion();//open database connexion
     if ($dbConnexion != null) {
-        echo 'Connection à la DB réussie';
+        $statement = $dbConnexion->prepare($query);//prepare query
+        $statement->execute();//execute query
+        $queryResult = $statement->fetchAll();//prepare result for client
+    }
+    $dbConnexion = null;//close database connexion
+    return $queryResult;
+}
+
+/**
+ * This function is designed to insert value in database
+ * @param $query
+ * @return bool|null : $statement->execute() returne true is the insert was successful
+ */
+function executeQueryInsert($query)
+{
+    $queryResult = null;
+
+    $dbConnexion = openDBConnexion();//open database connexion
+    if ($dbConnexion != null) {
         $statement = $dbConnexion->prepare($query);//prepare query
         $queryResult = $statement->execute();//execute query
-        //$dbConnexion->close();//close connection
     }
     $dbConnexion = null;//close database connexion
     return $queryResult;
@@ -43,6 +61,7 @@ function openDBConnexion()
     $port = 3306;
     $charset = 'utf8';
     $dbName = 'storex';
+    //$userName = 'root';
     $userName = 'Storex';
     //$userName = 'StorexAutoAdmin';
     $userPwd = 'Storex2022Password';
@@ -50,7 +69,6 @@ function openDBConnexion()
 
     try {
         $tempDbConnexion = new PDO($dsn, $userName, $userPwd);
-        echo 'Connection done';
     } catch (PDOException $exception) {
         echo 'Connection failed: ' . $exception->getMessage();
     }

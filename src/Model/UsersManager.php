@@ -18,7 +18,6 @@
 function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword)
 {
     $usertype = 3;
-
     $result = false;
 
     $strSeparator = '\'';
@@ -28,10 +27,9 @@ function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhon
     $registerQuery = 'INSERT INTO storex.users (`FirstName`, `LastName`, `PhoneNumber`, `Email`, `Password`, `usertype_ID`) VALUES (' . $strSeparator . $UserFirstName . $strSeparator . ', ' . $strSeparator . $UserLastName . $strSeparator . ', ' . $strSeparator . $UserEmail . $strSeparator . ', ' . $strSeparator . $UserPhoneNumber . $strSeparator . ', ' . $strSeparator . $UserPassword . $strSeparator . ', ' . $strSeparator . $usertype . $strSeparator . ')';
 
     require_once 'model/dbConnector.php';
-    $queryResult = executeQuery($registerQuery);
+    $queryResult = executeQueryInsert($registerQuery);
     if ($queryResult) {
         $result = $queryResult;
-        echo 'Saved';
     }
     return $result;
 }
@@ -51,7 +49,7 @@ function getUserType($UserEmail)
     $getUserTypeQuery = 'SELECT usertype_ID FROM storex.users WHERE users.Email =' . $strSeparator . $UserEmail . $strSeparator;
 
     require_once 'model/dbConnector.php';
-    $queryResult = executeQuery($getUserTypeQuery);
+    $queryResult = executeQuerySelect($getUserTypeQuery);
 
     if (count($queryResult) == 1) {
         $result = $queryResult[0]['usertype_ID'];

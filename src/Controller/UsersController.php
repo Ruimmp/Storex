@@ -36,7 +36,7 @@ function UserRegister($registerRequest)
             if (registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword)) {
                 createSession($UserEmail);
                 $_GET['registerError'] = false;
-                $_GET['registerComplete'] = true;
+                $_GET['registerComplete'] = false;
                 $_GET['registerNotFinished'] = false;
                 $_GET['action'] = "home";
                 require "view/PageHome.php";
@@ -50,12 +50,12 @@ function UserRegister($registerRequest)
         } else {
             $_GET['registerNotFinished'] = false;
             $_GET['registerComplete'] = false;
-            $_GET['registerError'] = true;
+            $_GET['registerError'] = false;
             $_GET['action'] = "register";
             require "view/FormRegister.php";
         }
     } else {
-        $_GET['registerNotFinished'] = true;
+        $_GET['registerNotFinished'] = false;
         $_GET['registerComplete'] = false;
         $_GET['registerError'] = false;
         $_GET['action'] = "register";
@@ -67,7 +67,8 @@ function UserRegister($registerRequest)
  * This function is designed to create a new user session
  * @param $UserEmail : user unique id
  */
-function createSession($UserEmail){
+function createSession($UserEmail)
+{
     $_SESSION['UserEmail'] = $UserEmail;
     //set user type in Session
     $userType = getUserType($UserEmail);
