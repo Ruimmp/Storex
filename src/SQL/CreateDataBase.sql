@@ -26,7 +26,7 @@ USE `storex`;
 CREATE TABLE IF NOT EXISTS `storex`.`userstypes`
 (
     `ID`   INT         NOT NULL AUTO_INCREMENT,
-    `Name` VARCHAR(45) NULL,
+    `Name` VARCHAR(50) NULL,
     PRIMARY KEY (`ID`),
     UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE
 )
@@ -39,11 +39,11 @@ CREATE TABLE IF NOT EXISTS `storex`.`userstypes`
 CREATE TABLE IF NOT EXISTS `storex`.`users`
 (
     `ID`          INT         NOT NULL AUTO_INCREMENT,
-    `FirstName`   VARCHAR(45) NOT NULL,
-    `LastName`    VARCHAR(45) NOT NULL,
-    `PhoneNumber` VARCHAR(12) NULL,
-    `Email`       VARCHAR(45) NOT NULL,
-    `Password`    VARCHAR(50) NOT NULL,
+    `FirstName`   VARCHAR(50) NOT NULL,
+    `LastName`    VARCHAR(50) NOT NULL,
+    `PhoneNumber` VARCHAR(20) NULL,
+    `Email`       VARCHAR(50) NOT NULL,
+    `Password`    VARCHAR(500) NOT NULL,
     `usertype_ID` INT         NOT NULL,
     PRIMARY KEY (`ID`),
     UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `storex`.`users`
 CREATE TABLE IF NOT EXISTS `storex`.`categories`
 (
     `ID`   INT         NOT NULL AUTO_INCREMENT,
-    `Name` VARCHAR(20) NOT NULL,
+    `Name` VARCHAR(50) NOT NULL,
     PRIMARY KEY (`ID`),
     UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE
 )
@@ -78,10 +78,10 @@ CREATE TABLE IF NOT EXISTS `storex`.`categories`
 CREATE TABLE IF NOT EXISTS `storex`.`articles`
 (
     `ID`          INT          NOT NULL AUTO_INCREMENT,
-    `Name`        VARCHAR(45)  NOT NULL,
-    `Price`       DECIMAL(4)   NOT NULL,
-    `Description` VARCHAR(500) NULL,
-    `Image`       VARCHAR(45)  NOT NULL,
+    `Name`        VARCHAR(50)  NOT NULL,
+    `Price`       DECIMAL(10)   NOT NULL,
+    `Description` VARCHAR(2000) NULL,
+    `Image`       VARCHAR(200)  NOT NULL,
     `category_ID` INT          NOT NULL,
     `user_ID`     INT          NOT NULL,
     PRIMARY KEY (`ID`),
