@@ -74,6 +74,9 @@
                     </li>
                 <?php else : ?>
                     <li class="nav-item">
+                        <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link nav-link-default" href="index.php?action=profile">Profile</a>
                     </li>
                     <li class="nav-item">
@@ -117,20 +120,17 @@
                         <li class="mb-2"><a href="index.php?action=home" class="text-muted">Accueil</a></li>
                         <li class="nav-item">
                         <li class="mb-2"><a href="index.php?action=login" class="text-muted">Connexion</a></li>
-                        </li>
                         <li class="nav-item">
                         <li class="mb-2"><a href="index.php?action=register" class="text-muted">S'enregistrer</a></li>
-                        </li>
                     <?php else : ?>
                         <li class="nav-item">
+                        <li class="mb-2"><a href="index.php?action=home" class="text-muted">Accueil</a></li>
+                        <li class="nav-item">
                         <li class="mb-2"><a href="index.php?action=profile" class="text-muted">Profile</a></li>
-                        </li>
                         <li class="nav-item">
                         <li class="mb-2"><a href="index.php?action=logout" class="text-muted">Logout</a></li>
-                        </li>
                         <li class="nav-item">
                         <li class="mb-2"><a href="index.php?action=myArticles" class="text-muted">Mes articles</a></li>
-                        </li>
                     <?php endif; ?>
                 </ul>
             </div>
