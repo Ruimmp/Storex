@@ -75,6 +75,36 @@ function createSession($UserEmail)
     $_SESSION['usertype_ID'] = $userType;
 }
 
+//region users management
+/**
+ * This function is designed to manage login request
+ * @param $loginRequest containing login fields required to authenticate the user
+ */
+function login($loginRequest){
+    //if a login request was submitted
+    if (isset($loginRequest['UserEmail']) && isset($loginRequest['UserPassword'])) {
+        //extract login parameters
+        $UserEmail = $loginRequest['UserEmail'];
+        $UserPassword = $loginRequest['UserPassword'];
+
+        //try to check if user/psw are matching with the database
+        require_once "model/UsersManager.php";
+        if (isLoginCorrect($UserEmail, $UserPassword)) {
+            createSession($UserEmail);
+            $_GET['loginError'] = false;
+            $_GET['action'] = "home";
+            require "view/PageHome.php";
+        } else { //if the user/psw does not match, login form appears again
+            $_GET['loginError'] = true;
+            $_GET['action'] = "login";
+            require "view/FormLogin.php";
+        }
+    }else{ //the user does not yet fill the form
+        $_GET['action'] = "login";
+        require "view/FormLogin.php";
+    }
+}
+
 /**
  * @brief Cette fonction sert à déconnecter l'utilisateur
  */

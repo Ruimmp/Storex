@@ -35,6 +35,30 @@ function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhon
 }
 
 /**
+ * This function is designed to verify user's login
+ * @param $UserEmail
+ * @param $UserPassword
+ * @return bool : "true" only if the user and psw match the database. In all other cases will be "false".
+ */
+function isLoginCorrect($UserEmail, $UserPassword){
+    $result = false;
+
+    $strSeparator = '\'';
+    $loginQuery = 'SELECT Password FROM storex.users WHERE Email = '. $strSeparator . $UserEmail . $strSeparator;
+
+    require_once 'model/dbConnector.php';
+    $queryResult = executeQuerySelect($loginQuery);
+
+    if (count($queryResult) == 1)
+    {
+        $userHashPsw = $queryResult[0]['userHashPsw'];
+        $UserPassword = password_hash($UserPassword, PASSWORD_DEFAULT);
+        $result = password_verify($UserPassword, $userHashPsw);
+    }
+    return $result;
+}
+
+/**
  * This function is designed to get the type of user
  * For the webapp, it will adapt the behavior of the GUI
  * @param $UserEmail
