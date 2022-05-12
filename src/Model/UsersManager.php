@@ -44,7 +44,7 @@ function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhon
  */
 function getUserType($UserEmail)
 {
-    $result = 0;//we fix the result to 0 -> customer
+    $result = 3;//we fix the result to 0 -> customer
 
     $strSeparator = '\'';
 
