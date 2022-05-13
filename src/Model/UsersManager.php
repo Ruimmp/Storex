@@ -24,7 +24,7 @@ function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhon
 
     $UserPassword = password_hash($UserPassword, PASSWORD_DEFAULT);
 
-    $registerQuery = 'INSERT INTO storex.users (`FirstName`, `LastName`, `PhoneNumber`, `Email`, `Password`, `usertype_ID`) VALUES (' . $strSeparator . $UserFirstName . $strSeparator . ', ' . $strSeparator . $UserLastName . $strSeparator . ', ' . $strSeparator . $UserEmail . $strSeparator . ', ' . $strSeparator . $UserPhoneNumber . $strSeparator . ', ' . $strSeparator . $UserPassword . $strSeparator . ', ' . $strSeparator . $usertype . $strSeparator . ')';
+    $registerQuery = 'INSERT INTO storex.users (`FirstName`, `LastName`, `Email`, `PhoneNumber`, `Password`, `usertype_ID`) VALUES (' . $strSeparator . $UserFirstName . $strSeparator . ', ' . $strSeparator . $UserLastName . $strSeparator . ', ' . $strSeparator . $UserEmail . $strSeparator . ', ' . $strSeparator . $UserPhoneNumber . $strSeparator . ', ' . $strSeparator . $UserPassword . $strSeparator . ', ' . $strSeparator . $usertype . $strSeparator . ')';
 
     require_once 'model/dbConnector.php';
     $queryResult = executeQueryInsert($registerQuery);
