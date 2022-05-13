@@ -24,7 +24,8 @@ function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhon
 
     $UserPassword = password_hash($UserPassword, PASSWORD_DEFAULT);
 
-    $registerQuery = 'INSERT INTO storex.users (`FirstName`, `LastName`, `PhoneNumber`, `Email`, `Password`, `usertype_ID`) VALUES (' . $strSeparator . $UserFirstName . $strSeparator . ', ' . $strSeparator . $UserLastName . $strSeparator . ', ' . $strSeparator . $UserEmail . $strSeparator . ', ' . $strSeparator . $UserPhoneNumber . $strSeparator . ', ' . $strSeparator . $UserPassword . $strSeparator . ', ' . $strSeparator . $usertype . $strSeparator . ')';
+    $registerQuery = '
+INSERT INTO storex.users (`FirstName`, `LastName`, `Email`, `PhoneNumber`,`Password`, `usertype_ID`) VALUES (' . $strSeparator . $UserFirstName . $strSeparator . ', ' . $strSeparator . $UserLastName . $strSeparator . ', ' . $strSeparator . $UserEmail . $strSeparator . ', ' . $strSeparator . $UserPhoneNumber . $strSeparator . ', ' . $strSeparator . $UserPassword . $strSeparator . ', ' . $strSeparator . $usertype . $strSeparator . ')';
 
     require_once 'model/dbConnector.php';
     $queryResult = executeQueryInsert($registerQuery);
@@ -40,18 +41,24 @@ function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhon
  * @param $UserPassword
  * @return bool : "true" only if the user and psw match the database. In all other cases will be "false".
  */
-function isLoginCorrect($UserEmail, $UserPassword){
+function isLoginCorrect($UserEmail, $UserPassword)
+{
     $result = false;
 
     $strSeparator = '\'';
-    $loginQuery = 'SELECT Password FROM storex.users WHERE Email = '. $strSeparator . $UserEmail . $strSeparator;
+    $loginQuery = 'SELECT Password FROM storex.users WHERE Email = ' . $strSeparator . $UserEmail . $strSeparator;
 
     require_once 'model/dbConnector.php';
     $queryResult = executeQuerySelect($loginQuery);
 
+<<<<<<< Updated upstream
     if (count($queryResult) == 1)
     {
         $userHashPsw = $queryResult[0]['Password'];
+=======
+    if (count($queryResult) == 1) {
+        $userHashPsw = $queryResult[0]['userHashPsw'];
+>>>>>>> Stashed changes
         $UserPassword = password_hash($UserPassword, PASSWORD_DEFAULT);
         $result = password_verify($UserPassword, $userHashPsw);
     }
