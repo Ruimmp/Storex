@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `storex`.`users`
     `ID`          INT         NOT NULL AUTO_INCREMENT,
     `FirstName`   VARCHAR(50) NOT NULL,
     `LastName`    VARCHAR(50) NOT NULL,
-    `PhoneNumber` VARCHAR(30) NULL,
+    `PhoneNumber` VARCHAR(100) NULL,
     `Email`       VARCHAR(100) NOT NULL,
     `Password`    VARCHAR(1000) NOT NULL,
     `usertype_ID` INT         NOT NULL,
@@ -117,7 +117,8 @@ VALUES ('CEO'),
        ('CTO'),
        ('Vendor');
 
-DROP USER if exists 'StorexAutoAdmin'@'localhost';
 
-CREATE USER 'StorexAutoAdmin'@'localhost' IDENTIFIED BY 'storex';
-GRANT ALL PRIVILEGES ON storex.* TO 'StorexAutoAdmin'@'localhost';
+/* Création de l'utilisateur
+CREATE USER IF NOT EXISTS 'StorexAutoAdmin'@'%' IDENTIFIED BY 'storex';
+GRANT ALL PRIVILEGES ON *.* TO 'StorexAutoAdmin'@'%';
+*/
