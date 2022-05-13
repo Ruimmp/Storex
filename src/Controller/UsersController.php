@@ -80,7 +80,7 @@ function createSession($UserEmail)
  * This function is designed to manage login request
  * @param $loginRequest containing login fields required to authenticate the user
  */
-function login($loginRequest){
+function UserLogin($loginRequest){
     //if a login request was submitted
     if (isset($loginRequest['UserEmail']) && isset($loginRequest['UserPassword'])) {
         //extract login parameters
@@ -91,15 +91,18 @@ function login($loginRequest){
         require_once "model/UsersManager.php";
         if (isLoginCorrect($UserEmail, $UserPassword)) {
             createSession($UserEmail);
+            echo 'loginerror false';
             $_GET['loginError'] = false;
             $_GET['action'] = "home";
             require "view/PageHome.php";
         } else { //if the user/psw does not match, login form appears again
+            echo 'loginerror true';
             $_GET['loginError'] = true;
             $_GET['action'] = "login";
             require "view/FormLogin.php";
         }
     }else{ //the user does not yet fill the form
+        echo 'loginerror autre';
         $_GET['action'] = "login";
         require "view/FormLogin.php";
     }

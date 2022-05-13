@@ -51,7 +51,7 @@ function isLoginCorrect($UserEmail, $UserPassword){
 
     if (count($queryResult) == 1)
     {
-        $userHashPsw = $queryResult[0]['userHashPsw'];
+        $userHashPsw = $queryResult[0]['Password'];
         $UserPassword = password_hash($UserPassword, PASSWORD_DEFAULT);
         $result = password_verify($UserPassword, $userHashPsw);
     }

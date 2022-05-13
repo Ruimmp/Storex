@@ -20,7 +20,7 @@ if (isset($_GET['action'])) {
             UserRegister($_POST);
             break;
         case 'login':
-            UserLogin();
+            UserLogin($_POST);
             break;
         case 'logout' :
             UserLogout();

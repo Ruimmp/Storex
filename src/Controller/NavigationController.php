@@ -18,7 +18,3 @@ function UserProfile()
     require "./view/PageUserProfile.php";
 }
 
-function UserLogin()
-{
-    require "./view/FormLogin.php";
-}
