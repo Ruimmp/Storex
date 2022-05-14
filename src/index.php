@@ -17,7 +17,7 @@ if (isset($_GET['action'])) {
             home();
             break;
 
-        /* Utilisateurs*/
+        /* Utilisateurs */
         case 'register' :
             UserRegister($_POST);
             break;
@@ -30,9 +30,24 @@ if (isset($_GET['action'])) {
         case 'profile' :
             UserProfile();
             break;
+        case 'editUser' :
+            UserEditProfil();
+            break;
+        case 'editUserAdmin' :
+            UserAdminEditProfil();
+            break;
+
+        /* Articles */
+
+        /* navigations*/
+        case 'lost' :
+            Lost();
+            break;
+
+        /* Others */
         default :
             home();
     }
 } else {
-    Lost();
+    home();
 }
