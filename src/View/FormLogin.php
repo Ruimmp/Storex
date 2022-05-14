@@ -40,21 +40,13 @@ ob_start();
                             <label for="agree-term" class="label-agree-term">
                                 <span>
                                     <span>
+                                        <?php if (@$_GET['loginError'] == true) : ?>
+                                            <span style="color:red">E-mail ou mot de passe incorrect!</span>
+                                        <?php endif ?>
                                     </span>
                                 </span>
                                 Vous n'avez pas de compte? <a href="index.php?action=register" class="term-service">Créez un!</a>
                             </label>
-                            <label for="agree-term" class="label-agree-term">
-                                <span>
-                                    <span>
-                                    </span>
-                                </span>
-                                <?php if (@$_GET['loginError'] == true) : ?>
-                                    <span style="color:red">Inscription refusée</span>
-                                <?php endif ?>
-                            </label>
-                        </div>
-
                         <div class="form-group form-button">
                             <input type="submit" name="signup" id="signup" class="form-submit" value="Login"/>
                         </div>

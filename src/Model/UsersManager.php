@@ -24,8 +24,7 @@ function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhon
 
     $UserPassword = password_hash($UserPassword, PASSWORD_DEFAULT);
 
-    $registerQuery = '
-INSERT INTO storex.users (`FirstName`, `LastName`, `Email`, `PhoneNumber`,`Password`, `usertype_ID`) VALUES (' . $strSeparator . $UserFirstName . $strSeparator . ', ' . $strSeparator . $UserLastName . $strSeparator . ', ' . $strSeparator . $UserEmail . $strSeparator . ', ' . $strSeparator . $UserPhoneNumber . $strSeparator . ', ' . $strSeparator . $UserPassword . $strSeparator . ', ' . $strSeparator . $usertype . $strSeparator . ')';
+    $registerQuery = 'INSERT INTO storex.users (`FirstName`, `LastName`, `Email`, `PhoneNumber`,`Password`, `usertype_ID`) VALUES (' . $strSeparator . $UserFirstName . $strSeparator . ', ' . $strSeparator . $UserLastName . $strSeparator . ', ' . $strSeparator . $UserEmail . $strSeparator . ', ' . $strSeparator . $UserPhoneNumber . $strSeparator . ', ' . $strSeparator . $UserPassword . $strSeparator . ', ' . $strSeparator . $usertype . $strSeparator . ')';
 
     require_once 'model/dbConnector.php';
     $queryResult = executeQueryInsert($registerQuery);
@@ -41,25 +40,19 @@ INSERT INTO storex.users (`FirstName`, `LastName`, `Email`, `PhoneNumber`,`Passw
  * @param $UserPassword
  * @return bool : "true" only if the user and psw match the database. In all other cases will be "false".
  */
-function isLoginCorrect($UserEmail, $UserPassword)
-{
+function isLoginCorrect($UserEmail, $UserPassword){
     $result = false;
 
     $strSeparator = '\'';
-    $loginQuery = 'SELECT Password FROM storex.users WHERE Email = ' . $strSeparator . $UserEmail . $strSeparator;
+    $loginQuery = 'SELECT Password FROM storex.users WHERE Email = '. $strSeparator . $UserEmail . $strSeparator;
 
     require_once 'model/dbConnector.php';
     $queryResult = executeQuerySelect($loginQuery);
 
-<<<<<<< Updated upstream
     if (count($queryResult) == 1)
     {
         $userHashPsw = $queryResult[0]['Password'];
-=======
-    if (count($queryResult) == 1) {
-        $userHashPsw = $queryResult[0]['userHashPsw'];
->>>>>>> Stashed changes
-        $UserPassword = password_hash($UserPassword, PASSWORD_DEFAULT);
+        $hashPasswordDebug = password_hash($UserPassword, PASSWORD_DEFAULT);
         $result = password_verify($UserPassword, $userHashPsw);
     }
     return $result;
@@ -69,20 +62,19 @@ function isLoginCorrect($UserEmail, $UserPassword)
  * This function is designed to get the type of user
  * For the webapp, it will adapt the behavior of the GUI
  * @param $UserEmail
- * @return int (1 = CEO ; 2 = CTO ; 3 = Vendor)
+ * @return int (1 = customer ; 2 = seller)
  */
-function getUserType($UserEmail)
-{
-    $result = 3;//we fix the result to 0 -> customer
+function getUserType($UserEmail){
+    $result = 1;//we fix the result to 1 -> customer
 
     $strSeparator = '\'';
 
-    $getUserTypeQuery = 'SELECT usertype_ID FROM storex.users WHERE users.Email =' . $strSeparator . $UserEmail . $strSeparator;
+    $getUserTypeQuery = 'SELECT userType FROM users WHERE users.userEmailAddress =' . $strSeparator . $UserEmail . $strSeparator;
 
     require_once 'model/dbConnector.php';
     $queryResult = executeQuerySelect($getUserTypeQuery);
 
-    if (count($queryResult) == 1) {
+    if (count($queryResult) == 1){
         $result = $queryResult[0]['usertype_ID'];
     }
     return $result;
