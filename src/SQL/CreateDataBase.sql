@@ -26,7 +26,7 @@ USE `storex`;
 CREATE TABLE IF NOT EXISTS `storex`.`userstypes`
 (
     `ID`   INT         NOT NULL AUTO_INCREMENT,
-    `Name` VARCHAR(50) NULL,
+    `Name` VARCHAR(15) NULL,
     PRIMARY KEY (`ID`),
     UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE
 )
@@ -39,11 +39,11 @@ CREATE TABLE IF NOT EXISTS `storex`.`userstypes`
 CREATE TABLE IF NOT EXISTS `storex`.`users`
 (
     `ID`          INT         NOT NULL AUTO_INCREMENT,
-    `FirstName`   VARCHAR(50) NOT NULL,
-    `LastName`    VARCHAR(50) NOT NULL,
-    `Email`       VARCHAR(100) NOT NULL,
-    `PhoneNumber` VARCHAR(100) NULL,
-    `Password`    VARCHAR(1000) NOT NULL,
+    `FirstName`   VARCHAR(30) NOT NULL,
+    `LastName`    VARCHAR(30) NOT NULL,
+    `Email`       VARCHAR(50) NOT NULL,
+    `PhoneNumber` VARCHAR(15) NULL,
+    `Password`    VARCHAR(256) NOT NULL,
     `usertype_ID` INT         NOT NULL,
     PRIMARY KEY (`ID`),
     UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE,
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `storex`.`users`
 CREATE TABLE IF NOT EXISTS `storex`.`categories`
 (
     `ID`   INT         NOT NULL AUTO_INCREMENT,
-    `Name` VARCHAR(100) NOT NULL,
+    `Name` VARCHAR(20) NOT NULL,
     PRIMARY KEY (`ID`),
     UNIQUE INDEX `ID_UNIQUE` (`ID` ASC) VISIBLE
 )
@@ -78,10 +78,10 @@ CREATE TABLE IF NOT EXISTS `storex`.`categories`
 CREATE TABLE IF NOT EXISTS `storex`.`articles`
 (
     `ID`          INT          NOT NULL AUTO_INCREMENT,
-    `Name`        VARCHAR(100)  NOT NULL,
-    `Price`       DECIMAL(50)   NOT NULL,
-    `Description` VARCHAR(10000) NULL,
-    `Image`       VARCHAR(500)  NOT NULL,
+    `Name`        VARCHAR(20)  NOT NULL,
+    `Price`       DECIMAL(7)   NOT NULL,
+    `Description` VARCHAR(2000) NULL,
+    `Image`       VARCHAR(100)  NOT NULL,
     `category_ID` INT          NOT NULL,
     `user_ID`     INT          NOT NULL,
     PRIMARY KEY (`ID`),
@@ -116,9 +116,6 @@ INSERT INTO storex.userstypes (Name)
 VALUES ('CEO'),
        ('CTO'),
        ('Vendor');
-
-INSERT INTO storex.users (`FirstName`, `LastName`, `Email`, `PhoneNumber`,`Password`, `usertype_ID`)
-VALUES ("Rui Miguel", "Monteiro Pereira", "Rui-Miguel.MONTEIRO-PEREIRA@cpnv.ch", "12345678", "$2y$10$OFaRWF4fiKZCAk11JjDP1ukR2MLLkuUSFPOk58SzRJrjHRNatG/6K", "1")
 
 /* Création de l'utilisateur
 CREATE USER IF NOT EXISTS 'StorexAutoAdmin'@'%' IDENTIFIED BY 'storex';
