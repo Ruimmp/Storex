@@ -77,10 +77,10 @@
                         <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-default" href="index.php?action=profile">Profile</a>
+                        <a class="nav-link nav-link-default" href="index.php?action=myArticles">Mes articles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-default" href="index.php?action=myArticles">Mes articles</a>
+                        <a class="nav-link nav-link-default" href="index.php?action=profile">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-logout" href="index.php?action=logout">Logout</a>
@@ -90,6 +90,7 @@
         </div>
     </div>
 </nav>
+
 <!-- Header END -->
 
 <?= $content; ?>
