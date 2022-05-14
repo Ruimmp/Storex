@@ -53,5 +53,5 @@ if (isset($_GET['action'])) {
             home();
     }
 } else {
-    home();
+    Lost();
 }

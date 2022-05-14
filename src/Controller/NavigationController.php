@@ -18,3 +18,7 @@ function UserProfile()
     require "./view/PageUserProfile.php";
 }
 
+function Lost()
+{
+    require "./view/PageLost.php";
+}
