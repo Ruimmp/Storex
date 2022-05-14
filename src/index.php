@@ -16,6 +16,8 @@ if (isset($_GET['action'])) {
         case 'home' :
             home();
             break;
+
+        /* Utilisateurs*/
         case 'register' :
             UserRegister($_POST);
             break;
@@ -27,27 +29,6 @@ if (isset($_GET['action'])) {
             break;
         case 'profile' :
             UserProfile();
-            break;
-        case 'myArticles' :
-            DisplayMyArticles();
-            break;
-        case 'displayArticleDetails':
-            DisplayArticleDetails($_GET['articleID']);
-            break;
-        case 'addArticle':
-            AddArticle($_POST, $_FILES);
-            break;
-        case 'editArticle':
-            EditArticle($_GET['articleID'], $_POST);
-            break;
-        case 'deleteArticle':
-            DeleteArticle($_GET['articleID']);
-            break;
-        case 'contact' :
-            ContactArticleUser();
-            break;
-        case 'sendEmail':
-            SendEmail($_POST);
             break;
         default :
             home();
