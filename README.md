@@ -19,12 +19,12 @@
   - [X] Création de la base de données (MCD, MLD, Script)
   - [X] Organisation du projet sur IceScrum
   - [ ] Wireframe et Zoning
-- [ ] Sprint 3
+- [X] Sprint 3
   - [X] Création des pages:
     - [X] Enregistrement
     - [X] Connexion
-  - [ ] Création des fonctions pour l'inscription
-  - [ ] Création des fonctions pour la connexion
+  - [X] Création des fonctions pour l'inscription
+  - [X] Création des fonctions pour la connexion
 - [ ] Sprint 4
   - [ ] Création des pages:
     - [ ] Annonces
