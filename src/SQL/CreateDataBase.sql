@@ -117,6 +117,8 @@ VALUES ('CEO'),
        ('CTO'),
        ('Vendor');
 
+INSERT INTO storex.users (`FirstName`, `LastName`, `Email`, `PhoneNumber`,`Password`, `usertype_ID`)
+VALUES ("Rui Miguel", "Monteiro Pereira", "Rui-Miguel.MONTEIRO-PEREIRA@cpnv.ch", "12345678", "$2y$10$OFaRWF4fiKZCAk11JjDP1ukR2MLLkuUSFPOk58SzRJrjHRNatG/6K", "1")
 
 /* Création de l'utilisateur
 CREATE USER IF NOT EXISTS 'StorexAutoAdmin'@'%' IDENTIFIED BY 'storex';
