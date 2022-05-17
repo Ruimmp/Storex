@@ -37,7 +37,12 @@ if (isset($_GET['action'])) {
             UserAdminEditProfil();
             break;
 
+
         /* Articles */
+        case 'displayArticles' :
+            displayArticles();
+            break;
+
 
         /* navigations*/
         case 'lost' :
