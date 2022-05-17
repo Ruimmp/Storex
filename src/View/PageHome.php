@@ -26,7 +26,7 @@ $rows=0; // Column count
 
             <div class="yox-view">
 
-                <?php foreach ($ArticlesResult as $result ) : ?>
+                <?php foreach ($articlesResults as $result ) : ?>
                     <?php $rows++; ?>
                     <?php if ($rows%4) : // tests to have 4 items / line ?>
                         <div class="row-fluid">
@@ -36,11 +36,11 @@ $rows=0; // Column count
 
                     <li class="span3">
                         <div class="thumbnail">
-                            <img src="<?= $result['inputImage']; ?>" alt="<?= $result['id']; ?>">
+                            <img src="<?= $result['Image']; ?>" alt="<?= $result['Name']; ?>">
                             <div class="caption">
-                                <h2><?= $result['inputName']; ?></h2>
-                                <h3><?= $result['inputPrice']; ?></h3>
-                                <p><?= $result['inputDescription']; ?></p>
+                                <h2><?= $result['Name']; ?></h2>
+                                <h3><?= $result['Price']; ?></h3>
+                                <p><?= $result['Description']; ?></p>
                             </div>
                         </div>
                     </li>
