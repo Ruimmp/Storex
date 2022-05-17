@@ -141,21 +141,19 @@
                 Inscrivez-vous à notre newsletter pour être informé aux soldes de nos produits!
             </p>
             <div class="p-1 rounded border">
-
                 <div class="input-group">
-
                     <input
                             type="email"
                             placeholder="Entrez votre mail"
                             aria-describedby="button-addon1"
                             class="form-control border-0 shadow-0">
                     <div class="input-group-append">
-
                         <button
                                 id="button-addon1"
                                 type="submit"
                                 class="btn btn-link">
-                            <i class="fa fa-paper-plane"></i></button>
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
                     </div>
                 </div>
             </div>
