@@ -39,6 +39,9 @@ if (isset($_GET['action'])) {
 
 
         /* Articles */
+        case 'addArticle' :
+            addArticle($_POST);
+            break;
         case 'createArticle' :
             createArticle();
             break;

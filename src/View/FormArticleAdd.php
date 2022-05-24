@@ -15,7 +15,7 @@ ob_start();
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Ajoutez un article</h2>
-                    <form method="POST" action="index.php?action=createArticle" class="register-form"
+                    <form class="register-form" method="POST" action="index.php?action=addArticle" >
                           id="register-form">
 
                         <div class="form-group">
