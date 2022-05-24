@@ -88,3 +88,9 @@ INSERT INTO storex.userstypes (Name)
 VALUES ('CEO'),
        ('CTO'),
        ('Vendor');
+
+INSERT INTO storex.users (FirstName, LastName, PhoneNumber, Email, Password, usertype_ID)
+VALUES ('Storex', 'Example', '1234567', 'storex@storex.com', '$2y$10$ZGh3AnOSyNHqNM5PpjcbleES4IHwbIYWcVZonaiKxZdHf8z6K6c36', '3');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Example', '1234', 'Description', 'Image', '1');
