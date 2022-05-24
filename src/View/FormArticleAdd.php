@@ -9,24 +9,69 @@
 $title = "Article Storex";
 ob_start();
 ?>
-    <form method="POST" action="upload.php" enctype="multipart/form-data">
 
-        <div class="form-group">
-            <label>Titre</label>
-            <input type="text" name="articleTitre" id="articleTitre" required/>
+    <section class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Ajoutez un article</h2>
+                    <form method="POST" action="index.php?action=createArticle" class="register-form"
+                          id="register-form">
+
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input
+                                    type="text"
+                                    name="articleName"
+                                    id="articleName"
+                                    placeholder="Entrez le nom de l'article*"
+                                    required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                            <input
+                                    type="text"
+                                    name="articlePrice"
+                                    id="articlePrice"
+                                    placeholder="Entrez le prix de l'article*"
+                                    required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                            <input
+                                    type="text"
+                                    name="articleDescription"
+                                    id="articleDescription"
+                                    placeholder="Entrez la descritpion de l'article"
+                            />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                            <input
+                                    type="file"
+                                    name="articleImage"
+                                    id="articleImage"
+                                    accept="image/*"
+                                    required/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="agree-term" class="label-agree-term">
+                                <span>
+                                </span>
+                            </label>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Ajouter"/>
+                            </div>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label>Prix</label>
-            <input type="text" name="articlePrix" id="articlePrix" required/>
-        </div>
-        <div class="form-group">
-            <label>Upload Image</label>
-            <input type="file" name="image" accept="image/*" required/>
-        </div>
-        <div class="form-group form-button">
-            <input type="submit" value="Upload" class="form-submit"/>
-        </div>
-    </form>
+    </section>
+
 <?php
 $content = ob_get_clean();
 require 'gabarit.php';
