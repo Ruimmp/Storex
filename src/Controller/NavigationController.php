@@ -11,6 +11,7 @@
  */
 function home()
 {
+    require_once "./controller/ArticlesController.php";
     require "./view/PageHome.php";
 }
 function UserProfile()
@@ -21,4 +22,9 @@ function UserProfile()
 function Lost()
 {
     require "./view/PageLost.php";
+}
+
+function createArticle()
+{
+    require "./view/FormArticleAdd.php";
 }

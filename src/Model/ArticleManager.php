@@ -11,8 +11,8 @@
  * @return array : containing all information about snows. Array can be empty.
  */
 function getArticles(){
+    require_once 'model/dbConnector.php';
     $articlesQuery = 'SELECT ID, Name, Price, Description, Image, user_ID FROM storex.articles';
 
-    require_once 'model/dbConnector.php';
     return executeQuerySelect($articlesQuery);
 }

@@ -21,41 +21,27 @@ $rows=0; // Column count
         </form>
     </div>
 
-    <article>
-        <header>
-
-            <div class="yox-view">
-
-                <?php foreach ($articlesResults as $result ) : ?>
-                    <?php $rows++; ?>
-                    <?php if ($rows%4) : // tests to have 4 items / line ?>
-                        <div class="row-fluid">
-                        <ul class="thumbnails">
-                        <?php $rows=0;?>
-                    <?php endif ?>
-
-                    <li class="span3">
-                        <div class="thumbnail">
-                            <img src="<?= $result['Image']; ?>" alt="<?= $result['Name']; ?>">
-                            <div class="caption">
-                                <h2><?= $result['Name']; ?></h2>
-                                <h3><?= $result['Price']; ?></h3>
-                                <p><?= $result['Description']; ?></p>
-                            </div>
-                        </div>
-                    </li>
-
-                    <?php if ($rows%4) :?>
-                        </ul>
-                        </div>
-                    <?php endif ?>
-                <?php endforeach ?>
-
+<?php $articlesResults = displayArticles();
+foreach ($articlesResults as $result ) : ?>
+    <?php $rows++; ?>
+    <?php if ($rows%4) : // tests to have 4 items / line ?>
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row tm-gallery">
+        <?php $rows=0;?>
+    <?php endif ?>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+                <figure class="effect-ming tm-video-item">
+                    <img src="<?= $result['Image']; ?>" alt="<?= $result['Name']; ?>" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <a href="./View/PageWomenArticles.php">View more</a>
+                        <h2><?= $result['Name']; ?></h2>
+                        <h3><?= $result['Price']; ?></h3>
+                </figure>
             </div>
-        </header>
-    </article>
-    <hr/>
-
+            <?php if ($rows%4) :?>
+    </div>
+    <?php endif ?>
+<?php endforeach ?>
 <?php
 $content = ob_get_clean();
 require 'gabarit.php';

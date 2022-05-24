@@ -13,28 +13,9 @@
  */
 function displayArticles()
 {
-    require_once "model/ArticleManager.php";
-    $articlesResults = getArticles();
+    require_once 'model/dbConnector.php';
+    $articlesQuery = 'SELECT ID, Name, Price, Description, Image, user_ID FROM storex.articles';
 
-    $_GET['action'] = "displayArticles";
-    if (isset($_SESSION['usertype_ID'])) {
-        switch ($_SESSION['usertype_ID']) {
-            case 1: //This is a CEO
-                require "view/PageHome.php";
-                break;
-            case 2: //This is a CTO
-                require "view/FormRegister.php";
-                break;
-            case 3: //This is a vendor
-                require "view/FormLogin.php";
-                break;
-            default:
-                require "view/PageHome.php";
-                break;
-        }
-    } else {
-        require "view/PageHome.php";
-    }
+    return executeQuerySelect($articlesQuery);   require_once "model/ArticleManager.php";
+    return getArticles();
 }
-
-?>

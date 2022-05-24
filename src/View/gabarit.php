@@ -77,6 +77,9 @@
                         <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link nav-link-default" href="index.php?action=createArticle">Ajouter un article</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link nav-link-default" href="index.php?action=myArticles">Mes articles</a>
                     </li>
                     <li class="nav-item">

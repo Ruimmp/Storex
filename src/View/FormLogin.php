@@ -45,7 +45,7 @@ ob_start();
                                         <?php endif ?>
                                     </span>
                                 </span>
-                                Vous n'avez pas de compte? <a href="index.php?action=register" class="term-service">Créez un!</a>
+                                <br>Vous n'avez pas de compte? <a href="index.php?action=register" class="term-service">Créez un!</a>
                             </label>
                         <div class="form-group form-button">
                             <input type="submit" name="signup" id="signup" class="form-submit" value="Login"/>
