@@ -8,7 +8,7 @@
 
 $title = "Accueil Storex";
 ob_start();
-$rows=0; // Column count
+$rows = 0; // Column count
 ?>
 
     <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll"
@@ -22,26 +22,42 @@ $rows=0; // Column count
     </div>
 
 <?php $articlesResults = displayArticles();
-foreach ($articlesResults as $result ) : ?>
+foreach ($articlesResults as $result) : ?>
     <?php $rows++; ?>
-    <?php if ($rows%4) : // tests to have 4 items / line ?>
-    <div class="container-fluid tm-container-content tm-mt-60">
+    <?php if ($rows % 4) : // tests to have 4 items / line ?>
+        <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row tm-gallery">
-        <?php $rows=0;?>
+
+        <?php $rows = 0; ?>
     <?php endif ?>
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                <figure class="effect-ming tm-video-item">
-                    <img src="<?= $result['Image']; ?>" alt="<?= $result['Name']; ?>" class="img-fluid">
-                    <figcaption class="d-flex align-items-center justify-content-center">
-                        <a href="./View/PageWomenArticles.php">View more</a>
-                        <h2><?= $result['Name']; ?></h2>
-                        <h3><?= $result['Price']; ?></h3>
-                </figure>
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+    <div class="card h-100">
+
+        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+             alt="<?= $result['Name']; ?>"/>
+        <!-- Product details-->
+        <div class="card-body p-4">
+            <div class="text-center">
+                <!-- Product name-->
+                <h5 class="fw-bolder"><?= $result['Name']; ?></h5>
+                <!-- Product price-->
+                Prix: <?= $result['Price']; ?> CHF
             </div>
-            <?php if ($rows%4) :?>
+        </div>
+        <!-- Product actions-->
+        <div class="form-group1 form-button">
+            <input type="submit" name="signup" id="signup" class="form-submit" value="Ajouter au panier"/>
+        </div>
     </div>
+    </div>
+
+    <?php if ($rows % 4) : ?>
+
+        </div>
+        </div>
     <?php endif ?>
 <?php endforeach ?>
+
 <?php
 $content = ob_get_clean();
 require 'gabarit.php';
