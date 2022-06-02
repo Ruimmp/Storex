@@ -7,7 +7,6 @@
 */
 
 
-
 #button-addon1 {
     color: #ffc371;
 }
@@ -18,7 +17,7 @@ i {
 
 .form-control::placeholder {
     font-size: 0.95rem;
-    color: red;
+    color: #ffc371;
     font-style: italic;
 }
 
