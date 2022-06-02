@@ -22,39 +22,44 @@ $rows = 0; // Column count
     </div>
 
 <?php $articlesResults = displayArticles();
+
 foreach ($articlesResults as $result) : ?>
+
     <?php $rows++; ?>
     <?php if ($rows % 4) : // tests to have 4 items / line ?>
+
         <div class="container-fluid tm-container-content tm-mt-60">
-        <div class="row tm-gallery">
 
         <?php $rows = 0; ?>
     <?php endif ?>
-    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-    <div class="card h-100">
 
-        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
-             alt="<?= $result['Name']; ?>"/>
-        <!-- Product details-->
-        <div class="card-body p-4">
-            <div class="text-center">
-                <!-- Product name-->
-                <h5 class="fw-bolder"><?= $result['Name']; ?></h5>
-                <!-- Product price-->
-                Prix: <?= $result['Price']; ?> CHF
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
+        <div class="card h-100">
+            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg"
+                 alt="<?= $result['Name']; ?>"/>
+
+            <!-- Product details-->
+            <div class="card-body p-4">
+                <div class="text-center">
+                    <!-- Product name-->
+                    <h5 class="fw-bolder"><?= $result['Name']; ?></h5>
+                    <!-- Product price-->
+                    Prix: <?= $result['Price']; ?> CHF
+                </div>
             </div>
+
+            <!-- Product actions-->
+            <div class="form-group1 form-button">
+                <input type="submit" name="signup" id="signup" class="form-submit" value="Ajouter au panier"/>
+            </div>
+
         </div>
-        <!-- Product actions-->
-        <div class="form-group1 form-button">
-            <input type="submit" name="signup" id="signup" class="form-submit" value="Ajouter au panier"/>
-        </div>
-    </div>
     </div>
 
     <?php if ($rows % 4) : ?>
 
         </div>
-        </div>
+
     <?php endif ?>
 <?php endforeach ?>
 
