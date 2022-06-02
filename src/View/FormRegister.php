@@ -88,10 +88,6 @@ ob_start();
                                 Vous avez déjà un compte? <a href="index.php?action=login" class="term-service">Connectez-vous!</a>
                             </label>
                             <label for="agree-term" class="label-agree-term">
-                                <span>
-                                    <span>
-                                    </span>
-                                </span>
                                 <?php if (@$_GET['registerError'] == true) : ?>
                                     <span style="color:red">Inscription refusée</span>
                                 <?php endif ?>

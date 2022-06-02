@@ -19,34 +19,38 @@ ob_start();
                         <div class="form-group">
                             <label for="email"><i class="zmdi zmdi-email"></i></label>
                             <input
-                                type="email"
-                                name="UserEmail"
-                                id="UserEmail"
-                                placeholder="Entrez votre addresse mail"
-                                required/>
+                                    type="email"
+                                    name="UserEmail"
+                                    id="UserEmail"
+                                    placeholder="Entrez votre addresse mail"
+                                    required/>
                         </div>
 
                         <div class="form-group">
                             <label for="password"><i class="zmdi zmdi-lock"></i></label>
                             <input
-                                type="password"
-                                name="UserPassword"
-                                id="UserPassword"
-                                placeholder="Entrez votre mot de passe"
-                                required/>
+                                    type="password"
+                                    name="UserPassword"
+                                    id="UserPassword"
+                                    placeholder="Entrez votre mot de passe"
+                                    required/>
                         </div>
 
                         <div class="form-group">
                             <label for="agree-term" class="label-agree-term">
                                 <span>
                                     <span>
-                                        <?php if (@$_GET['loginError'] == true) : ?>
-                                            <span style="color:red">E-mail ou mot de passe incorrect!</span>
-                                        <?php endif ?>
                                     </span>
                                 </span>
-                                <br>Vous n'avez pas de compte? <a href="index.php?action=register" class="term-service">Créez un!</a>
+                                Vous n'avez pas de compte? <a href="index.php?action=register" class="term-service">Créez
+                                    un!</a>
                             </label>
+                            <label for="agree-term" class="label-agree-term">
+                                <?php if (@$_GET['loginError'] == true) : ?>
+                                    <span style="color:red">E-mail ou mot de passe incorrect!</span>
+                                <?php endif ?>
+                            </label>
+                        </div>
                         <div class="form-group form-button">
                             <input type="submit" name="signup" id="signup" class="form-submit" value="Login"/>
                         </div>
@@ -55,6 +59,8 @@ ob_start();
                 <div class="signup-image">
                     <figure><img src="../Assets/img/Login.png" alt="Logo du site"></figure>
                 </div>
+
+
             </div>
         </div>
     </section>
