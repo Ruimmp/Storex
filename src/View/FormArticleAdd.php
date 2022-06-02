@@ -15,8 +15,8 @@ ob_start();
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Ajoutez un article</h2>
-                    <form class="register-form" method="POST" action="index.php?action=addArticle" >
-                          id="register-form">
+                    <form class="register-form" method="POST" action="index.php?action=addArticle">
+
 
                         <div class="form-group">
                             <label for="email"><i class="zmdi zmdi-email"></i></label>
@@ -50,19 +50,18 @@ ob_start();
 
                         <div class="form-group">
                             <label for="password"><i class="zmdi zmdi-lock"></i></label>
-                            <input
-                                    type="file"
-                                    name="articleImage"
-                                    id="articleImage"
-                                    accept="image/*"
-                                    required/>
+
+                            <div class="upload-btn-wrapper">
+                                <button class="btn">Choisir une image</button>
+                                <input type="file"
+                                       name="articleImage"
+                                       id="articleImage"
+                                       accept="image/*"
+                                       required/>
+                            </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="agree-term" class="label-agree-term">
-                                <span>
-                                </span>
-                            </label>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Ajouter"/>
                             </div>

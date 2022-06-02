@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="Assets/css/templatemo-style.css">
     <link rel="stylesheet" href="Assets/styles/footer.css">
+    <link rel="stylesheet" href="Assets/styles/addfile.css">
 
     <!-- Register CSS -->
     <link rel="stylesheet" href="Assets/styles/FormsRegister_Login.css">
