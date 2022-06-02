@@ -19,7 +19,7 @@ ob_start();
 
 
                         <div class="form-group">
-                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <label for="email"><i class="zmdi zmdi-tag"></i></label>
                             <input
                                     type="text"
                                     name="articleName"
@@ -29,7 +29,7 @@ ob_start();
                         </div>
 
                         <div class="form-group">
-                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                            <label for="password"><i class="zmdi zmdi-shopping-basket"></i></label>
                             <input
                                     type="text"
                                     name="articlePrice"
@@ -39,7 +39,7 @@ ob_start();
                         </div>
 
                         <div class="form-group">
-                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
+                            <label for="password"><i class="zmdi zmdi-format-subject"></i></label>
                             <input
                                     type="text"
                                     name="articleDescription"
@@ -49,8 +49,6 @@ ob_start();
                         </div>
 
                         <div class="form-group">
-                            <label for="password"><i class="zmdi zmdi-lock"></i></label>
-
                             <div class="upload-btn-wrapper">
                                 <button class="btn">Choisir une image</button>
                                 <input type="file"
