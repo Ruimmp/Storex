@@ -7,8 +7,10 @@
  */
 
 session_start();
-require "controller/UsersController.php";
 require "controller/NavigationController.php";
+
+require "controller/UsersController.php";
+require "controller/ArticlesController.php";
 
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
@@ -41,9 +43,6 @@ if (isset($_GET['action'])) {
         /* Articles */
         case 'addArticle' :
             addArticle($_POST);
-            break;
-        case 'createArticle' :
-            createArticle();
             break;
         case 'displayArticles' :
             displayArticles();

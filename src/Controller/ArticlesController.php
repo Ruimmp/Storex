@@ -17,26 +17,31 @@ function displayArticles()
     return getArticles();
 }
 
-function addArticle($addArticleRequest)
-{
-    if (isset($addArticleRequest['articleName']) && isset($addArticleRequest['articlePrice']) && isset($addArticleRequest['articleDescription']) && isset($addArticleRequest['articleImage'])) {
+function addArticle($addArticleRequest){
+    echo 'addArticle';
 
-        //extract parameters
+    if (isset($addArticleRequest['articleName']) &&
+        isset($addArticleRequest['articlePrice']) &&
+        isset($addArticleRequest['articleDescription'])
+        //&& isset($addArticleRequest['articleImage'])
+    ) {
+        echo 'ici';
         $name = $addArticleRequest['articleName'];
         $price = $addArticleRequest['articlePrice'];
         $description = $addArticleRequest['articleDescription'];
-        $image = $addArticleRequest['articleImage'];
+        //$image = $addArticleRequest['articleImage'];
 
-        require_once "model/articleManager.php";
-        if (addNewArticle($name, $price, $image, $description)) {
+
+        require_once "model/ArticleManager.php";
+        if (addNewArticle($name, $price, $description)){
             $_GET['action'] = "addSuccess";
-            $articlesResults = getArticles();
-            require "view/PageMyArticles.php";
-        } else {
+            $snowsResults = getArticles();
+            require "view/PageHome.php";
+        }else{
             $_GET['addArticleError'] = true;
-            require "view/FormArticleAdd.php";
+            require "view/formArticleAdd.php";
         }
-    } else {
-        require "view/FormArticleAdd.php";
+    }else{
+        require "view/formArticleAdd.php";
     }
 }

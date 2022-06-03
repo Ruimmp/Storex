@@ -10,7 +10,7 @@
  * This function is designed to get all active snows
  * @return array : containing all information about snows. Array can be empty.
  */
-function getArticles()
+function getArticles(): array
 {
     require_once 'model/dbConnector.php';
     $articlesQuery = 'SELECT ID, Name, Price, Description, Image, user_ID FROM storex.articles';
@@ -18,16 +18,17 @@ function getArticles()
     return executeQuerySelect($articlesQuery);
 }
 
-function addNewArticle($name, $price, $description, $image)
+function addNewArticle($name, $price, $description): bool
 {
     $result = false;
-
     $strSeparator = '\'';
 
-    $addArticleQuery = 'INSERT INTO storex.articles (`Name`, `Price`,`Description`, `Image`,`user_ID`) VALUES (' . $strSeparator . $name . $strSeparator . ',' . $strSeparator . $price . $strSeparator . ',' . $strSeparator . $description . $strSeparator . ',' . $strSeparator . $image . $strSeparator . ',' . $strSeparator . '1' . $strSeparator . ')';
+    $addArticleQuery = 'INSERT INTO storex.articles (`Name`, `Price`,`Description`, `Image`, `user_ID`) VALUES (' . $strSeparator . $name . $strSeparator . ',' . $strSeparator . $price . $strSeparator . ',' . $strSeparator . $description . $strSeparator . ',' . $strSeparator . '$image' . $strSeparator . ',' . $strSeparator . '1' . $strSeparator . ' )';
+
+    echo "<br>".$addArticleQuery;
 
     require_once 'model/dbConnector.php';
-    $queryResult = executeQueryInsert($addArticleQuery);
+    $queryResult = executeQuerySelect($addArticleQuery);
     if ($queryResult) {
         $result = $queryResult;
     }

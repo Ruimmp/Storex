@@ -47,7 +47,7 @@ ob_start();
                                     placeholder="Entrez la descritpion de l'article"
                             />
                         </div>
-
+<!--
                         <div class="form-group">
                             <div class="upload-btn-wrapper">
                                 <button class="btn">Choisir une image</button>
@@ -57,6 +57,14 @@ ob_start();
                                        accept="image/*"
                                        required/>
                             </div>
+                        </div>
+-->
+                        <div class="form-group">
+                            <label for="agree-term" class="label-agree-term">
+                                <?php if (@$_GET['addArticleError']) :?>
+                                    <h5><span style="color:red">Une erreur est sur-venue</span></h5>
+                                <?php endif ?>
+                            </label>
                         </div>
 
                         <div class="form-group">
