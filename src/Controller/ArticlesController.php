@@ -18,14 +18,12 @@ function displayArticles()
 }
 
 function addArticle($addArticleRequest){
-    echo 'addArticle';
 
     if (isset($addArticleRequest['articleName']) &&
         isset($addArticleRequest['articlePrice']) &&
         isset($addArticleRequest['articleDescription'])
         //&& isset($addArticleRequest['articleImage'])
     ) {
-        echo 'ici';
         $name = $addArticleRequest['articleName'];
         $price = $addArticleRequest['articlePrice'];
         $description = $addArticleRequest['articleDescription'];
@@ -39,7 +37,7 @@ function addArticle($addArticleRequest){
             require "view/PageHome.php";
         }else{
             $_GET['addArticleError'] = true;
-            require "view/formArticleAdd.php";
+            require "view/PageHome.php";
         }
     }else{
         require "view/formArticleAdd.php";

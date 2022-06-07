@@ -24,9 +24,7 @@ function addNewArticle($name, $price, $description): bool
     $strSeparator = '\'';
 
     $addArticleQuery = 'INSERT INTO storex.articles (`Name`, `Price`,`Description`, `Image`, `user_ID`) VALUES (' . $strSeparator . $name . $strSeparator . ',' . $strSeparator . $price . $strSeparator . ',' . $strSeparator . $description . $strSeparator . ',' . $strSeparator . '$image' . $strSeparator . ',' . $strSeparator . '1' . $strSeparator . ' )';
-
-    echo "<br>".$addArticleQuery;
-
+    
     require_once 'model/dbConnector.php';
     $queryResult = executeQuerySelect($addArticleQuery);
     if ($queryResult) {
