@@ -26,10 +26,10 @@
   - [X] Création des fonctions pour l'inscription
   - [X] Création des fonctions pour la connexion
 - [ ] Sprint 4
-  - [ ] Création des pages:
-    - [ ] Annonces
+  - [x] Création des pages:
+    - [x] Annonces
     - [ ] Modification d'annonces
-  - [ ] Création des fonctions pour la publication d'annonces
+  - [x] Création des fonctions pour la publication d'annonces
 - [ ] Sprint 5
   - [ ] Création des pages:
     - [ ] Profil
