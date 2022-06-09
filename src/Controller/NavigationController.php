@@ -14,17 +14,13 @@ function home()
     require_once "./controller/ArticlesController.php";
     require "./view/PageHome.php";
 }
-function UserProfile()
-{
-    require "./view/PageUserProfile.php";
-}
 
 function Lost()
 {
     require "./view/PageLost.php";
 }
 
-function createArticle()
+function ManagerArticles()
 {
-    require "./view/FormArticleAdd.php";
+    require "./view/PageArticlesAdmin.php";
 }

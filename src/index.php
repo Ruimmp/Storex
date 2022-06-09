@@ -29,16 +29,6 @@ if (isset($_GET['action'])) {
         case 'logout' :
             UserLogout();
             break;
-        case 'profile' :
-            UserProfile();
-            break;
-        case 'editUser' :
-            UserEditProfil();
-            break;
-        case 'editUserAdmin' :
-            UserAdminEditProfil();
-            break;
-
 
         /* Articles */
         case 'addArticle' :
@@ -47,11 +37,16 @@ if (isset($_GET['action'])) {
         case 'displayArticles' :
             displayArticles();
             break;
-
+        case 'deleteArticle' :
+            deleteArticle($_GET['Name']);
+            break;
 
         /* navigations*/
         case 'lost' :
             Lost();
+            break;
+        case 'ManagerArticles' :
+            ManagerArticles();
             break;
 
         /* Others */

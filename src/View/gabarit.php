@@ -61,6 +61,13 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+
+                <?php if (isset($_SESSION['usertype_ID']) && (@$_SESSION['usertype_ID'] == '3')) : ?>
+                    <li class="nav-item">
+                    <li class="mb-2"><a href="index.php?action=ManagerArticles" class="text-muted">Articles(A)</a></li>
+                <?php endif; ?>
+
+
                 <?php if (!isset($_SESSION['UserEmail']) ||
                     (!isset($_GET['action'])) ||
                     ((@$_GET['action'] == "logout"))) : ?>
@@ -74,6 +81,9 @@
                         <a class="nav-link nav-link-register" href="index.php?action=register">S'enregistrer</a>
                     </li>
                 <?php else : ?>
+                    <li class="nav-item">
+                    <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=ManagerArticles">Articles(A)</a>
+
                     <li class="nav-item">
                         <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
                     </li>

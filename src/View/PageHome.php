@@ -51,6 +51,8 @@ foreach ($articlesResults as $result) : ?>
             <!-- Product actions-->
             <div class="form-group1 form-button">
                 <input type="submit" name="signup" id="signup" class="form-submit" value="Ajouter au panier"/>
+                <td><a href="index.php?action=deleteArticle&Name=<?= $result['Name']; ?>">aaa<i class="far fa-file-times"></i></a></td>
+
             </div>
 
         </div>

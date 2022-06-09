@@ -17,7 +17,8 @@ function displayArticles()
     return getArticles();
 }
 
-function addArticle($addArticleRequest){
+function addArticle($addArticleRequest)
+{
 
     if (isset($addArticleRequest['articleName']) &&
         isset($addArticleRequest['articlePrice']) &&
@@ -31,15 +32,31 @@ function addArticle($addArticleRequest){
 
 
         require_once "model/ArticleManager.php";
-        if (addNewArticle($name, $price, $description)){
+        if (addNewArticle($name, $price, $description)) {
             $_GET['action'] = "addSuccess";
             $snowsResults = getArticles();
             require "view/PageHome.php";
-        }else{
+        } else {
             $_GET['addArticleError'] = true;
             require "view/PageHome.php";
         }
-    }else{
+    } else {
         require "view/formArticleAdd.php";
+    }
+}
+
+/**
+ * @brief Fonction pour supprimer les annonces grace a son index
+ */
+function deleteArticle($Name)
+{
+    require_once "model/ArticleManager.php";
+    if (deleteAArticle($Name)) {
+        $_GET['action'] = "deleteSuccess";
+        $snowsResults = getArticles();
+        require "view/PageHome.php";
+    } else {
+        $_GET['addArticleError'] = true;
+        require "view/PageHome.php";
     }
 }
