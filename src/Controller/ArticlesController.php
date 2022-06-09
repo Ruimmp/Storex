@@ -17,22 +17,32 @@ function displayArticles()
     return getArticles();
 }
 
+<<<<<<< Updated upstream
 function addArticle($addArticleRequest)
 {
+=======
+function addArticle($addArticleRequest){
+
+>>>>>>> Stashed changes
 
     if (isset($addArticleRequest['articleName']) &&
         isset($addArticleRequest['articlePrice']) &&
         isset($addArticleRequest['articleDescription'])
-        //&& isset($addArticleRequest['articleImage'])
+        && isset($addArticleRequest['articleImage'])
     ) {
         $name = $addArticleRequest['articleName'];
         $price = $addArticleRequest['articlePrice'];
         $description = $addArticleRequest['articleDescription'];
-        //$image = $addArticleRequest['articleImage'];
+        $image = $addArticleRequest['articleImage'];
+
 
 
         require_once "model/ArticleManager.php";
+<<<<<<< Updated upstream
         if (addNewArticle($name, $price, $description)) {
+=======
+        if (addNewArticle($name, $price, $description, $image)){
+>>>>>>> Stashed changes
             $_GET['action'] = "addSuccess";
             $snowsResults = getArticles();
             require "view/PageHome.php";

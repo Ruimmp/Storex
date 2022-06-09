@@ -18,13 +18,20 @@ function getArticles(): array
     return executeQuerySelect($articlesQuery);
 }
 
-function addNewArticle($name, $price, $description): bool
+function addNewArticle($name, $price, $description, $image): bool
 {
     $result = false;
+    $folder = "./Assets/img/articles/";
+    $path_file_Image = $folder . $image;
+    move_uploaded_file($_FILES[$image], $folder);
+
     $strSeparator = '\'';
+    $addArticleQuery = 'INSERT INTO storex.articles (`Name`, `Price`,`Description`, `Image`, `user_ID`) VALUES (' . $strSeparator . $name . $strSeparator . ',' . $strSeparator . $price . $strSeparator . ',' . $strSeparator . $description . $strSeparator . ',' . $strSeparator . $path_file_Image . $strSeparator . ',' . $strSeparator . '1' . $strSeparator . ' )';
 
-    $addArticleQuery = 'INSERT INTO storex.articles (`Name`, `Price`,`Description`, `Image`, `user_ID`) VALUES (' . $strSeparator . $name . $strSeparator . ',' . $strSeparator . $price . $strSeparator . ',' . $strSeparator . $description . $strSeparator . ',' . $strSeparator . '$image' . $strSeparator . ',' . $strSeparator . '1' . $strSeparator . ' )';
+<<<<<<< Updated upstream
+=======
 
+>>>>>>> Stashed changes
     require_once 'model/dbConnector.php';
     $queryResult = executeQuerySelect($addArticleQuery);
     if ($queryResult) {
@@ -32,6 +39,7 @@ function addNewArticle($name, $price, $description): bool
     }
     return $result;
 }
+<<<<<<< Updated upstream
 
 function deleteAArticle($ID)
 {
@@ -48,3 +56,5 @@ function deleteAArticle($ID)
     }
     return $result;
 }
+=======
+>>>>>>> Stashed changes
