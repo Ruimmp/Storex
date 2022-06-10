@@ -93,4 +93,6 @@ INSERT INTO storex.users (FirstName, LastName, PhoneNumber, Email, Password, use
 VALUES ('Storex', 'Example', '1234567', 'storex@storex.com', '$2y$10$ZGh3AnOSyNHqNM5PpjcbleES4IHwbIYWcVZonaiKxZdHf8z6K6c36', '3');
 
 INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
-VALUES ('Example', '1234', 'Description', 'Image', '1');
+VALUES ('Example', '1234', 'Description', '.\\Assets\\img\\articles\\montreHommeGuess.jpg', '1');
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Example_2', '9876', 'Ceci est une description', '.\\Assets\\img\\articles\\montreHommeGuess.jpg', '1');
