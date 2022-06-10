@@ -4,6 +4,8 @@
  * @brief     This model is designed to implements articles business logic
  * @author    Created by Monteiro.Rui
  * @version   17.05.2022
+ * @modif modified by Pereira.Nuno
+ * @description downloads of images helped by Viret.Loic
  */
 
 /**
@@ -18,20 +20,16 @@ function getArticles(): array
     return executeQuerySelect($articlesQuery);
 }
 
-function addNewArticle($name, $price, $description, $image): bool
+function addNewArticle($name, $price, $description): bool
 {
     $result = false;
     $folder = "./Assets/img/articles/";
-    $path_file_Image = $folder . $image;
-    move_uploaded_file($_FILES[$image], $folder);
-
+    $path_file_Image = $folder . $_FILES["articleImage"]["name"];   // variable qui stock le chemin ou est stocké l'image
     $strSeparator = '\'';
     $addArticleQuery = 'INSERT INTO storex.articles (`Name`, `Price`,`Description`, `Image`, `user_ID`) VALUES (' . $strSeparator . $name . $strSeparator . ',' . $strSeparator . $price . $strSeparator . ',' . $strSeparator . $description . $strSeparator . ',' . $strSeparator . $path_file_Image . $strSeparator . ',' . $strSeparator . '1' . $strSeparator . ' )';
 
-<<<<<<< Updated upstream
-=======
+    move_uploaded_file($_FILES["articleImage"]["tmp_name"], $path_file_Image);  // stock l'image dans le chemin défini au dessus
 
->>>>>>> Stashed changes
     require_once 'model/dbConnector.php';
     $queryResult = executeQuerySelect($addArticleQuery);
     if ($queryResult) {
@@ -39,7 +37,7 @@ function addNewArticle($name, $price, $description, $image): bool
     }
     return $result;
 }
-<<<<<<< Updated upstream
+
 
 function deleteAArticle($ID)
 {
@@ -56,5 +54,4 @@ function deleteAArticle($ID)
     }
     return $result;
 }
-=======
->>>>>>> Stashed changes
+

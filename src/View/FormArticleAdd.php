@@ -15,7 +15,7 @@ ob_start();
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Ajoutez un article</h2>
-                    <form class="register-form" method="POST" action="index.php?action=addArticle">
+                    <form class="register-form" method="POST" action="index.php?action=addArticle" enctype="multipart/form-data">
 
 
                         <div class="form-group">
@@ -54,7 +54,6 @@ ob_start();
                                 <input type="file"
                                        name="articleImage"
                                        id="articleImage"
-                                       accept="image/*"
                                        required/>
                             </div>
                         </div>

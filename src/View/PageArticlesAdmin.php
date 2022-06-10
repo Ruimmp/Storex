@@ -46,11 +46,8 @@ $rows = 0; // Column count
                             <td><?= $result['Name']; ?></td>
                             <td>CHF <?= $result['Price']; ?>.-</td> <!-- Prices are not float -->
                             <td><?= $result['Description']; ?></td>
-                            <td><img <?= $result['Image']; ?>" style="height: 20px"></td>
+                            <td><img <?= $result['Image']; ?></td>
                             <td><a href="index.php?action=deleteArticle&Name=<?= $result['Name']; ?>">Effacer</a></td>
-
-                            <!--<td><a href="index.php?action=deleteSnow&code=<?= $result['code']; ?>"><i class="far fa-file-times"></i></a></td>
-            <td><a href="index.php?action=editSnow&code=<?= $result['code']; ?>"><i class="far fa-edit"></i></a></td>-->
                         </tr>
                     <?php endforeach ?>
                     </tbody>
