@@ -193,7 +193,7 @@ sup {
 }
 
 a {
-    color: #0d6efd;
+    color: #D4AB65;
     text-decoration: underline
 }
 
@@ -1837,7 +1837,7 @@ progress {
     margin-bottom: 1rem;
     color: #212529;
     vertical-align: top;
-    border-color: #dee2e6
+    border-color: #D4AB65
 }
 
 .table > :not(caption) > * > * {
@@ -1856,7 +1856,7 @@ progress {
 }
 
 .table > :not(:last-child) > :last-child > * {
-    border-bottom-color: currentColor
+    border-bottom-color: #D4AB65
 }
 
 .caption-top {

@@ -11,52 +11,44 @@ ob_start();
 $rows = 0; // Column count
 ?>
 
-    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll"
-         data-image-src="Assets/img/hero.jpg">
-        <form class="d-flex tm-search-form">
-            <input class="tm-search-input" type="search" placeholder="Cherchez ici" aria-label="Search">
-            <button class="btn tm-search-btn" type="submit">
-                <i class="fas fa-search"></i>
-            </button>
-        </form>
-    </div>
-
-<?php $articlesResults = displayArticles(); ?>
+<?php $articlesResults = displayAdminArticles(); ?>
     <div class="content">
-
         <div class="container">
-            <h2 class="mb-3">Annonces</h2>
+            <h2 class="col-6 tm-text-primary">Annonces</h2>
             <div class="table-responsive">
                 <table class="table table-striped custom-table">
                     <thead>
                     <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Nom</th>
-                        <th scope="col">Prix</th>
-                        <th scope="col">Description</th>
-                        <th scope="col"></th>
+                        <th class="tm-text-gray-dark mb-3" scope="col">ID (annonce)</th>
+                        <th class="tm-text-gray-dark mb-3" scope="col">Information du vendeur</th>
+                        <th class="tm-text-gray-dark mb-3" scope="col">Nom (annonce)</th>
+                        <th class="tm-text-gray-dark mb-3" scope="col">Prix (annonce)</th>
+                        <th class="tm-text-gray-dark mb-3" scope="col">Description (annonce)</th>
+                        <th class="tm-text-gray-dark mb-3" scope="col">Image (annonce)</th>
+                        <th class="tm-text-gray-dark mb-3" scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
 
                     <?php foreach ($articlesResults as $result) : ?>
                         <tr scope="row">
-                            <td><?= $result['ID']; ?>
-                            </td>
+                            <td><?= $result['ID']; ?></td>
+                            <td><?= $result['LastName']; ?> <?= $result['Firstname']; ?><br><?= $result['Email']; ?></td>
                             <td><?= $result['Name']; ?></td>
                             <td>CHF <?= $result['Price']; ?>.-</td> <!-- Prices are not float -->
                             <td><?= $result['Description']; ?></td>
+<<<<<<< Updated upstream
                             <td><img <?= $result['Image']; ?></td>
+=======
+                            <td><?= $result['Image']; ?></td>
+>>>>>>> Stashed changes
                             <td><a href="index.php?action=deleteArticle&Name=<?= $result['Name']; ?>">Effacer</a></td>
                         </tr>
                     <?php endforeach ?>
                     </tbody>
                 </table>
             </div>
-
-
         </div>
-
     </div>
 
 <?php
