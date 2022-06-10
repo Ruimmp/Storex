@@ -15,46 +15,55 @@ function displayArticles()
     return executeQuerySelect($articlesQuery);
 }
 
-    function addArticle($addArticleRequest)
-    {
+function displayAdminArticles()
+{
+    require_once 'model/dbConnector.php';
+    $articlesQuery = 'SELECT articles.ID, users.LastName, users.Firstname, users.Email, articles.Name, articles.Description, articles.Price, articles.Image FROM storex.articles INNER JOIN storex.users ON articles.user_ID = users.ID;';
 
-        if (isset($addArticleRequest['articleName']) &&
-            isset($addArticleRequest['articlePrice']) &&
-            isset($addArticleRequest['articleDescription'])
-        ) {
-            $name = $addArticleRequest['articleName'];
-            $price = $addArticleRequest['articlePrice'];
-            $description = $addArticleRequest['articleDescription'];
+    return executeQuerySelect($articlesQuery);
+    require_once "model/ArticleManager.php";
+    return getArticles();
+}
 
-            require_once "model/ArticleManager.php";
+function addArticle($addArticleRequest)
+{
 
+    if (isset($addArticleRequest['articleName']) &&
+        isset($addArticleRequest['articlePrice']) &&
+        isset($addArticleRequest['articleDescription'])
+    ) {
+        $name = $addArticleRequest['articleName'];
+        $price = $addArticleRequest['articlePrice'];
+        $description = $addArticleRequest['articleDescription'];
 
-            if (addNewArticle($name, $price, $description)) {
-
-                $_GET['action'] = "addSuccess";
-                $articlesResults = getArticles();
-                require "view/PageHome.php";
-            } else {
-                $_GET['addArticleError'] = true;
-                require "view/PageHome.php";
-            }
-        } else {
-            require "view/formArticleAdd.php";
-        }
-    }
-
-    /**
-     * @brief Fonction pour supprimer les annonces grace a son index
-     */
-    function deleteArticle($Name)
-    {
         require_once "model/ArticleManager.php";
-        if (deleteAArticle($Name)) {
-            $_GET['action'] = "deleteSuccess";
+
+
+        if (addNewArticle($name, $price, $description)) {
+
+            $_GET['action'] = "addSuccess";
             $articlesResults = getArticles();
             require "view/PageHome.php";
         } else {
             $_GET['addArticleError'] = true;
             require "view/PageHome.php";
         }
+    } else {
+        require "view/formArticleAdd.php";
     }
+}
+
+/**
+ * @brief Fonction pour supprimer les annonces grace a son index
+ */
+function deleteArticle($Name)
+{
+    require_once "model/ArticleManager.php";
+    if (deleteAArticle($Name)) {
+        $_GET['action'] = "deleteSuccess";
+        $articlesResults = getArticles();
+    } else {
+        $_GET['addArticleError'] = true;
+    }
+    require "view/PageArticlesAdmin.php";
+}

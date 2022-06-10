@@ -37,11 +37,7 @@ $rows = 0; // Column count
                             <td><?= $result['Name']; ?></td>
                             <td>CHF <?= $result['Price']; ?>.-</td> <!-- Prices are not float -->
                             <td><?= $result['Description']; ?></td>
-<<<<<<< Updated upstream
-                            <td><img <?= $result['Image']; ?></td>
-=======
                             <td><?= $result['Image']; ?></td>
->>>>>>> Stashed changes
                             <td><a href="index.php?action=deleteArticle&Name=<?= $result['Name']; ?>">Effacer</a></td>
                         </tr>
                     <?php endforeach ?>
