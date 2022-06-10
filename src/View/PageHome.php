@@ -35,7 +35,7 @@ foreach ($articlesResults as $result) : ?>
 
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
         <div class="card h-100">
-            <img class="card-img-top" src="src/Assets/img/articles/$image"
+            <img class="card-img-top" src="<?= $result['Image']; ?>"
                  alt="<?= $result['Name']; ?>"/>
 
             <!-- Product details-->
