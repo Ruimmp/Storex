@@ -24,3 +24,8 @@ function ManagerArticles()
 {
     require "./view/PageArticlesAdmin.php";
 }
+
+function displayMyArticles()
+{
+    require "./view/PageMyArticles.php";
+}

@@ -37,6 +37,9 @@ if (isset($_GET['action'])) {
         case 'displayArticles' :
             displayArticles();
             break;
+        case 'displayMyArticles' :
+            displayMyArticles();
+            break;
         case 'deleteArticle' :
             deleteArticle($_GET['Name']);
             break;
