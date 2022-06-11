@@ -15,7 +15,7 @@ $rows = 0; // Column count
     <div class="content">
         <div class="container">
             <h2 class="col-6 tm-text-primary">Annonces</h2>
-            <div class="table-responsive">
+            <div class="table-responsive tm-mb-90">
                 <table class="table table-striped custom-table">
                     <thead>
                     <tr>
@@ -37,8 +37,8 @@ $rows = 0; // Column count
                             <td><?= $result['Name']; ?></td>
                             <td>CHF <?= $result['Price']; ?>.-</td> <!-- Prices are not float -->
                             <td><?= $result['Description']; ?></td>
-                            <td><?= $result['Image']; ?></td>
-                            <td><a href="index.php?action=deleteArticle&Name=<?= $result['Name']; ?>">Effacer</a></td>
+                            <td><img class="imgcustum" src="<?= $result['Image']; ?>" alt="Image pas trouvée"/></td>
+                            <td><a href="index.php?action=deleteArticle&Name=<?= $result['ID']; ?>">Effacer</a></td>
                         </tr>
                     <?php endforeach ?>
                     </tbody>
