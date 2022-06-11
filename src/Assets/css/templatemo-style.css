@@ -6,6 +6,14 @@ https://templatemo.com/tm-556-catalog-z
 
 */
 
+.imgcustum{
+    max-width: 90px !important;
+    max-height: 90px !important;
+    border-radius: 10px;
+    float: right;
+    margin-right: 30%;
+}
+
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -220,11 +228,14 @@ a:hover {
 .navbar-brand {
     color: #D4AB65;
     font-size: 2.1rem;
+    font-weight: bold;
+
 }
 
 .navbar-brand:hover {
     color: #D4AB65;
     font-weight: bold;
+
 }
 
 .navbar-brand i {
@@ -296,34 +307,28 @@ a.tm-text-primary:hover {
     color: #D4AB65;
 }
 
-.nav-link-home.active,
-.nav-link-home:hover {
-    border-color: #D4AB65;
-    color: #D4AB65;
-}
-
-.nav-link-articles.active,
-.nav-link-articles:hover {
-    border-color: #D4AB65;
-    color: #D4AB65;
-}
-
-.nav-link-login.active,
-.nav-link-login:hover {
+.nav-link-blue.active,
+.nav-link-blue:hover {
     border-color: #009999;
     color: #009999;
 }
 
-.nav-link-register.active,
-.nav-link-register:hover {
-    border-color: #009999;
-    color: #009999;
-}
-
-.nav-link-logout.active,
-.nav-link-logout:hover {
+.nav-link-red.active,
+.nav-link-red:hover {
     color: #F05454;
     border-color: #F05454;
+}
+
+.nav-link-green.active,
+.nav-link-green:hover {
+    color: #4fc34f;
+    border-color: #4fc34f;
+}
+
+.nav-link-black.active,
+.nav-link-black:hover {
+    color: #000000;
+    border-color: #000000;
 }
 
 .tm-search-input {
