@@ -50,7 +50,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.php?action=home">
-            <img src="Assets/img/logonobg.png" alt="HTML5 Icon" style="width:115px;height:115px;">
+            <img src="Assets/img/logonobg1.png" alt="HTML5 Icon" style="width:40%;">
             Storex
         </a>
 
@@ -63,47 +63,48 @@
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
 
                 <?php if (isset($_SESSION['usertype_ID']) && (@$_SESSION['usertype_ID'] == '3')) : ?>
-                    <li class="nav-item">
-                    <li class="mb-2"><a href="index.php?action=ManagerArticles" class="text-muted">Articles(A)</a></li>
-                <?php endif; ?>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-black" aria-current="page" href="index.php?action=ManagerArticles">(A)Annonce</a>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-black" aria-current="page" href="index.php?action=ManagerArticles">(A)Utilisateur</a>
+                    <?php endif; ?>
 
-
-                <?php if (!isset($_SESSION['UserEmail']) ||
+                    <?php if (!isset($_SESSION['UserEmail']) ||
                     (!isset($_GET['action'])) ||
                     ((@$_GET['action'] == "logout"))) : ?>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-login" href="index.php?action=login">Connexion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-register" href="index.php?action=register">S'enregistrer</a>
-                    </li>
-                <?php else : ?>
-                    <li class="nav-item">
-                    <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=ManagerArticles">Articles(A)</a>
-
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-default" href="index.php?action=addArticle">Ajouter un article</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-default" href="index.php?action=myArticles">Mes articles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-default" href="index.php?action=profile">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-link-logout" href="index.php?action=logout">Logout</a>
-                    </li>
-                <?php endif; ?>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-blue" href="index.php?action=login">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-blue" href="index.php?action=register">S'enregistrer</a>
+                </li>
+            <?php else : ?>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-default" aria-current="page" href="index.php?action=home">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-green" href="index.php?action=addArticle">Créé une annonce</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-default" href="index.php?action=displayMyArticles">Mes annonces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-default" href="index.php?action=profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-red" href="index.php?action=logout">Logout</a>
+                </li>
+            <?php endif; ?>
             </ul>
         </div>
     </div>
 </nav>
+<?php if (isset($_SESSION['UserEmail'])) : ?>
+    <h6>Vous êtes connecté : <?= $_SESSION['UserEmail']; ?></h6>
+<?php endif; ?>
 
 <!-- Header END -->
 
@@ -113,8 +114,9 @@
 <div class="ft_1">
     <div class="row py-4">
         <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-            <img src="Assets/img/logonobg.png" alt="" width="230" class="mb-3">
+            <img src="Assets/img/logonobg.png" alt="" width="230" class="mb-3" style="height:100%">
         </div>
+        <!--
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
             <h6 class="text-uppercase font-weight-bold mb-4">Categories</h6>
             <ul class="list-unstyled mb-0">
@@ -125,6 +127,7 @@
                 </li>
             </ul>
         </div>
+        -->
         <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
             <h6 class="text-uppercase font-weight-bold mb-4">Pages</h6>
             <ul class="list-unstyled mb-0">
@@ -154,7 +157,7 @@
             <p class="text-muted mb-4">
                 Inscrivez-vous à notre newsletter pour être informé aux soldes de nos produits!
             </p>
-            <div class="p-1 rounded border">
+            <div class="rounded">
                 <div class="input-group">
                     <input
                             type="email"
@@ -165,7 +168,7 @@
                         <button
                                 id="button-addon1"
                                 type="submit"
-                                class="btn btn-link">
+                                class="btn">
                             <i class="fa fa-paper-plane"></i>
                         </button>
                     </div>
