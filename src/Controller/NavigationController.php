@@ -20,9 +20,19 @@ function Lost()
     require "./view/PageLost.php";
 }
 
+function AdminPanel()
+{
+    require "./view/PageAdmin.php";
+}
+
 function ManagerArticles()
 {
     require "./view/PageArticlesAdmin.php";
+}
+
+function ManagerUsers()
+{
+    require "./view/PageUsersAdmin.php";
 }
 
 function displayMyArticles()
