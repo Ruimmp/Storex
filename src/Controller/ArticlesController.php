@@ -55,14 +55,22 @@ function addArticle($addArticleRequest)
 /**
  * @brief Fonction pour supprimer les annonces grace a son index
  */
-function deleteArticle($Name)
+function deleteArticle($ID)
 {
     require_once "model/ArticleManager.php";
-    if (deleteAArticle($Name)) {
+    if (deleteAArticle($ID)) {
         $_GET['action'] = "deleteSuccess";
         $articlesResults = getArticles();
     } else {
         $_GET['addArticleError'] = true;
     }
     require "view/PageArticlesAdmin.php";
+}
+
+function modifyArticle($ID)
+{
+    require_once "model/ArticleManager.php";
+    $snowsResults = getAArticle($ID);
+    require "view/FormArticleModify.php";
+
 }

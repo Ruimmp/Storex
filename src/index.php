@@ -43,6 +43,9 @@ if (isset($_GET['action'])) {
         case 'deleteArticle' :
             deleteArticle($_GET['ID']);
             break;
+        case 'modifyArticle' :
+            modifyArticle($_GET['ID']);
+            break;
 
         /* navigations*/
         case 'lost' :
