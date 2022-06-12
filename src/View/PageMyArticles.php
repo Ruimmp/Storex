@@ -1,18 +1,15 @@
 <?php
 /**
- * @file        PageHome.php
+ * @file        PageMyArticles.php
  * @brief       This view is designed to display the home page
  * @author      Created by Monteiro.Rui
- * @version     12.04.2022
+ * @version     10.06.2022
  */
 
-$title = "Accueil Storex";
+$title = "Mes annonces Storex";
 ob_start();
 $rows = 0; // Column count
 ?>
-
-    <link rel="stylesheet" href="../Assets/styles/button.css">
-
 
 <?php $articlesResults = displayAdminArticles(); ?>
     <div class="content">
@@ -40,10 +37,8 @@ $rows = 0; // Column count
                             <td>CHF <?= $result['Price']; ?>.-</td> <!-- Prices are not float -->
                             <td><?= $result['Description']; ?></td>
                             <td><img class="imgcustum" src="<?= $result['Image']; ?>" alt="Image pas trouvée"/></td>
-                            <td>
-                                <button class="noselect"><a href="index.php?action=deleteArticle&Name=<?= $result['ID']; ?>">Modifier</a></button>
-                                <button class="noselect"><a href="index.php?action=deleteArticle&Name=<?= $result['ID']; ?>">Effacer</a></button>
-                            </td>
+                            <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Modifier</a></td>
+                            <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Effacer</a></td>
                         </tr>
                     <?php endforeach ?>
                     </tbody>
