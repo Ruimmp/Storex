@@ -2,40 +2,28 @@
 /**
  * @file      gabarit.php
  * @brief     This view is designed to centralize all common graphical component like header and footer (will be call by all views)
- * @author    Created by Pascal.BENZONANA
- * @author    Updated by Nicolas.GLASSEY & Pascal BENZONANA
- * @version   03-MAY-2020
+ * @author    Created by Monteiro.Rui
+ * @version   12.04.2022
  */
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title; ?></title>
-    <link rel="icon" type="image/x-icon" href="Assets/img/logonobg.png">
 
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="Assets/css/templatemo-style.css">
+    <link rel="stylesheet" href="Assets/css/main.css">
     <link rel="stylesheet" href="Assets/styles/footer.css">
     <link rel="stylesheet" href="Assets/styles/addfile.css">
-
-    <!-- Register CSS -->
     <link rel="stylesheet" href="Assets/styles/FormsRegister_Login.css">
-    <!-- Login CSS -->
     <link rel="stylesheet" href="Assets/styles/PageHome.css">
-    <!-- Erro CSS -->
-
-    <!-- Font Icon -->
     <link rel="stylesheet" href="Assets/material-icon/css/material-design-iconic-font.min.css">
 
 
-    <!--
-    TemplateMo 556 Catalog-Z
-    https://templatemo.com/tm-556-catalog-z
-    -->
 </head>
 <body>
 <!-- Page Loader -->
@@ -62,50 +50,46 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
 
-                <?php if (isset($_SESSION['usertype_ID']) && (@$_SESSION['usertype_ID'] == '3')) : ?>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-black" aria-current="page" href="index.php?action=ManagerArticles">(A)Annonce</a>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-black" aria-current="page" href="index.php?action=ManagerArticles">(A)Utilisateur</a>
-                    <?php endif; ?>
 
-                    <?php if (!isset($_SESSION['UserEmail']) ||
+                <?php if (!isset($_SESSION['UserEmail']) ||
                     (!isset($_GET['action'])) ||
                     ((@$_GET['action'] == "logout"))) : ?>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-blue" href="index.php?action=login">Connexion</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-blue" href="index.php?action=register">S'enregistrer</a>
-                </li>
-            <?php else : ?>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-default" aria-current="page" href="index.php?action=home">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-green" href="index.php?action=addArticle">Créé une annonce</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-default" href="index.php?action=displayMyArticles">Mes annonces</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-default" href="index.php?action=profile">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-link-red" href="index.php?action=logout">Logout</a>
-                </li>
-            <?php endif; ?>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-home" aria-current="page" href="index.php?action=home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-blue" href="index.php?action=login">Connexion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-blue" href="index.php?action=register">S'enregistrer</a>
+                    </li>
+                <?php else : ?>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-default" aria-current="page" href="index.php?action=home">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-green" href="index.php?action=addArticle">Créé une annonce</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-default" href="index.php?action=displayMyArticles">Mes annonces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-default" href="index.php?action=profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-red" href="index.php?action=logout">Logout</a>
+                    </li>
+                <?php endif; ?>
+
+                <?php if (isset($_SESSION['usertype_ID']) && (@$_SESSION['usertype_ID'] == '3')) : ?>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-black" href="index.php?action=AdminPanel">Admin</a>
+                    </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>
 </nav>
-<?php if (isset($_SESSION['UserEmail'])) : ?>
-    <h6>Vous êtes connecté : <?= $_SESSION['UserEmail']; ?></h6>
-<?php endif; ?>
-
 <!-- Header END -->
 
 <?= $content; ?>
