@@ -10,12 +10,11 @@
 
 /**
  * This function is designed to get all active snows
- * @return array : containing all information about snows. Array can be empty.
  */
 function getArticles(): array
 {
     require_once 'model/dbConnector.php';
-    $articlesQuery = 'SELECT ID, Name, Price, Description, Image, user_ID FROM storex.articles';
+    $articlesQuery = 'SELECT articles.ID, users.LastName, users.Firstname, users.Email, articles.Name, articles.Description, articles.Price, articles.Image FROM storex.articles INNER JOIN storex.users ON articles.user_ID = users.ID;';
 
     return executeQuerySelect($articlesQuery);
 }
@@ -45,7 +44,7 @@ function deleteAArticle($ID)
 
     $strSeparator = '\'';
 
-    $deleteArticleQuery = 'DELETE FROM storex.articles WHERE (`Name`) LIKE (' . $strSeparator . $ID . $strSeparator . ')';
+    $deleteArticleQuery = 'DELETE FROM storex.articles WHERE (`ID`) LIKE (' . $strSeparator . $ID . $strSeparator . ')';
 
     require_once 'model/dbConnector.php';
     $queryResult = executeQuerySelect($deleteArticleQuery);
