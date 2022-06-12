@@ -36,7 +36,7 @@
     - [ ] Modification de profil
   - [ ] Création des fonctions pour la modifications d'annonces
 - [ ] Sprint 6
-  - [ ] Création des fonctions pour supprimer des annonces
+  - [x] Création des fonctions pour supprimer des annonces
   - [ ] Création des fonctions pour la modification de profil
 - [ ] Sprint 7
 - [ ] Sprint 8
@@ -45,6 +45,10 @@
 | Membre  | Date | Teste | Application | Évaluation |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Exemple: Monteiro Rui  | Exemple: 11/05/2022  | Exemple: Register | Exemple: Google Chrome/FireFox/Edge/Opera | ❌ ou ✔️ |
+| Monteiro Rui  | 12/06/2022  | Register | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+| Monteiro Rui  | 12/06/2022  | Login | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+| Monteiro Rui  | 12/06/2022  | Affichage des annonces | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+| Monteiro Rui  | 12/06/2022  | Création d'annonces | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
 
 ## Matériel necessaire
 - Pour l'instalation de ce projet dans votre environement vous allez avoir besoin de:
