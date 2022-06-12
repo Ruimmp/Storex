@@ -1,12 +1,12 @@
 <?php
 /**
- * @file        PageHome.php
+ * @file        PageArticlesAdmin.php
  * @brief       This view is designed to display the home page
  * @author      Created by Monteiro.Rui
- * @version     12.04.2022
+ * @version     10.06.2022
  */
 
-$title = "Accueil Storex";
+$title = "Admin Panel Announcement";
 ob_start();
 $rows = 0; // Column count
 ?>
@@ -26,6 +26,7 @@ $rows = 0; // Column count
                         <th class="tm-text-gray-dark mb-3" scope="col">Description (annonce)</th>
                         <th class="tm-text-gray-dark mb-3" scope="col">Image (annonce)</th>
                         <th class="tm-text-gray-dark mb-3" scope="col"></th>
+                        <th class="tm-text-gray-dark mb-3" scope="col"></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -33,12 +34,14 @@ $rows = 0; // Column count
                     <?php foreach ($articlesResults as $result) : ?>
                         <tr scope="row">
                             <td><?= $result['ID']; ?></td>
-                            <td><?= $result['LastName']; ?> <?= $result['Firstname']; ?><br><?= $result['Email']; ?></td>
+                            <td><?= $result['LastName']; ?> <?= $result['Firstname']; ?><br><?= $result['Email']; ?>
+                            </td>
                             <td><?= $result['Name']; ?></td>
                             <td>CHF <?= $result['Price']; ?>.-</td> <!-- Prices are not float -->
                             <td><?= $result['Description']; ?></td>
                             <td><img class="imgcustum" src="<?= $result['Image']; ?>" alt="Image pas trouvée"/></td>
-                            <td><a href="index.php?action=deleteArticle&Name=<?= $result['ID']; ?>">Effacer</a></td>
+                            <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Modifier</a></td>
+                            <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Effacer</a></td>
                         </tr>
                     <?php endforeach ?>
                     </tbody>
