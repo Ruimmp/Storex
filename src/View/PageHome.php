@@ -6,7 +6,7 @@
  * @version     12.04.2022
  */
 
-$title = "Accueil Storex";
+$title = "Storex | Accueil";
 ob_start();
 $rows = 0; // Column count
 ?>

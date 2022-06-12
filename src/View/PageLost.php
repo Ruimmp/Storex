@@ -6,7 +6,7 @@
  * @version     26.04.2022
  */
 
-$title = "Error Storex";
+$title = "Storex | Erreur";
 ob_start();
 ?>;
 

@@ -6,7 +6,7 @@
  * @version     14.04.2022
  */
 
-$title = "Article Storex";
+$title = "Storex | Création d'annonce";
 ob_start();
 ?>
 

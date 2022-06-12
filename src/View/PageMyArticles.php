@@ -6,7 +6,7 @@
  * @version     10.06.2022
  */
 
-$title = "Mes annonces Storex";
+$title = "Storex | Mes annonces";
 ob_start();
 $rows = 0; // Column count
 ?>

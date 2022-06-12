@@ -6,7 +6,7 @@
  * @version     12.04.2022
  */
 
-$title = "Register Storex";
+$title = "Storex | Register";
 ob_start();
 ?>
     <!-- Sign up form -->

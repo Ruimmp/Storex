@@ -1,12 +1,12 @@
 <?php
 /**
- * @file        FormArticleEdit.php
+ * @file        FormArticleModify.php
  * @brief       This view is designed to display the edit article form
  * @author      Created by Monteiro.Rui
- * @version     14.04.2022
+ * @version     12.06.2022
  */
 
-$title = "Article Storex";
+$title = "Storex | Modification d'annonce";
 ob_start();
 ?>
 

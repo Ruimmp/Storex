@@ -6,7 +6,7 @@
  * @version     10.06.2022
  */
 
-$title = "Admin Panel Announcement";
+$title = "Storex | Annonces Admin";
 ob_start();
 $rows = 0; // Column count
 ?>

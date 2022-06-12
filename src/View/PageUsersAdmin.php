@@ -6,7 +6,7 @@
  * @version     11.06.2022
  */
 
-$title = "Admin Panel Users";
+$title = "Storex | Users Admin";
 ob_start();
 $rows = 0; // Column count
 ?>

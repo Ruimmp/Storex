@@ -6,7 +6,7 @@
  * @version     11.06.2022
  */
 
-$title = "Admin Panel";
+$title = "Storex | Admin panel";
 ob_start();
 ?>
 

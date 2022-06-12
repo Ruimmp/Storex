@@ -6,7 +6,7 @@
  * @version     13.04.2022
  */
 
-$title = "Login Storex";
+$title = "Storex | Login";
 ob_start();
 ?>
     <section class="signup">
