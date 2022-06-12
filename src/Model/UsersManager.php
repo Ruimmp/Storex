@@ -15,7 +15,7 @@
  * @param $UserPassword
  * @return bool|null
  */
-function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword)
+function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword): ?bool
 {
     $usertype = 3;
     $result = false;
@@ -40,7 +40,8 @@ function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhon
  * @param $UserPassword
  * @return bool : "true" only if the user and psw match the database. In all other cases will be "false".
  */
-function isLoginCorrect($UserEmail, $UserPassword){
+function isLoginCorrect($UserEmail, $UserPassword): bool
+{
     $result = false;
 
     $strSeparator = '\'';
@@ -64,7 +65,8 @@ function isLoginCorrect($UserEmail, $UserPassword){
  * @param $UserEmail
  * @return int (1 = customer ; 2 = seller)
  */
-function getUserType($UserEmail){
+function getUserType($UserEmail): int
+{
     $result = 1;//we fix the result to 1 -> customer
 
     $strSeparator = '\'';
@@ -78,4 +80,15 @@ function getUserType($UserEmail){
         $result = $queryResult[0]['usertype_ID'];
     }
     return $result;
+}
+
+/**
+ * This function is designed to get all active snows
+ */
+function getUsers(): array
+{
+    require_once 'model/dbConnector.php';
+    $articlesQuery = 'SELECT ID, FirstName, LastName, PhoneNumber, Email, Password, usertype_ID FROM storex.users;';
+
+    return executeQuerySelect($articlesQuery);
 }

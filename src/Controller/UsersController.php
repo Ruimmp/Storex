@@ -79,7 +79,8 @@ function UserRegister($registerRequest)
  * This function is designed to manage login request
  * @param $loginRequest : containing login fields required to authenticate the user
  */
-function UserLogin($loginRequest){
+function UserLogin($loginRequest)
+{
     if (
         isset($loginRequest['UserEmail']) &&
         isset($loginRequest['UserPassword'])
@@ -98,7 +99,7 @@ function UserLogin($loginRequest){
             $_GET['action'] = "login";
             require "view/FormLogin.php";
         }
-    }else{
+    } else {
         $_GET['action'] = "login";
         require "view/FormLogin.php";
     }
@@ -112,4 +113,10 @@ function UserLogout()
     $_SESSION = array();
     session_destroy();
     require "view/PageHome.php";
+}
+
+function displayAdminUsers(): ?array
+{
+    require_once "model/UsersManager.php";
+    return getUsers();
 }
