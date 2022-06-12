@@ -6,6 +6,12 @@ https://templatemo.com/tm-556-catalog-z
 
 */
 
+.noselect{
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 .imgcustum{
     max-width: 90px !important;
     max-height: 90px !important;
