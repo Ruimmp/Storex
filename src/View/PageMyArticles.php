@@ -37,7 +37,7 @@ $rows = 0; // Column count
                             <td>CHF <?= $result['Price']; ?>.-</td> <!-- Prices are not float -->
                             <td><?= $result['Description']; ?></td>
                             <td><img class="imgcustum" src="<?= $result['Image']; ?>" alt="Image pas trouvée"/></td>
-                            <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Modifier</a></td>
+                            <td><a href="index.php?action=modifyArticle&ID=<?= $result['ID']; ?>">Modifier</a></td>
                             <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Effacer</a></td>
                         </tr>
                     <?php endforeach ?>
