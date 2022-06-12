@@ -41,15 +41,23 @@ if (isset($_GET['action'])) {
             displayMyArticles();
             break;
         case 'deleteArticle' :
-            deleteArticle($_GET['Name']);
+            deleteArticle($_GET['ID']);
             break;
 
         /* navigations*/
         case 'lost' :
             Lost();
             break;
+
+        /* Admin */
+        case 'AdminPanel' :
+            AdminPanel();
+            break;
         case 'ManagerArticles' :
             ManagerArticles();
+            break;
+        case 'ManagerUsers' :
+            ManagerUsers();
             break;
 
         /* Others */
