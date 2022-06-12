@@ -15,7 +15,7 @@
  * @return array|null : get the query result (can be null)
  * Source : http://php.net/manual/en/pdo.prepare.php
  */
-function executeQuerySelect($query)
+function executeQuerySelect($query): ?array
 {
     $queryResult = null;
 
@@ -34,7 +34,7 @@ function executeQuerySelect($query)
  * @param $query
  * @return bool|null : $statement->execute() returne true is the insert was successful
  */
-function executeQueryInsert($query)
+function executeQueryInsert($query): ?bool
 {
     $queryResult = null;
 
@@ -52,7 +52,7 @@ function executeQueryInsert($query)
  * @return PDO|null
  * Source : http://php.net/manual/en/pdo.construct.php
  */
-function openDBConnexion()
+function openDBConnexion(): ?PDO
 {
     $tempDbConnexion = null;
 
