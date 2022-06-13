@@ -17,7 +17,7 @@
  */
 function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword): ?bool
 {
-    $usertype = 3;
+    $usertype = 2;
     $result = false;
 
     $strSeparator = '\'';
