@@ -18,14 +18,14 @@ ob_start();
                     <div class="row tm-gallery">
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 tm-mb-90">
                             <div class="card h-100">
-                                <img class="card-img-top" src="../Assets/img/usermanager.jpg" alt=" "
+                                <img class="card-img-top imgedit" src="../Assets/img/usermanager.jpg" alt=" "
                                      style="max-width:100%"/>
                                 <div class="card-body p-4">
                                     <div class="text-center">
                                         <h5 class="fw-bolder">Utilisateurs</h5>
                                         <div class="form-group1 form-button">
                                             <a href="index.php?action=ManagerUsers">
-                                                <input type="submit" class="form-submit" value="Détails"/>
+                                                <input type="submit" class="form-submit btnDetails" value="Détails"/>
                                             </a>
                                         </div>
                                     </div>
