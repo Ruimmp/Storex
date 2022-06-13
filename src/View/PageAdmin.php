@@ -25,7 +25,7 @@ ob_start();
                                         <h5 class="fw-bolder">Utilisateurs</h5>
                                         <div class="form-group1 form-button">
                                             <a href="index.php?action=ManagerUsers">
-                                                <input type="submit" class="form-submit" value="Voir les détails"/>
+                                                <input type="submit" class="form-submit" value="Détails"/>
                                             </a>
                                         </div>
                                     </div>
@@ -36,13 +36,13 @@ ob_start();
                         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 tm-mb-90">
                             <div class="card h-100">
                                 <img class="card-img-top" src="../Assets/img/annonce.jpg" alt=" "
-                                     style="max-width:100%;height:100%" />
+                                     style="max-width:100%;height:100%"/>
                                 <div class="card-body p-4">
                                     <div class="text-center">
                                         <h5 class="fw-bolder">Annonces</h5>
                                         <div class="form-group1 form-button">
                                             <a href="index.php?action=ManagerArticles">
-                                                <input type="submit" class="form-submit" value="Voir les détails"/>
+                                                <input type="submit" class="form-submit" value="Détails"/>
                                             </a>
                                         </div>
                                     </div>
