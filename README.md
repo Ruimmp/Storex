@@ -1,6 +1,6 @@
 # Storex
 ## Introduction
-- Storex est un site web d'annonces dans lequel ou peut créer un compte, se connecter, voir des articles publiés par d'utilisateurs, mettre des articles en vente, modifier le profil et quelques autres paramètres.
+- Storex est un site web d'annonces dans lequel ou peut créer un compte, se connecter, voir des annonces publiés par d'utilisateurs, mettre des annonces en vente et quelques autres paramètres.
 - Les annonces ont des images génériques pour chaque activité et le site sera enregistré dans une base de données MYSQL.
 - Le projet est refait depuis le zéro avec un template de page d'accueil.
 
@@ -11,7 +11,7 @@
 
 ## Planification de projet
 - [X] Sprint 1
-  - [X] Modifier le template de page d'acueil
+  - [X] Modifier le template de page d'accueil
   - [X] Création d'un footer
   - [X] Création de la page d'inscription
   - [X] Création de la page de connexion
@@ -49,6 +49,11 @@
 | Monteiro Rui  | 12/06/2022  | Login | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
 | Monteiro Rui  | 12/06/2022  | Affichage des annonces | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
 | Monteiro Rui  | 12/06/2022  | Création d'annonces | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+|  |  | Effacement d'une annonce |  |  |
+|  |  | Modification d'annonces |  |  |
+|  |  | Modification d'utilisateur |  |  |
+|  |  | Utilisateurs Admin |  |  |
+|  |  | Annonces Admin |  |  |
 
 ## Matériel necessaire
 - Pour l'instalation de ce projet dans votre environement vous allez avoir besoin de:
