@@ -533,7 +533,7 @@ progress {
 }
 
 .img-fluid {
-    max-width: 100%;
+    max-width: 50%;
     height: auto
 }
 
@@ -6653,7 +6653,7 @@ progress {
 }
 
 .h-100 {
-    height: 100% !important
+    height: 90% !important
 }
 
 .h-auto {

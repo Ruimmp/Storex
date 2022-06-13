@@ -6,13 +6,22 @@ https://templatemo.com/tm-556-catalog-z
 
 */
 
-.noselect{
+.btnDetails {
+    margin-top: 100%;
+}
+
+.imgedit {
+    height: 50%;
+    width: 100%;
+}
+
+.noselect {
     border-color: inherit;
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
-.imgcustum{
+.imgcustum {
     max-width: 90px !important;
     max-height: 90px !important;
     border-radius: 10px;
