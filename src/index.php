@@ -46,6 +46,10 @@ if (isset($_GET['action'])) {
         case 'modifyArticle' :
             modifyArticle($_GET['ID']);
             break;
+        case 'PageArticleDetails':
+            PageArticleDetails();
+            break;
+
 
         /* navigations*/
         case 'lost' :

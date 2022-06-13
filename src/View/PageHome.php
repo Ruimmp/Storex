@@ -25,23 +25,23 @@ $rows = 0; // Column count
     <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row tm-gallery">
             <?php foreach ($articlesResults as $result) : ?>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 tm-mb-90">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="card h-100">
-                        <img class="card-img-top" src="<?= $result['Image']; ?>" alt="<?= $result['Name']; ?>"
-                             style="max-width:100%"/>
+                        <img class="card-img-top imgedit" src="<?= $result['Image']; ?>" alt="<?= $result['Name']; ?>"/>
                         <!-- Product details-->
-                        <div class="card-body p-4">
+                        <div class="p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder"><?= $result['Name']; ?></h5>
+                                <h4><?= $result['Name']; ?></h4>
                                 <!-- Product price-->
                                 Prix: <?= $result['Price']; ?> CHF
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="form-group1 form-button">
-                            <input type="submit" name="signup" id="signup" class="form-submit"
-                                   value="Voir les détails"/>
+                            <a action="index.php?action=PageArticleDetails">
+                                <input type="submit" class="form-submit" value="Voir les détails"/>
+                            </a>
                         </div>
                     </div>
                 </div>
