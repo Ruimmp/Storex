@@ -70,7 +70,6 @@ function deleteArticle($ID)
 function modifyArticle($ID)
 {
     require_once "model/ArticleManager.php";
-    $snowsResults = getAArticle($ID);
+    $announcesResults = getAArticle($ID);
     require "view/FormArticleModify.php";
-
 }

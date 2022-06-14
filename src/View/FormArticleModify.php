@@ -10,7 +10,7 @@ $title = "Storex | Modification d'annonce";
 ob_start();
 ?>
 
-<?php $articlesResults = displayAdminArticles(); ?>
+
 
     <section class="signup">
         <div class="container">
@@ -18,9 +18,9 @@ ob_start();
                 <div class="signup-form">
                     <h2 class="form-title">Connectez vous</h2>
 
-                    <?php foreach ($articlesResults as $result) : ?>
-
-                        <form method="POST" class="register-form" id="register-form" action="index.php?action=modifyArticle">
+                    <?php foreach ($announcesResults as $result) : ?>
+                        <form method="POST" class="register-form" id="register-form"
+                              action="index.php?action=modifyArticle">
 
                             <div class="form-group">
                                 <label><i class="zmdi zmdi-code"></i></label>
@@ -35,9 +35,10 @@ ob_start();
                         </form>
 
                     <?php endforeach ?>
-                    
+
+
                     <div class="form-group form-button">
-                        <input type="submit" name="signup" id="signup" class="form-submit" value="Login"/>
+                        <input type="submit" name="signup" id="signup" class="form-submit" value="Enregistrer"/>
                     </div>
                 </div>
             </div>
