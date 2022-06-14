@@ -89,10 +89,72 @@ VALUES ('CEO'),
        ('CTO'),
        ('Vendor');
 
+# Insertion des utilisateurs pour la présentation
 INSERT INTO storex.users (FirstName, LastName, PhoneNumber, Email, Password, usertype_ID)
-VALUES ('Storex', 'Example', '1234567', 'storex@storex.com', '$2y$10$ZGh3AnOSyNHqNM5PpjcbleES4IHwbIYWcVZonaiKxZdHf8z6K6c36', '3');
+VALUES ('Storex', 'Example', '0', 'storex@storex.com', '$2y$10$DNWrykB65j8tM73EAk9pXOEHIHWbbpJJZp49CILhmV2BV6.HfBuRu', '2');
+INSERT INTO storex.users (FirstName, LastName, PhoneNumber, Email, Password, usertype_ID)
+VALUES ('StorexAdmin', 'StorexAdmin', '1', 'storexadmin@storex.com', '$2y$10$DNWrykB65j8tM73EAk9pXOEHIHWbbpJJZp49CILhmV2BV6.HfBuRu', '3');
+
+
+# Insertion des annonces pour la présentation
+SET foreign_key_checks = 0;
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Zu verkaufen Wohnwagen Dethleffs Camper', '9200', 'Ab Kontrolle am 3:6:2022 kann sofort Eingelöst werden Länge 7,71m Breite 2,30m mit verstärkter Achse und Pneus 4,5 Atü Kein schlingern Hinten von L- R WC Lavabo Dusche 20L Boiler. Mitte Bett mitZwischenmatraze 2,15m x 2,05m Heuzung Küche mit Komressorkühlschrank Vorne Essgruppe oder Bett. Staukasten unterdem Wagenboden. Vorzelt Sonnensegel Tisch und Stühle. Alles umgerüstet auf 12V ausser Boiler sehr guter Zustand immer im Unterstand abgestellt. Gasleitungs kontrolle lass ich machen nach Verkauf.', '.\\Assets\\img\\articles\\Wohnwagen.jfif', '1');
 
 INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
-VALUES ('Example', '1234', 'Description', '.\\Assets\\img\\articles\\montreHommeGuess.jpg', '1');
+VALUES ('Trainings -& Yogastudio auch zum mieten', '50', 'Reactics bietet TrainerInnen, LehrerInnen, WorkshopleiterInnen,TherapeutInnen, die Möglichkeit eigene Kurse in unserem wunderschönen Raum anzubieten Yoga, Fitness, Tanz, Pilates, Personal Training, Kampfkunst, Persönlichkeitsentwicklung, Meditation. Alles finded bei uns einen Raum !', '.\\Assets\\img\\articles\\téléchargement (2).jfif', '1');
+
 INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
-VALUES ('Example_2', '9876', 'Ceci est une description', '.\\Assets\\img\\articles\\montreHommeGuess.jpg', '1');
+VALUES ('Emma wartet in der Schweiz', '750', 'Emma der kleine Streuner aus Griechenland lebt momentan bei ihrer Pflegefamilie im Kanton Zürich. Sie wurde auf Kreta mit ihren 4 Geschwistern auf der Strasse in einem Karton gefunden, die kleinen waren alleine und ohne ihre Mutter. Sie wurden aber zum Glück von Tierschützern ins Tierheim auf Kreta gebracht und dort aufgepäppelt. Emma ist einfach nur toll. Mit ihren ca. 8 Monaten misst sie eine Schulterhöhe von ca. 30 – 35 cm. Wir schätzen, dass sie einmal eine kleinere mittlere Größe erreichen wird. Den Umgang mit Katzen ist kein Problem und Kinder sollten einen verantwortungsbewussten Umgang mit Hunden kennen aber sie ist auch zu Kindern sehr lieb.', '.\\Assets\\img\\articles\\téléchargement (3).jfif', '1');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Spezialangebot Chesterfield Ledersofa', '1000', 'Spezialangebot Best Preis Switzerland Chesterfield Sofa erst Qualitat Leder 3 Sitzer 2490 CHF Normal preis 3890 CHF Neue Vollnarbenleder, antike argentinien erste Qualität Sonderverkauf all in stock unt Show room Cazadeco', '.\\Assets\\img\\articles\\téléchargement (4).jfif', '1');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Klappvelo Elektro Titanium', '2700', 'Selbstaufladendes Faltbike für unterwegs im Flachland. Keine Kette sondern Zahnriemenantrieb! Das VELLO Bike ist dein idealer Begleiter in der Stadt! Ob Arbeitsweg mit Umsteigen in Zug oder Ubahn, oder Nachmittagsausflug ins Grüne, dank innovativem Motor und platzsparender Faltung lässt sich das VELLO Elektro-Klapprad nahtlos in deinen Alltag integrieren. Für steile Anstiege bis zu 17 Prozent ausgerüstet mit der Schlumpf Mountain Drive (Planetengetriebe im Tretlager) mit einem Übersetzungsverhältnis von 2,5:1. Gewicht: 13,9 kg (ca., ohne Pedale, +/- 5 Prozent) Faltmass: H: 57 cm x L: 79 cm x B: 29 cm', '.\\Assets\\img\\articles\\téléchargement (5).jfif', '1');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Pierre Cardin Uhren, Herren & Dame', '149', '30.6.22 Preis ist fuer beide Uhren zusammen Sie koennen auch mit TWINT zahlen, Sie haben immer eine Rueckgabegarantie von 8 Tagen bei trifftigem Grund. Versandkosten fuer diesen Artikel zusaetzlich, Fr. 15.-- eingeschrieben. Teilen Sie sofort mit, wenn Sie diesen Artikel moechten, mailen oder tel.efonisch. So wird der Artikel fur Sie reserviert aus dem System genommen und in der Zwischenzeit zahlen Sie. Vielen Dank, Franz Ritter', '.\\Assets\\img\\articles\\téléchargement (6).jfif', '1');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Peugeot Roller MFK 05.04.2022', '1000', 'Der Roller ist in einem sehr gutem zustand Kick/E-Starter beides funktioniert sehr gut Hat viel kraft 27,549km auf dem Tacho Neuer Vario wurde bei 25,000km gemacht Mfk wurde am 05.04.22 gemacht Jg: 1998', '.\\Assets\\img\\articles\\téléchargement (7).jfif', '1');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('2 Flachdachdecker/-isoleure', '9876', 'Aktuell werden zwei gute Flachdachdecker/-isoleure – als 2er-Team oder 2 einzelne Mitarbeiter - für die Region Thurgau/Frauenfeld gesucht. Eine Arbeitsaufnahme wäre ab sofort möglich - je nach direkter Vereinbarung mit Schweizer Arbeitgeber. Wir sind eine private Personal- und Arbeitsvermittlung in der Region Stuttgart und suchen für unsere Schweizer Partner/Auftraggeber ständig gute Leute aus dem Bau- und Handwerksbereich.', '.\\Assets\\img\\articles\\téléchargement (8).jfif', '1');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('HP ProBook 455 G8', '922', 'Avec son design compact, l''ordinateur portable HP ProBook 455 offre des performances, une sécurité et une durabilité de niveau commercial pour les professionnels des entreprises en croissance qui vont du bureau à la salle de réunion ou à la maison. Le châssis compact, léger et élégant avec des composants en aluminium est facile à transporter d''un endroit à l''autre. Un écran haute luminosité en option offre un rapport écran/corps de plus de 87 %, et un clavier permet de travailler de manière silencieuse et réactive. Votre entreprise en pleine expansion a besoin de la protection d''un PC doté de fonctions de sécurité commerciales. Le HP ProBook 455 est doté d''une sécurité et d''une protection des données depuis le BIOS jusqu''au BIOS.', '.\\Assets\\img\\articles\\195107235_xxl3.avif', '1');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Apple AirPods Pro 2021', '9876', 'Que ce soit pour ceux qui téléphonent beaucoup ou pour les amateurs de musique, les AirPods Pro sont le complément parfait de presque tous les appareils Apple. Ils ne servent pas seulement d''écouteurs : activez Siri d''une double pression ou dites simplement Hey Siri pour régler le volume, changer de chanson, appeler quelqu''un ou vous faire indiquer le chemin par commande vocale. En maintenant la pression, vous passez du mode transparent à la suppression active du bruit. Les AirPods offrent un son riche et de haute qualité ainsi qu''une reproduction vocale. Lorsque vous parlez au téléphone, les microphones à concentration', '.\\Assets\\img\\articles\\212385002_xxl3.avif', '1');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('TwelveSouth HoverBar Duo', '81', 'HoverBar Duo est un bras réglable qui vous permet de prolonger l''utilisation de votre iPad. À votre bureau, vous pouvez utiliser la HoverBar Duo comme support de bureau à côté de votre Mac avec SideCar pour suivre votre calendrier, consulter vos actions ou passer des appels FaceTime en mains libres. Attachez la pince au HoverBar Duo et fixez-le au rebord de votre bureau, de vos tables ou de vos armoires de cuisine. Vous aurez toujours votre iPad à la hauteur que vous souhaitez pour pouvoir recréer une recette.', '.\\Assets\\img\\articles\\TS-12-2021.avif', '2');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('SoFlow SO4 Pro', '749', 'S''il existait une série de courses pour les e-scooters, le SO4 Pro en serait la version routière. La puissance et le couple permettent au scooter de rouler plus vite que d''habitude et le son du moteur du SO4 Pro fait taire tous les bolides de la Formule E. Le SO4 Pro est équipé d''un moteur de 500 watts et peut parcourir jusqu''à 40 kilomètres. Sa vitesse maximale s''arrête à 20 km/h. Le scooter gère également des pentes de 18% maximum sans effort.', '.\\Assets\\img\\articles\\p.avif', '2');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('WD Blue SN550', '99', 'Augmentez les performances de votre PC avec NVMe et bénéficiez d''une faible latence et de temps de chargement rapides. Le WD Blue SN550 NVMe SSD offre une vitesse de transfert quatre fois supérieure à celle de nos meilleurs SSD SATA. Que ce soit pour le travail, la création de contenu, les sessions de jeu relaxantes ou le traitement de grandes quantités de données - profitez de la rapidité de ce puissant SSD interne.', '.\\Assets\\img\\articles\\SSD-front-NoCap.avif', '2');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('HP 950MK', '129', 'HP sans fil, rechargeable, 950MK, souris et clavier.', '.\\Assets\\img\\articles\\image 2.webp', '2');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Blaupunkt Bluebot Xboost', '284', 'Le Blaupunkt Bluebot XBOOST peut être allumé par simple pression d''un bouton et dispose d''un contrôle de la puissance d''aspiration avec une fonction d''aspiration basse, moyenne, haute et turbo . Le dessus en verre trempé résistant aux rayures donne au robot aspirateur XBOOST un beau design et assure une excellente protection.', '.\\Assets\\img\\articles\\2MAIN.avif', '2');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Apple iPad Pro 2021 (3. Gen)', '789', 'L’iPad Pro intègre la puissante puce Apple M1, pour des performances à couper le souffle et une autonomie d’une journée3. L’écran Liquid Retina de l’iPad Pro 11 pouces allie beauté et extrême portabilité. La caméra avant avec Cadre centré vous garde automatiquement dans le cadre lors de vos appels vidéo. ', '.\\Assets\\img\\articles\\Image_Position-1b__WWEN.avif', '2');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Sony Xperia 1 IV', '1399', 'Le Xperia 1 IV offre des fonctions incomparables de création et de partage de vidéos. Il est le premier smartphone à pouvoir enregistrer des vidéos HDR 4K à 120 images par seconde avec tous les objectifs. Vous pouvez ainsi laisser libre cours à votre créativité et donner vie à vos idées et visions avec une qualité exceptionnelle. Sony est connu dans le secteur pour ses fonctions AF exceptionnelles.', '.\\Assets\\img\\articles\\Xperia 1 IV_group_black.avif', '2');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Nintendo Mario Strikers', '59', 'Ici, tout est permis !
+Le dernier jeu de la série Mario Strikers arrive sur Nintendo Switch ! Prépare-toi à jouer à Strike, un jeu à 5 contre 5. C''est comme le football, mais avec une offensive nettement plus dure !', '.\\Assets\\img\\articles\\BLF_PS_GFI.avif', '2');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Canon EOS R7 Body inkl', '1439', 'L''EOSR7 est idéal pour capturer ces moments fugaces et uniques, si recherchés dans la photographie de la vie sauvage, du sport et de l''action.', '.\\Assets\\img\\articles\\01_EOS R7_Front_BODY.avif', '2');
+
+INSERT INTO storex.articles (Name, Price, Description, Image, User_ID)
+VALUES ('Dji Mini 3 Pro mit RC Controller', '1099', 'DJI Mini 3 Pro (RC RM330). Nombre de rotors : 4 rotors. Mégapixels : 48 MP, Résolution vidéo maximale : 3840 x 2160 pixels. Vitesse maximale : 16 m/s, Distance de travail maximale : 18000 m. Fonctions de contrôle de mouvement : Arrière, Bas, Avant, Rotation à gauche, Rotation à droite, Haut. Capacité de la batterie : 2453 mAh. Cartes mémoire compatibles : MicroSD (TransFlash). WLAN, Normes WLAN : 802.11a,802.11b,802.11g,Wi-Fi 4 (802.11n), Bluetooth, Version Bluetooth : 4.2. Couleur du produit : noir, blanc.', '.\\Assets\\img\\articles\\DJI Mini 3 Pro DJI RC 2.avif', '2');
