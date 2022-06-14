@@ -39,7 +39,7 @@ $rows = 0; // Column count
                         </div>
                         <!-- Product actions-->
                         <div class="form-group1 form-button">
-                            <a action="index.php?action=PageArticleDetails">
+                            <a href="index.php?action=PageArticleDetails&ID=<?= $result['ID']; ?>">
                                 <input type="submit" class="form-submit" value="Voir les détails"/>
                             </a>
                         </div>

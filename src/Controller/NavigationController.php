@@ -39,7 +39,3 @@ function displayMyArticles()
 {
     require "./view/PageMyArticles.php";
 }
-
-function PageArticleDetails(){
-    require "./view/PageArticleDetails.php";
-}

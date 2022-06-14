@@ -73,3 +73,10 @@ function modifyArticle($ID)
     $announcesResults = getAArticle($ID);
     require "view/FormArticleModify.php";
 }
+
+function PageArticleDetails($ID)
+{
+    require_once "model/ArticleManager.php";
+    $announcesResults = getAArticle($ID);
+    require "view/PageArticleDetails.php";
+}

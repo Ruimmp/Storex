@@ -10,6 +10,7 @@ $title = "Storex | Détails d'annonce";
 ob_start();
 ?>
 
+<?php foreach ($announcesResults as $result) : ?>
 
     <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row mb-4">
@@ -17,7 +18,7 @@ ob_start();
         </div>
         <div class="row tm-mb-90">
             <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <img src="../Assets/img/articles/img.jpg" alt="Image" class="img-fluid">
+                <img src="<?= $result['Image']; ?>" alt="Image" class="img-fluid">
             </div>
 
             <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
@@ -27,7 +28,7 @@ ob_start();
                         aliquet justo. Cras nec varius leo.
                     </p>
                     <div class="text-center mb-5 btnDetails">
-                        <a href="mailto:someone@example.com" class="btn btn-primary tm-btn-big">Contacter
+                        <a href="mailto:<?= $result['Email']; ?>" class="btn btn-primary tm-btn-big">Contacter
                             l'annonceur</a>
                     </div>
 
@@ -65,33 +66,9 @@ ob_start();
                 </div>
             </div>
         </div>
-
-        <div class="row mb-4">
-            <h2 class="col-12 tm-text-primary">
-                Autres annonces de ce même utilisateur
-            </h2>
-        </div>
-
-        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-            <div class="card h-100">
-                <img class="card-img-top imgedit" src="../Assets/img/articles/img.jpg"/>
-                <!-- Product details-->
-                <div class="p-4">
-                    <div class="text-center">
-                        <!-- Product name-->
-                        <h4>Nom de l'annonce</h4>
-                        <!-- Product price-->
-                        Prix: 123 CHF
-                    </div>
-                </div>
-                <!-- Product actions-->
-                <div class="form-group1 form-button">
-                    <input type="submit" name="signup" id="signup" class="form-submit"
-                           value="Voir les détails"/>
-                </div>
-            </div>
-        </div>
     </div> <!-- container-fluid, tm-container-content -->
+
+<?php endforeach ?>
 
 <?php
 $content = ob_get_clean();

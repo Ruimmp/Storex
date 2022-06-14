@@ -47,7 +47,7 @@ if (isset($_GET['action'])) {
             modifyArticle($_GET['ID']);
             break;
         case 'PageArticleDetails':
-            PageArticleDetails();
+            PageArticleDetails($_GET['ID']);
             break;
 
 
