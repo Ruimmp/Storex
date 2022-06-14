@@ -63,6 +63,18 @@ ob_start();
                                 <?php if (@$_GET['addArticleError']) :?>
                                     <h5><span style="color:red">Une erreur est sur-venue</span></h5>
                                 <?php endif ?>
+
+                                <?php if (@$_GET['RegisterAnnonceNameError']) :?>
+                                    <h5><span style="color:red">Le nom de l'annonce est trop long</span></h5>
+                                <?php endif ?>
+
+                                <?php if (@$_GET['RegisterAnnoncePriceError']) :?>
+                                    <h5><span style="color:red">Le prix de l'annonce est trop long</span></h5>
+                                <?php endif ?>
+
+                                <?php if (@$_GET['RegisterAnnonceDescriptionError']) :?>
+                                    <h5><span style="color:red">La description de l'annonce est trop long</span></h5>
+                                <?php endif ?>
                             </label>
                         </div>
 
