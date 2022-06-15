@@ -23,7 +23,7 @@ $rows = 0; // Column count
                         <th class="tm-text-gray-dark mb-3" scope="col">(U) Informations</th>
                         <th class="tm-text-gray-dark mb-3" scope="col">(A) Nom</th>
                         <th class="tm-text-gray-dark mb-3" scope="col">(A) Prix</th>
-                        <th class="tm-text-gray-dark mb-3" scope="col">(A) Description</th>
+                        <!--<th class="tm-text-gray-dark mb-3" scope="col">(A) Description</th>-->
                         <th class="tm-text-gray-dark mb-3" scope="col">(A) Image</th>
                         <th class="tm-text-gray-dark mb-3" scope="col"></th>
                         <th class="tm-text-gray-dark mb-3" scope="col"></th>
@@ -38,10 +38,10 @@ $rows = 0; // Column count
                             </td>
                             <td><?= $result['Name']; ?></td>
                             <td>CHF <?= $result['Price']; ?>.-</td> <!-- Prices are not float -->
-                            <td><?= $result['Description']; ?></td>
+                            <!--<td>/*<?= $result['Description']; ?>*/</td>-->
                             <td><img class="imgcustum" src="<?= $result['Image']; ?>" alt="Image pas trouvée"/></td>
-                            <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Modifier</a></td>
-                            <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Effacer</a></td>
+                            <td><a class="lien" href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Modifier</a></td>
+                            <td><a class="lien" href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Effacer</a></td>
                         </tr>
                     <?php endforeach ?>
                     </tbody>
