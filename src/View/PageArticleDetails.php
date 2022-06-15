@@ -14,8 +14,9 @@ ob_start();
 
     <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row mb-4">
-            <h2 class="col-12 tm-text-primary">Photo title goes here</h2>
+            <h2 class="col-12 tm-text-primary"><?= $result['Name']; ?></h2>
         </div>
+
         <div class="row tm-mb-90">
             <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
                 <img src="<?= $result['Image']; ?>" alt="Image" class="img-fluid">
@@ -23,52 +24,66 @@ ob_start();
 
             <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
                 <div class="tm-bg-gray tm-video-details">
-                    <p class="mb-4">
-                        Please support us by making a PayPal donation. Nam ex nibh, efficitur eget libero ut, placerat
-                        aliquet justo. Cras nec varius leo.
+                    <h3 class="tm-text-gray-dark mb-3">Description</h3>
+                    <p class="mb-5 tm-video-details-txt">
+                        <?= $result['Description']; ?>
                     </p>
-                    <div class="text-center mb-5 btnDetails">
-                        <a href="mailto:<?= $result['Email']; ?>" class="btn btn-primary tm-btn-big">Contacter
+                    <div class="text-center mb-4 btn-dtl">
+                        <a href="mailto:<?= $result['Email']; ?>" class="form-submit">Contacter
                             l'annonceur</a>
                     </div>
 
-                    <!--
-                    <div class="mb-4 d-flex flex-wrap">
-                        <div class="mr-4 mb-2">
-                            <span class="tm-text-gray-dark">Dimension: </span>
-                            <span class="tm-text-primary">1920x1080</span>
-                        </div>
-                        <div class="mr-4 mb-2">
-                            <span class="tm-text-gray-dark">Format: </span>
-                            <span class="tm-text-primary">JPG</span>
+                    <div class="mb-4 d-flex flex-wrap justify-content-center text-xxl-center">
+                        <div>
+                            <h4>
+                                <span class="tm-text-gray-dark">Prix: </span>
+                                <span class="tm-text-primary"><?= $result['Price']; ?></span>
+                                <span class="tm-text-gray-dark">CHF</span>
+                            </h4>
                         </div>
                     </div>
-
-
-                    <div class="mb-4">
-                        <h3 class="tm-text-gray-dark mb-3">License</h3>
-                        <p>
-                            Free for both personal and commercial use. No need to pay anything. No need to make any attribution.</p>
-                    </div>
-
-                    <div>
-                        <h3 class="tm-text-gray-dark mb-3">Tags</h3>
-                        <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Cloud</a>
-                        <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Bluesky</a>
-                        <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Nature</a>
-                        <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Background</a>
-                        <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Timelapse</a>
-                        <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Night</a>
-                        <a href="#" class="tm-text-primary mr-4 mb-2 d-inline-block">Real Estate</a>
-                    </div>
-                    -->
-
                 </div>
             </div>
         </div>
-    </div> <!-- container-fluid, tm-container-content -->
+    </div>
 
 <?php endforeach ?>
+
+    <!--
+<?php $articlesResults = displayAdminArticles(); ?>
+<?php foreach ($announcesResults as $result) : ?>
+    <?php if (isset($_SESSION['Email']) == $result['Email']) : ?>
+
+        <div class="row mb-4 container">
+            <h2 class="col-12 tm-text-primary text-xxl-center">
+                <span class="tm-text-gray-dark">Autres annonces par: </span>
+                <a href="mailto:<?= $result['Email']; ?>" class="lien">
+                    <span><?= $result['Firstname']; ?></span>
+                </a>
+            </h2>
+        </div>
+        <div class="row mb-3 tm-gallery container">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+                <div class="h-90 tm-mt-10">
+                    <img class="card-img-top imgedit-dtl" src="<?= $result['Image']; ?>" alt="<?= $result['Name']; ?>"/>
+                    <div class="p-4">
+                        <div class="text-center">
+                            <h4><?= $result['Name']; ?></h4>
+                            Prix: <?= $result['Price']; ?> CHF
+                        </div>
+                    </div>
+                    <div class="form-group1 form-button btn-dtl">
+                        <a href="index.php?action=PageArticleDetails&ID=<?= $result['ID']; ?>">
+                            <input type="submit" class="form-submit" value="Voir les détails"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+
+<?php endforeach ?>
+-->
 
 <?php
 $content = ob_get_clean();
