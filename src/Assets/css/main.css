@@ -1,15 +1,25 @@
-/*
+.lien:hover {
+    color: #b98225;
+}
 
-TemplateMo 556 Catalog-Z
+.lien {
+    color: #D4AB65;
+}
 
-https://templatemo.com/tm-556-catalog-z
+.imgedit-dtl {
+    height: 50%;
+}
 
-*/
+.btn-dtl {
+    margin-top: 0px !important;
+}
 
-
+.btn-dtl:hover {
+    color: #fff;
+}
 
 .imgedit {
-    height: 55%;
+    height: 50%;
     width: 100%;
 }
 
@@ -260,6 +270,10 @@ a:hover {
     background: transparent;
 }
 
+.tm-mt-10 {
+    margin-top: 20px;
+}
+
 .tm-mt-60 {
     margin-top: 60px;
 }
@@ -274,6 +288,14 @@ a:hover {
 
 .tm-mb-90 {
     margin-bottom: 90px;
+}
+
+.tm-mb-60 {
+    margin-bottom: 60px;
+}
+
+.tm-mb-40 {
+    margin-bottom: 40px;
 }
 
 .tm-text-primary {
@@ -611,6 +633,10 @@ figure.effect-ming:hover img {
 .tm-video-details {
     height: 100%;
     padding: 40px;
+}
+
+.tm-video-details-txt {
+    font-size: 16px;
 }
 
 /* About */
