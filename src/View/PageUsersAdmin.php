@@ -35,8 +35,8 @@ $rows = 0; // Column count
                             <td><?= $result['LastName']; ?></td>
                             <td><?= $result['FirstName']; ?></td>
                             <td><?= $result['Email']; ?></td>
-                            <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Modifier</a></td>
-                            <td><a href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Effacer</a></td>
+                            <td><a class="lien" href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Modifier</a></td>
+                            <td><a class="lien" href="index.php?action=deleteArticle&ID=<?= $result['ID']; ?>">Effacer</a></td>
                         </tr>
                     <?php endforeach ?>
                     </tbody>

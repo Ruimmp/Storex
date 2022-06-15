@@ -25,8 +25,8 @@ $rows = 0; // Column count
     <div class="container-fluid tm-container-content tm-mt-60">
         <div class="row tm-gallery">
             <?php foreach ($articlesResults as $result) : ?>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12">
-                    <div class="card h-80">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 tm-mb-60">
+                    <div class="card h-90">
                         <img class="card-img-top imgedit" src="<?= $result['Image']; ?>" alt="<?= $result['Name']; ?>"/>
                         <!-- Product details-->
                         <div class="p-4">
@@ -38,7 +38,7 @@ $rows = 0; // Column count
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="form-group1 form-button">
+                        <div class="form-group1 form-button btn-dtl">
                             <a href="index.php?action=PageArticleDetails&ID=<?= $result['ID']; ?>">
                                 <input type="submit" class="form-submit" value="Voir les détails"/>
                             </a>
