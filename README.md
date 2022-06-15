@@ -32,7 +32,7 @@
   - [x] Création des fonctions pour la publication d'annonces
 - [ ] Sprint 5
   - [ ] Création des pages:
-    - [x] Description d'annonces
+    - [x] Détails d'annonces
     - [ ] Profil
     - [ ] Modification de profil
   - [ ] Création des fonctions pour la modifications d'annonces
@@ -50,6 +50,7 @@
 | Monteiro Rui  | 12/06/2022  | Login | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
 | Monteiro Rui  | 12/06/2022  | Affichage des annonces | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
 | Monteiro Rui  | 12/06/2022  | Création d'annonces | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+|  |  | Détails d'une annonce |  |  |
 |  |  | Effacement d'une annonce |  |  |
 |  |  | Modification d'annonces |  |  |
 |  |  | Modification d'utilisateur |  |  |
