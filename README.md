@@ -32,6 +32,7 @@
   - [x] Création des fonctions pour la publication d'annonces
 - [ ] Sprint 5
   - [ ] Création des pages:
+    - [x] Description d'annonces
     - [ ] Profil
     - [ ] Modification de profil
   - [ ] Création des fonctions pour la modifications d'annonces
