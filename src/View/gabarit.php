@@ -12,24 +12,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title><?= $title; ?></title>
+
+    <link rel="icon" href="Assets/img/logonobg1.png">
 
     <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="Assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="Assets/css/main.css">
     <link rel="stylesheet" href="Assets/styles/footer.css">
     <link rel="stylesheet" href="Assets/styles/addfile.css">
-
-    <!-- Register CSS -->
     <link rel="stylesheet" href="Assets/styles/FormsRegister_Login.css">
-    <!-- Login CSS -->
     <link rel="stylesheet" href="Assets/styles/PageHome.css">
-    <!-- Erro CSS -->
-
-    <!-- Font Icon -->
     <link rel="stylesheet" href="Assets/material-icon/css/material-design-iconic-font.min.css">
-
-
 </head>
 <body>
 <!-- Page Loader -->
@@ -61,7 +56,8 @@
                     (!isset($_GET['action'])) ||
                     ((@$_GET['action'] == "logout"))) : ?>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-default" aria-current="page" href="index.php?action=home">Accueil</a>
+                        <a class="nav-link nav-link-default" aria-current="page"
+                           href="index.php?action=home">Accueil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-blue" href="index.php?action=login">Connexion</a>
@@ -71,10 +67,11 @@
                     </li>
                 <?php else : ?>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-default" aria-current="page" href="index.php?action=home">Accueil</a>
+                        <a class="nav-link nav-link-default" aria-current="page"
+                           href="index.php?action=home">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-green" href="index.php?action=addArticle">Créé une annonce</a>
+                        <a class="nav-link nav-link-green" href="index.php?action=addArticle">Créer une annonce</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-default" href="index.php?action=displayMyArticles">Mes annonces</a>
