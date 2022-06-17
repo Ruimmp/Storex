@@ -1,3 +1,10 @@
+
+.colorOr {
+    color: #D4AB65;
+    font-weight: bold;
+    font-size: 17px;
+}
+
 .lien:hover {
     color: #b98225;
 }
