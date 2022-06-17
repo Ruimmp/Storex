@@ -49,6 +49,9 @@ if (isset($_GET['action'])) {
         case 'PageArticleDetails':
             PageArticleDetails($_GET['ID']);
             break;
+        case 'FormContact':
+            FormContact($_GET['ID']);
+            break;
 
 
         /* navigations*/

@@ -80,3 +80,10 @@ function PageArticleDetails($ID)
     $announcesResults = getAArticle($ID);
     require "view/PageArticleDetails.php";
 }
+
+function FormContact($ID)
+{
+    require_once "model/ArticleManager.php";
+    $announcesResults = getAArticle($ID);
+    require "view/FormContact.php";
+}
