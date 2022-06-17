@@ -11,70 +11,83 @@ ob_start();
 ?>
 
 
+
 <?php foreach ($announcesResults as $result) : ?>
 
     <section class="signup">
         <div class="container">
             <div class="signup-content">
                 <div class="signup-form">
-                    <h2 class="form-title">Modification de <?= $result['Name']; ?></h2>
-                    <form method="POST" class="register-form" id="register-form" action="index.php?action=modifyArticle">
+                    <h2 class="form-title">Modification d'annonce</h2>
+
+                    <form method="POST" class="register-form tm-mb-40" id="register-form"
+                          action="index.php?action=modifyArticle">
 
                         <div class="form-group">
-                            <label><i class="zmdi zmdi-code"></i></label>
+                            <p><i class="zmdi zmdi-code"></i><span class="colorOr"> ID de l'annonce</span></p>
+
                             <input
+                                    class="containerModify"
                                     type="text"
-                                    name="articleName"
-                                    id="articleName"
+                                    name="announceID"
+                                    id="announceID"
                                     value="<?= $result['ID']; ?>"
                                     disabled
                                     required/>
                         </div>
 
                         <div class="form-group">
-                            <label><i class="zmdi zmdi-code"></i></label>
+                            <p><i class="zmdi zmdi-label"></i><span class="colorOr"> Nom de l'annonce</span></p>
+
                             <input
+                                    class="containerModify"
                                     type="text"
-                                    name="articleName"
-                                    id="articleName"
+                                    name="announceName"
+                                    id="announceName"
                                     value="<?= $result['Name']; ?>"
                                     required/>
                         </div>
 
                         <div class="form-group">
-                            <label><i class="zmdi zmdi-code"></i></label>
+                            <p><i class="zmdi zmdi-shopping-cart"></i><span class="colorOr"> Prix de l'annonce</span></p>
                             <input
+                                    class="containerModify"
                                     type="text"
-                                    name="articleName"
-                                    id="articleName"
+                                    name="announcePrice"
+                                    id="announcePrice"
                                     value="<?= $result['Price']; ?>"
                                     required/>
                         </div>
 
                         <div class="form-group">
-                            <label><i class="zmdi zmdi-code"></i></label>
+                            <p><i class="zmdi zmdi-image"></i><span class="colorOr"> Image de l'annonce</span></p>
+
                             <input
+                                    class="containerModify"
                                     type="text"
-                                    name="articleName"
-                                    id="articleName"
-                                    value="<?= $result['Description']; ?>"
+                                    name="announceImage"
+                                    id="announceImage"
+                                    value="<?= $result['Image']; ?>"
                                     required/>
                         </div>
 
                         <div class="form-group">
-                            <label><i class="zmdi zmdi-code"></i></label>
-                            <input
-                                    type="text"
-                                    name="articleName"
-                                    id="articleName"
-                                    value="<?= $result['Image']; ?>"
-                                    required/>
+                            <p><i class="zmdi zmdi-sort-amount-desc"></i><span class="colorOr"> Description de l'annonce</span></p>
+
+                            <textarea
+                                    rows="10"
+                                    class="containerModifyTextarea"
+                                    name="announceDescription"
+                                    id="announceDescription"
+                                    required>
+                                <?= $result['Description']; ?>
+                            </textarea>
                         </div>
 
                     </form>
 
                     <div class="form-group form-button">
-                        <input type="submit" name="signup" id="signup" class="form-submit" value="Enregistrer"/>
+                        <input type="submit" name="signup" id="signup" class="form-submit btn btn-primary tm-btn-big" value="Enregistrer"/>
                     </div>
                 </div>
             </div>
