@@ -1,7 +1,7 @@
 <?php
 /**
- * @file        FormArticleAdd.php
- * @brief       This view is designed to display the add article form
+ * @file        FormAnnouncesAdd.php
+ * @brief       This view is designed to display the add annonce form
  * @author      Created by Monteiro.Rui
  * @version     14.04.2022
  */
@@ -14,17 +14,17 @@ ob_start();
         <div class="container">
             <div class="signup-content">
                 <div class="signup-form">
-                    <h2 class="form-title">Ajoutez un article</h2>
-                    <form class="register-form" method="POST" action="index.php?action=addArticle" enctype="multipart/form-data">
+                    <h2 class="form-title">Ajoutez une annonce</h2>
+                    <form class="register-form" method="POST" action="index.php?action=AddAnnounce" enctype="multipart/form-data">
 
 
                         <div class="form-group">
                             <label for="email"><i class="zmdi zmdi-tag"></i></label>
                             <input
                                     type="text"
-                                    name="articleName"
-                                    id="articleName"
-                                    placeholder="Entrez le nom de l'article*"
+                                    name="AnnounceName"
+                                    id="AnnounceName"
+                                    placeholder="Entrez le nom de l'annonce*"
                                     required/>
                         </div>
 
@@ -32,9 +32,9 @@ ob_start();
                             <label for="password"><i class="zmdi zmdi-shopping-basket"></i></label>
                             <input
                                     type="text"
-                                    name="articlePrice"
-                                    id="articlePrice"
-                                    placeholder="Entrez le prix de l'article*"
+                                    name="AnnouncePrice"
+                                    id="AnnouncePrice"
+                                    placeholder="Entrez le prix de l'annonce*"
                                     required/>
                         </div>
 
@@ -42,9 +42,9 @@ ob_start();
                             <label for="password"><i class="zmdi zmdi-format-subject"></i></label>
                             <input
                                     type="text"
-                                    name="articleDescription"
-                                    id="articleDescription"
-                                    placeholder="Entrez la descritpion de l'article"
+                                    name="AnnounceDescription"
+                                    id="AnnounceDescription"
+                                    placeholder="Entrez la descritpion de l'annonce"
                             />
                         </div>
 
@@ -52,15 +52,15 @@ ob_start();
                             <div class="upload-btn-wrapper">
                                 <button class="btn">Choisir une image</button>
                                 <input type="file"
-                                       name="articleImage"
-                                       id="articleImage"
+                                       name="AnnounceImage"
+                                       id="AnnounceImage"
                                        required/>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label for="agree-term" class="label-agree-term">
-                                <?php if (@$_GET['addArticleError']) :?>
+                                <?php if (@$_GET['RegisterAnnounceError']) :?>
                                     <h5><span style="color:red">Une erreur est sur-venue</span></h5>
                                 <?php endif ?>
 

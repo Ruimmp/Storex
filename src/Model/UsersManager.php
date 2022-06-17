@@ -7,27 +7,18 @@
  */
 
 /**
- * This function is designed to register a new account
- * @param $UserFirstName
- * @param $UserLastName
- * @param $UserEmail
- * @param $UserPhoneNumber
- * @param $UserPassword
- * @return bool|null
+ * @brief Cette fonction sert à enregistrer un novel utilisateur
  */
-function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword): ?bool
+function RegisterNewUserAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword): ?bool
 {
-    $usertype = 2;
+    $usertype = 2; // ID des annonceurs
     $result = false;
-
     $strSeparator = '\'';
-
     $UserPassword = password_hash($UserPassword, PASSWORD_DEFAULT);
+    $RegisterQuery = 'INSERT INTO storex.users (`FirstName`, `LastName`, `Email`, `PhoneNumber`,`Password`, `usertype_ID`) VALUES (' . $strSeparator . $UserFirstName . $strSeparator . ', ' . $strSeparator . $UserLastName . $strSeparator . ', ' . $strSeparator . $UserEmail . $strSeparator . ', ' . $strSeparator . $UserPhoneNumber . $strSeparator . ', ' . $strSeparator . $UserPassword . $strSeparator . ', ' . $strSeparator . $usertype . $strSeparator . ')';
 
-    $registerQuery = 'INSERT INTO storex.users (`FirstName`, `LastName`, `Email`, `PhoneNumber`,`Password`, `usertype_ID`) VALUES (' . $strSeparator . $UserFirstName . $strSeparator . ', ' . $strSeparator . $UserLastName . $strSeparator . ', ' . $strSeparator . $UserEmail . $strSeparator . ', ' . $strSeparator . $UserPhoneNumber . $strSeparator . ', ' . $strSeparator . $UserPassword . $strSeparator . ', ' . $strSeparator . $usertype . $strSeparator . ')';
-
-    require_once 'model/dbConnector.php';
-    $queryResult = executeQueryInsert($registerQuery);
+    require_once 'Model/DataBaseConnector.php';
+    $queryResult = executeQueryInsert($RegisterQuery);
     if ($queryResult) {
         $result = $queryResult;
     }
@@ -35,23 +26,18 @@ function registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhon
 }
 
 /**
- * This function is designed to verify user's login
- * @param $UserEmail
- * @param $UserPassword
- * @return bool : "true" only if the user and psw match the database. In all other cases will be "false".
+ * @brief Cette fonction sert à vérifier le login d'un utilisateur
  */
-function isLoginCorrect($UserEmail, $UserPassword): bool
+function IsUserLoginCorrect($UserEmail, $UserPassword): bool
 {
     $result = false;
-
     $strSeparator = '\'';
-    $loginQuery = 'SELECT Password FROM storex.users WHERE Email = '. $strSeparator . $UserEmail . $strSeparator;
+    $LoginQuery = 'SELECT Password FROM storex.users WHERE Email = ' . $strSeparator . $UserEmail . $strSeparator;
 
-    require_once 'model/dbConnector.php';
-    $queryResult = executeQuerySelect($loginQuery);
+    require_once 'Model/DataBaseConnector.php';
+    $queryResult = executeQuerySelect($LoginQuery);
 
-    if (count($queryResult) == 1)
-    {
+    if (count($queryResult) == 1) {
         $userHashPsw = $queryResult[0]['Password'];
         $hashPasswordDebug = password_hash($UserPassword, PASSWORD_DEFAULT);
         $result = password_verify($UserPassword, $userHashPsw);
@@ -60,35 +46,29 @@ function isLoginCorrect($UserEmail, $UserPassword): bool
 }
 
 /**
- * This function is designed to get the type of user
- * For the webapp, it will adapt the behavior of the GUI
- * @param $UserEmail
- * @return int (1 = customer ; 2 = seller)
+ * @brief Cette fonction sert à vérifier le type d'utilisateur grâce à son index
  */
-function getUserType($UserEmail): int
+function GetUserTypeFromEmail($UserEmail): int
 {
-    $result = 1;//we fix the result to 1 -> customer
-
+    $result = 1; // ID des annonceurs
     $strSeparator = '\'';
+    $GetUserTypeQueryFromEmail = 'SELECT usertype_ID FROM storex.users WHERE users.Email =' . $strSeparator . $UserEmail . $strSeparator;
 
-    $getUserTypeQuery = 'SELECT usertype_ID FROM storex.users WHERE users.Email =' . $strSeparator . $UserEmail . $strSeparator;
+    require_once 'Model/DataBaseConnector.php';
+    $queryResult = executeQuerySelect($GetUserTypeQueryFromEmail);
 
-    require_once 'model/dbConnector.php';
-    $queryResult = executeQuerySelect($getUserTypeQuery);
-
-    if (count($queryResult) == 1){
+    if (count($queryResult) == 1) {
         $result = $queryResult[0]['usertype_ID'];
     }
     return $result;
 }
 
 /**
- * This function is designed to get all active snows
+ * @brief Cette fonction sert à vérifier tous les utilisateurs
  */
-function getUsers(): array
+function GetUsers(): array
 {
-    require_once 'model/dbConnector.php';
-    $articlesQuery = 'SELECT ID, FirstName, LastName, PhoneNumber, Email, Password, usertype_ID FROM storex.users;';
-
-    return executeQuerySelect($articlesQuery);
+    require_once 'Model/DataBaseConnector.php';
+    $UsersQuery = 'SELECT ID, FirstName, LastName, PhoneNumber, Email, Password, usertype_ID FROM storex.users;';
+    return executeQuerySelect($UsersQuery);
 }

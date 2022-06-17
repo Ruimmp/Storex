@@ -1,7 +1,7 @@
 <?php
 /**
  * @file        FormContact.php
- * @brief       This view is designed to display the add article form
+ * @brief       This view is designed to display the contact to a user
  * @author      Created by Pereira.Nuno
  * @version     14.06.2022
  */
@@ -26,16 +26,10 @@ ob_start();
                                         placeholder="Entrez le message à envoyer"
                                         required/>
                             </div>
-                            <div class="form-group">
-                                <label for="agree-term" class="label-agree-term">
-                                    <?php if (@$_GET['addArticleError']) : ?>
-                                        <h5><span style="color:red">Une erreur est sur-venue</span></h5>
-                                    <?php endif ?>
-                                </label>
-                            </div>
+
                             <div class="form-group">
                                 <div class="text-center mb-5 form-button btn-dtl">
-                                    <a href="mailto:<?= $result['Email']; ?>?subject=Achat annonce '<?= $result['Name']; ?>'"
+                                    <a href="mailto:<?= $result['Email']; ?>?subject=Achat de l'annonce '<?= $result['Name']; ?>'"
                                        class="form-submit btn btn-primary tm-btn-big">Contacter
                                         l'annonceur</a>
                                 </div>

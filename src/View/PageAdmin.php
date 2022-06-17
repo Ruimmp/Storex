@@ -41,7 +41,7 @@ ob_start();
                                     <div class="text-center">
                                         <h5 class="fw-bolder">Annonces</h5>
                                         <div class="form-group1 form-button">
-                                            <a href="index.php?action=ManagerArticles">
+                                            <a href="index.php?action=ManagerAnnounces">
                                                 <input type="submit" class="form-submit" value="Détails"/>
                                             </a>
                                         </div>

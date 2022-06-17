@@ -15,7 +15,7 @@ ob_start();
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Créez un compte</h2>
-                    <form method="POST" action="index.php?action=register" class="register-form" id="register-form">
+                    <form method="POST" class="register-form" id="register-form" action="index.php?action=UserRegister">
 
                         <div class="form-group">
                             <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
@@ -85,7 +85,7 @@ ob_start();
                                     <span>
                                     </span>
                                 </span>
-                                Vous avez déjà un compte? <a href="index.php?action=login" class="term-service">Connectez-vous!</a>
+                                Vous avez déjà un compte? <a href="index.php?action=UserLogin" class="term-service">Connectez-vous!</a>
                             </label>
                             <label for="agree-term" class="label-agree-term">
                                 <?php if (@$_GET['registerError'] == true) : ?>

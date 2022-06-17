@@ -7,35 +7,36 @@
  */
 
 /**
- * @brief This function is designed to redirect the user to the home page (depending on the action received by the index)
+ * @brief Those functions are designed to redirect the user to the home page (depending on the action received by the index)
  */
-function home()
+
+function Accueil()
 {
-    require_once "./controller/ArticlesController.php";
-    require "./view/PageHome.php";
+    require_once "./Controller/AnnouncesController.php";
+    require "./View/PageAccueil.php";
 }
 
 function Lost()
 {
-    require "./view/PageLost.php";
+    require "./View/PageLost.php";
 }
 
 function AdminPanel()
 {
-    require "./view/PageAdmin.php";
+    require "./View/PageAdmin.php";
 }
 
-function ManagerArticles()
+function ManagerAnnounces()
 {
-    require "./view/PageArticlesAdmin.php";
+    require "./View/PageAnnouncesAdmin.php";
 }
 
 function ManagerUsers()
 {
-    require "./view/PageUsersAdmin.php";
+    require "./View/PageUsersAdmin.php";
 }
 
-function displayMyArticles()
+function DisplayMyAnnounce()
 {
-    require "./view/PageMyArticles.php";
+    require "./View/PageMyAnnounces.php";
 }

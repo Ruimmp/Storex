@@ -7,64 +7,62 @@
  */
 
 session_start();
-require "controller/NavigationController.php";
+require "Controller/NavigationController.php";
 
-require "controller/UsersController.php";
-require "controller/ArticlesController.php";
+require "Controller/UsersController.php";
+require "Controller/AnnouncesController.php";
 
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
     switch ($action) {
-        case 'home' :
-            home();
-            break;
-
         /* Utilisateurs */
-        case 'register' :
+        case 'UserRegister' :
             UserRegister($_POST);
             break;
-        case 'login':
+        case 'UserLogin' :
             UserLogin($_POST);
             break;
-        case 'logout' :
+        case 'UserLogout':
             UserLogout();
             break;
 
-        /* Articles */
-        case 'addArticle' :
-            addArticle($_POST);
+        /* Announces */
+        case 'AddAnnounce' :
+            AddAnnounce($_POST);
             break;
-        case 'displayArticles' :
-            displayArticles();
+        case 'DisplayAnnounce' :
+            DisplayAnnounce();
             break;
-        case 'displayMyArticles' :
-            displayMyArticles();
+        case 'DetailsAnnounce':
+            DetailsAnnounce($_GET['ID']);
             break;
-        case 'deleteArticle' :
-            deleteArticle($_GET['ID']);
+        case 'DeleteAnnounce' :
+            DeleteAnnounce($_GET['ID']);
             break;
-        case 'modifyArticle' :
-            modifyArticle($_GET['ID']);
+        case 'ModifyAnnounce' :
+            ModifyAnnounce($_GET['ID']);
             break;
-        case 'PageArticleDetails':
-            PageArticleDetails($_GET['ID']);
+        case 'DisplayMyAnnounce' :
+            DisplayMyAnnounce();
+            break;
+
+        /* navigations*/
+        case 'Accueil' :
+            Accueil();
+            break;
+        case 'Lost' :
+            Lost();
             break;
         case 'FormContact':
             FormContact($_GET['ID']);
-            break;
-
-
-        /* navigations*/
-        case 'lost' :
-            Lost();
             break;
 
         /* Admin */
         case 'AdminPanel' :
             AdminPanel();
             break;
-        case 'ManagerArticles' :
-            ManagerArticles();
+        case 'ManagerAnnounces' :
+            ManagerAnnounces();
             break;
         case 'ManagerUsers' :
             ManagerUsers();
@@ -72,8 +70,8 @@ if (isset($_GET['action'])) {
 
         /* Others */
         default :
-            home();
+            Accueil();
     }
 } else {
-    home();
+    Accueil();
 }

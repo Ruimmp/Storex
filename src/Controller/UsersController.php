@@ -7,101 +7,97 @@
  */
 
 /**
- * This function is designed to create a new user session
- * @param $UserEmail : user unique id
+ * @brief Cette fonction sert à créér une nouvelle session
  */
-function createSession($UserEmail)
+function CreateSession($UserEmail)
 {
     $_SESSION['UserEmail'] = $UserEmail;
-    //set user type in Session
-    $userType = getUserType($UserEmail);
+    $userType = GetUserTypeFromEmail($UserEmail);
     $_SESSION['usertype_ID'] = $userType;
 }
 
 /**
- * Cette function sert à enregistrer un nouvel utilisateur dans la base de données
- * @param $registerRequest
+ * @brief Cette function sert à enregistrer un nouvel utilisateur dans la base de données
  */
-function UserRegister($registerRequest)
+function UserRegister($RegisterNewUserRequest)
 {
     if (
-        isset($registerRequest['UserFirstName']) &&
-        isset($registerRequest['UserLastName']) &&
-        isset($registerRequest['UserEmail']) &&
-        isset($registerRequest['UserPhoneNumber']) &&
-        isset($registerRequest['UserPassword']) &&
-        isset($registerRequest['UserPasswordRepeat'])
+        isset($RegisterNewUserRequest['UserFirstName']) &&
+        isset($RegisterNewUserRequest['UserLastName']) &&
+        isset($RegisterNewUserRequest['UserEmail']) &&
+        isset($RegisterNewUserRequest['UserPhoneNumber']) &&
+        isset($RegisterNewUserRequest['UserPassword']) &&
+        isset($RegisterNewUserRequest['UserPasswordRepeat'])
     ) {
         //extract register parameters
-        $UserEmail = $registerRequest['UserEmail'];
+        $UserEmail = $RegisterNewUserRequest['UserEmail'];
         //E-mail user set to lowercase
         $UserEmail = strtolower($UserEmail);
 
-        $UserFirstName = $registerRequest['UserFirstName'];
-        $UserLastName = $registerRequest['UserLastName'];
-        $UserPhoneNumber = $registerRequest['UserPhoneNumber'];
-        $UserPassword = $registerRequest['UserPassword'];
-        $UserPasswordRepeat = $registerRequest['UserPasswordRepeat'];
+        $UserFirstName = $RegisterNewUserRequest['UserFirstName'];
+        $UserLastName = $RegisterNewUserRequest['UserLastName'];
+        $UserPhoneNumber = $RegisterNewUserRequest['UserPhoneNumber'];
+        $UserPassword = $RegisterNewUserRequest['UserPassword'];
+        $UserPasswordRepeat = $RegisterNewUserRequest['UserPasswordRepeat'];
 
         if ($UserPassword == $UserPasswordRepeat) {
-            require_once "model/UsersManager.php";
-            if (registerNewAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword)) {
-                createSession($UserEmail);
+            require_once "Model/UsersManager.php";
+            if (RegisterNewUserAccount($UserFirstName, $UserLastName, $UserEmail, $UserPhoneNumber, $UserPassword)) {
+                CreateSession($UserEmail);
                 $_GET['registerError'] = false;
                 $_GET['registerComplete'] = false;
                 $_GET['registerNotFinished'] = false;
                 $_GET['action'] = "home";
-                require "view/PageHome.php";
+                require "View/PageAccueil.php";
             } else {
                 $_GET['registerNotFinished'] = false;
                 $_GET['registerComplete'] = false;
                 $_GET['registerError'] = true;
                 $_GET['action'] = "register";
-                require "view/FormRegister.php";
+                require "View/FormRegister.php";
             }
         } else {
             $_GET['registerNotFinished'] = false;
             $_GET['registerComplete'] = false;
             $_GET['registerError'] = false;
             $_GET['action'] = "register";
-            require "view/FormRegister.php";
+            require "View/FormRegister.php";
         }
     } else {
         $_GET['registerNotFinished'] = false;
         $_GET['registerComplete'] = false;
         $_GET['registerError'] = false;
         $_GET['action'] = "register";
-        require "view/FormRegister.php";
+        require "View/FormRegister.php";
     }
 }
 
 /**
- * This function is designed to manage login request
- * @param $loginRequest : containing login fields required to authenticate the user
+ * @brief Cette fonction set à connecter un utilisateur
  */
-function UserLogin($loginRequest)
+function UserLogin($LoginUserRequest)
 {
     if (
-        isset($loginRequest['UserEmail']) &&
-        isset($loginRequest['UserPassword'])
+        isset($LoginUserRequest['UserEmail']) &&
+        isset($LoginUserRequest['UserPassword'])
     ) {
-        $UserEmail = $loginRequest['UserEmail'];
-        $UserPassword = $loginRequest['UserPassword'];
+        $UserEmail = $LoginUserRequest['UserEmail'];
+        $UserPassword = $LoginUserRequest['UserPassword'];
 
-        require_once "model/UsersManager.php";
-        if (isLoginCorrect($UserEmail, $UserPassword)) {
-            createSession($UserEmail);
+        require_once "Model/UsersManager.php";
+        if (IsUserLoginCorrect($UserEmail, $UserPassword)) {
+            CreateSession($UserEmail);
             $_GET['loginError'] = false;
             $_GET['action'] = "home";
-            require "view/PageHome.php";
+            require "View/PageAccueil.php";
         } else {
             $_GET['loginError'] = true;
             $_GET['action'] = "login";
-            require "view/FormLogin.php";
+            require "View/FormLogin.php";
         }
     } else {
         $_GET['action'] = "login";
-        require "view/FormLogin.php";
+        require "View/FormLogin.php";
     }
 }
 
@@ -112,11 +108,11 @@ function UserLogout()
 {
     $_SESSION = array();
     session_destroy();
-    require "view/PageHome.php";
+    require "View/PageAccueil.php";
 }
 
-function displayAdminUsers(): ?array
+function DisplayAdminUsers(): ?array
 {
-    require_once "model/UsersManager.php";
-    return getUsers();
+    require_once "Model/UsersManager.php";
+    return GetUsers();
 }

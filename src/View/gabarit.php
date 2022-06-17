@@ -56,31 +56,29 @@
                     (!isset($_GET['action'])) ||
                     ((@$_GET['action'] == "logout"))) : ?>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-default" aria-current="page"
-                           href="index.php?action=home">Accueil</a>
+                        <a class="nav-link nav-link-default" aria-current="page" href="index.php?action=Accueil">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-blue" href="index.php?action=login">Connexion</a>
+                        <a class="nav-link nav-link-blue" href="index.php?action=UserLogin">Connexion</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-blue" href="index.php?action=register">S'enregistrer</a>
+                        <a class="nav-link nav-link-blue" href="index.php?action=UserRegister">S'enregistrer</a>
                     </li>
                 <?php else : ?>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-default" aria-current="page"
-                           href="index.php?action=home">Accueil</a>
+                        <a class="nav-link nav-link-default" aria-current="page" href="index.php?action=Accueil">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-green" href="index.php?action=addArticle">Créer une annonce</a>
+                        <a class="nav-link nav-link-green" href="index.php?action=AddAnnounce">Créer une annonce</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-default" href="index.php?action=displayMyArticles">Mes annonces</a>
+                        <a class="nav-link nav-link-default" href="index.php?action=DisplayMyAnnounce">Mes annonces</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-default" href="index.php?action=profile">Profile</a>
+                        <a class="nav-link nav-link-default" href="index.php?action=Accueil">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-link-red" href="index.php?action=logout">Logout</a>
+                        <a class="nav-link nav-link-red" href="index.php?action=UserLogout">Logout</a>
                     </li>
                 <?php endif; ?>
 
@@ -122,20 +120,20 @@
                     (!isset($_GET['action'])) ||
                     ((@$_GET['action'] == "logout"))) : ?>
                     <li class="nav-item">
-                    <li class="mb-2"><a href="index.php?action=home" class="text-muted">Accueil</a></li>
+                    <li class="mb-2"><a href="index.php?action=Accueil" class="text-muted">Accueil</a></li>
                     <li class="nav-item">
-                    <li class="mb-2"><a href="index.php?action=login" class="text-muted">Connexion</a></li>
+                    <li class="mb-2"><a href="index.php?action=UserLogin" class="text-muted">Connexion</a></li>
                     <li class="nav-item">
-                    <li class="mb-2"><a href="index.php?action=register" class="text-muted">S'enregistrer</a></li>
+                    <li class="mb-2"><a href="index.php?action=UserRegister" class="text-muted">S'enregistrer</a></li>
                 <?php else : ?>
                     <li class="nav-item">
-                    <li class="mb-2"><a href="index.php?action=home" class="text-muted">Accueil</a></li>
+                    <li class="mb-2"><a href="index.php?action=Accueil" class="text-muted">Accueil</a></li>
                     <li class="nav-item">
-                    <li class="mb-2"><a href="index.php?action=profile" class="text-muted">Profile</a></li>
+                    <li class="mb-2"><a href="index.php?action=Accueil" class="text-muted">Profile</a></li>
                     <li class="nav-item">
-                    <li class="mb-2"><a href="index.php?action=myArticles" class="text-muted">Mes articles</a></li>
+                    <li class="mb-2"><a href="index.php?action=DisplayMyAnnounce" class="text-muted">Mes annonces</a></li>
                     <li class="nav-item">
-                    <li class="mb-2"><a href="index.php?action=logout" class="text-muted">Logout</a></li>
+                    <li class="mb-2"><a href="index.php?action=UserLogout" class="text-muted">Logout</a></li>
                 <?php endif; ?>
             </ul>
         </div>

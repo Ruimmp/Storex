@@ -11,7 +11,7 @@ ob_start();
 $rows = 0; // Column count
 ?>
 
-<?php $usersResults = displayAdminUsers(); ?>
+<?php $usersResults = DisplayAdminUsers(); ?>
     <div class="content">
         <div class="container">
             <h2 class="col-6 tm-text-primary">Utilisateurs</h2>

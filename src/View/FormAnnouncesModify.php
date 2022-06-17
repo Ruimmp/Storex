@@ -1,7 +1,7 @@
 <?php
 /**
- * @file        FormArticleModify.php
- * @brief       This view is designed to display the edit article form
+ * @file        FormAnnouncesModify.php
+ * @brief       This view is designed to display the edit annonce form
  * @author      Created by Monteiro.Rui
  * @version     12.06.2022
  */
@@ -20,8 +20,7 @@ ob_start();
                 <div class="signup-form">
                     <h2 class="form-title">Modification d'annonce</h2>
 
-                    <form method="POST" class="register-form tm-mb-40" id="register-form"
-                          action="index.php?action=modifyArticle">
+                    <form method="POST" class="register-form tm-mb-40" id="register-form" action="index.php?action=ModifyAnnounce">
 
                         <div class="form-group">
                             <p><i class="zmdi zmdi-code"></i><span class="colorOr"> ID de l'annonce</span></p>

@@ -16,7 +16,7 @@ ob_start();
         <div class="err">4</div>
         <i class="far fa-question-circle fa-spin"></i>
         <div class="err2">4</div>
-        <div class="msg">Cette page a été bougée? <br>Vous l'avez été supprimée? <br>N'a jamais existé en premier lieu?<p>Retourner à l'<a href="index.php?action=home">accueil</a></p></div>
+        <div class="msg">Cette page a été bougée? <br>Vous l'avez été supprimée? <br>N'a jamais existé en premier lieu?<p>Retourner à l'<a href="index.php?action=Accueil">accueil</a></p></div>
     </div>
 
 <?php

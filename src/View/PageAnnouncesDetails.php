@@ -1,7 +1,7 @@
 <?php
 /**
- * @file        PageArticleDetails.php
- * @brief       This view is designed to display the edit article form
+ * @file        PageAnnouncesDetails.php
+ * @brief       This view is designed to display the announcement details
  * @author      Created by Pereira.Nuno
  * @version     16.06.2022
  */

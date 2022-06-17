@@ -14,7 +14,7 @@ ob_start();
             <div class="signup-content">
                 <div class="signup-form">
                     <h2 class="form-title">Connectez vous</h2>
-                    <form method="POST" action="index.php?action=login" class="register-form" id="register-form">
+                    <form method="POST" class="register-form" id="register-form" action="index.php?action=UserLogin">
 
                         <div class="form-group">
                             <label for="email"><i class="zmdi zmdi-email"></i></label>
@@ -42,7 +42,7 @@ ob_start();
                                     <span>
                                     </span>
                                 </span>
-                                Vous n'avez pas de compte? <a href="index.php?action=register" class="term-service">Créez
+                                Vous n'avez pas de compte? <a href="index.php?action=UserRegister" class="term-service">Créez
                                     un!</a>
                             </label>
                             <label for="agree-term" class="label-agree-term">
