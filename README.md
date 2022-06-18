@@ -48,14 +48,17 @@
 | Exemple: Monteiro Rui  | Exemple: 11/05/2022  | Exemple: Register | Exemple: Google Chrome/FireFox/Edge/Opera | ❌ ou ✔️ |
 | Monteiro Rui  | 12/06/2022  | Register | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
 | Monteiro Rui  | 12/06/2022  | Login | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
-| Monteiro Rui  | 12/06/2022  | Affichage des annonces | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+| Monteiro Rui  | 12/06/2022  | Affichage des annonces | Google Chrome/FireFox/Opera/Brave | ✔️ |
 | Monteiro Rui  | 12/06/2022  | Création d'annonces | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
-|  |  | Détails d'une annonce |  |  |
-|  |  | Effacement d'une annonce |  |  |
+| Monteiro Rui  | 18/06/2022  | Détails d'une annonce | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+| Monteiro Rui  | 18/06/2022  | Effacement d'une annonce | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+| Monteiro Rui  | 18/06/2022  | Annonces Admin | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+| Monteiro Rui  | 18/06/2022  | Contacter l'annonceur | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
+| Monteiro Rui  | 18/06/2022  | Utilisateurs Admin | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
 |  |  | Modification d'annonces |  |  |
 |  |  | Modification d'utilisateur |  |  |
-|  |  | Utilisateurs Admin |  |  |
-|  |  | Annonces Admin |  |  |
+
+
 
 ## Matériel necessaire
 - Pour l'instalation de ce projet dans votre environement vous allez avoir besoin de:
