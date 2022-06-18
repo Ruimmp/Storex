@@ -46,7 +46,7 @@ ob_start();
                                     un!</a>
                             </label>
                             <label for="agree-term" class="label-agree-term">
-                                <?php if (@$_GET['loginError'] == true) : ?>
+                                <?php if (@$_GET['UserLoginError'] == true) : ?>
                                     <span style="color:red">E-mail ou mot de passe incorrect!</span>
                                 <?php endif ?>
                             </label>
