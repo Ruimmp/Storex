@@ -45,7 +45,6 @@
 ## Tests
 | Membre  | Date | Teste | Application | Évaluation |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Exemple: Monteiro Rui  | Exemple: 11/05/2022  | Exemple: Register | Exemple: Google Chrome/FireFox/Edge/Opera | ❌ ou ✔️ |
 | Monteiro Rui  | 12/06/2022  | Register | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
 | Monteiro Rui  | 12/06/2022  | Login | Google Chrome/FireFox/Edge/Opera/Brave | ✔️ |
 | Monteiro Rui  | 12/06/2022  | Affichage des annonces | Google Chrome/FireFox/Opera/Brave | ✔️ |
