@@ -42,7 +42,7 @@
 - [ ] Sprint 7
 - [ ] Sprint 8
 
-## Testes
+## Tests
 | Membre  | Date | Teste | Application | Évaluation |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | Exemple: Monteiro Rui  | Exemple: 11/05/2022  | Exemple: Register | Exemple: Google Chrome/FireFox/Edge/Opera | ❌ ou ✔️ |
