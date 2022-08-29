@@ -1,5 +1,5 @@
 {
     "require": {
-        "guzzlehttp/promises": "1.5.1"
+        "guzzlehttp/promises": "1.5.2"
     }
 }
